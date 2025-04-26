@@ -1,0 +1,219 @@
+<!-- data_file_manager.html -->
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件管理中心 - 风电预测平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        .chart-card { @apply bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition-shadow; }
+        .modal-enter { animation: modalFadeIn 0.3s ease-out; }
+        
+        @keyframes modalFadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100 font-sans">
+    <!-- 导航栏（与base.html完全一致） -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-3">
+                <a href="/" class="text-2xl font-bold text-indigo-600">🌪️ 风电智测</a>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#upload" class="nav-link">数据导入</a>
+                    <a href="#preprocess" class="nav-link">预处理</a>
+                    <a href="#model" class="nav-link">模型选择</a>
+                    <a href="#predict" class="nav-link">预测分析</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 文件管理主内容 -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="chart-card">
+            <div class="p-6">
+                <!-- 标题与操作栏 -->
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-3xl font-bold border-b-2 border-indigo-600 pb-2">
+                        <i class="fas fa-folder-open mr-2"></i>文件管理中心
+                    </h2>
+                    <button onclick="showUploadPanel()" 
+                            class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+                        <i class="fas fa-cloud-upload-alt mr-2"></i>上传新文件
+                    </button>
+                </div>
+
+                <!-- 分类导航 -->
+                <div class="category-tabs flex space-x-2 mb-6">
+                    <button class="px-4 py-2 bg-indigo-100 text-indigo-600 rounded-full transition-colors"
+                            data-category="raw"
+                            onclick="switchCategory('raw')">
+                        原始数据 (3)
+                    </button>
+                    <button class="px-4 py-2 hover:bg-indigo-100 text-gray-600 rounded-full transition-colors"
+                            data-category="processed"
+                            onclick="switchCategory('processed')">
+                        处理数据 (1)
+                    </button>
+                    <button class="px-4 py-2 hover:bg-indigo-100 text-gray-600 rounded-full transition-colors"
+                            data-category="predictions"
+                            onclick="switchCategory('predictions')">
+                        预测结果 (0)
+                    </button>
+                </div>
+
+                <!-- 文件展示区 -->
+                <div id="fileGrid" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 上传面板模态框 -->
+    <div id="uploadModal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+        <div class="bg-white rounded-lg p-6 w-full max-w-2xl modal-enter">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold">
+                    <i class="fas fa-file-upload mr-2 text-indigo-600"></i>上传数据文件
+                </h3>
+                <button onclick="closeUploadPanel()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- 上传区域 -->
+            <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center cursor-pointer"
+                 ondragover="event.preventDefault(); this.classList.add('border-indigo-600')"
+                 ondragleave="this.classList.remove('border-indigo-600')"
+                 ondrop="handleFileDrop(event)">
+                <i class="fas fa-cloud-upload-alt text-4xl text-indigo-600 mb-4"></i>
+                <p class="text-gray-600 mb-2">拖拽文件至此或点击选择</p>
+                <input type="file" id="fileInput" class="hidden" accept=".csv">
+                <button onclick="document.getElementById('fileInput').click()" 
+                        class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 mt-4">
+                    选择CSV文件
+                </button>
+                <p class="text-sm text-gray-500 mt-2">支持格式：CSV（最大100MB）</p>
+            </div>
+
+            <!-- 上传进度 -->
+            <div id="uploadProgress" class="mt-4 hidden">
+                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div id="progressBar" class="h-full bg-indigo-600 transition-all duration-300" style="width: 0%"></div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2 text-center">
+                    <span id="statusText">正在上传...</span>
+                    <span id="progressPercent" class="ml-2">0%</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 文件数据示例
+        let fileData = {
+            raw: [
+                { name: "wind_data_2024.csv", size: "58MB", date: "2024-03-15" },
+                { name: "historical.csv", size: "34MB", date: "2023-12-01" }
+            ],
+            processed: [
+                { name: "processed_v1.csv", size: "22MB", date: "2024-04-10" }
+            ],
+            predictions: []
+        };
+
+        // 分类切换
+        function switchCategory(category) {
+            // 更新按钮状态
+            document.querySelectorAll('.category-tabs button').forEach(btn => {
+                btn.classList.toggle('bg-indigo-100', btn.dataset.category === category);
+                btn.classList.toggle('text-indigo-600', btn.dataset.category === category);
+                btn.classList.toggle('text-gray-600', btn.dataset.category !== category);
+            });
+
+            // 渲染文件
+            renderFiles(category);
+        }
+
+        // 渲染文件列表
+        function renderFiles(category) {
+            const container = document.getElementById('fileGrid');
+            container.innerHTML = '';
+
+            fileData[category].forEach(file => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow';
+                fileItem.innerHTML = `
+                    <div class="flex items-start mb-2">
+                        <i class="fas fa-file-csv text-2xl text-indigo-600 mr-3"></i>
+                        <div class="flex-1">
+                            <div class="font-medium">${file.name}</div>
+                            <div class="text-sm text-gray-500">${file.size} · ${file.date}</div>
+                        </div>
+                        <button onclick="deleteFile('${category}', '${file.name}')" 
+                                class="text-gray-400 hover:text-red-600">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center mt-3">
+                        <a href="#" class="text-indigo-600 hover:underline">下载</a>
+                        <span class="text-sm text-gray-500">上次操作：预处理</span>
+                    </div>
+                `;
+                container.appendChild(fileItem);
+            });
+        }
+
+        // 初始化显示原始数据
+        renderFiles('raw');
+
+        // 上传面板控制
+        function showUploadPanel() {
+            document.getElementById('uploadModal').classList.remove('hidden');
+        }
+
+        function closeUploadPanel() {
+            document.getElementById('uploadModal').classList.add('hidden');
+        }
+
+        // 文件拖放处理
+        function handleFileDrop(e) {
+            e.preventDefault();
+            const files = e.dataTransfer.files;
+            if(files.length > 0) {
+                document.getElementById('fileInput').files = files;
+                startUpload(files[0]);
+            }
+        }
+
+        // 上传模拟
+        function startUpload(file) {
+            const progress = document.getElementById('progressBar');
+            const percent = document.getElementById('progressPercent');
+            const status = document.getElementById('statusText');
+            const uploadPanel = document.getElementById('uploadProgress');
+
+            uploadPanel.classList.remove('hidden');
+            
+            let progressValue = 0;
+            const interval = setInterval(() => {
+                progressValue += Math.random() * 10;
+                if(progressValue >= 100) {
+                    clearInterval(interval);
+                    status.textContent = "上传完成！";
+                    setTimeout(() => {
+                        uploadPanel.classList.add('hidden');
+                        closeUploadPanel();
+                    }, 2000);
+                }
+                progress.style.width = `${progressValue}%`;
+                percent.textContent = `${Math.min(100, Math.floor(progressValue))}%`;
+            }, 300);
+        }
+    </script>
+</body>
+</html>

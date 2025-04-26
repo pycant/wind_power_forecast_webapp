@@ -1,160 +1,182 @@
-{% extends "base.html" %}
+<!-- upload.html -->
+{% extends "base.html" %} {% block content %}
+<div class="upload-container">
+  <h2 class="upload-title">数据上传与管理</h2>
 
-{% block content %}
-<div class="container mx-auto px-4 py-8">
-    <!-- 头部操作栏 -->
-    <div class="flex justify-between items-center mb-6">
-        <h1 class="text-3xl font-bold">📁 数据管理中心</h1>
-        <div class="flex space-x-4">
-            <input type="text" id="searchInput" placeholder="搜索文件..." class="px-4 py-2 border rounded-lg">
-            <a href="{{ url_for('dashboard') }}" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg">
-                ← 返回主界面
-            </a>
-        </div>
+  <!-- 上传区域 -->
+  <div class="upload-area">
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input
+        type="file"
+        name="file"
+        id="fileInput"
+        class="file-input"
+        accept=".csv"
+      />
+      <label for="fileInput" class="upload-button">
+        <i class="fas fa-cloud-upload-alt"></i> 选择CSV文件
+      </label>
+      <div class="file-list" id="uploadStatus"></div>
+    </form>
+  </div>
+
+  <!-- 数据预览按钮 -->
+  <button class="preview-btn" onclick="showFileManager()">
+    下一步：数据预览 <i class="fas fa-arrow-right"></i>
+  </button>
+
+  <!-- 文件管理模态框 -->
+  <div class="modal-overlay" id="fileModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>文件管理</h3>
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+      </div>
+
+      <!-- 分类导航 -->
+      <div class="category-tabs">
+        <button
+          class="tab active"
+          data-category="raw"
+          onclick="switchCategory('raw')"
+        >
+          原始数据
+        </button>
+        <button class="tab" onclick="switchCategory('processed')">
+          处理数据
+        </button>
+        <button class="tab" onclick="switchCategory('predictions')">
+          预测结果
+        </button>
+      </div>
+
+      <!-- 文件展示区域 -->
+      <div class="file-grid" id="fileGrid"></div>
+
+      <div class="modal-footer">
+        <button class="delete-btn" onclick="deleteSelected()">
+          <i class="fas fa-trash"></i> 删除选中文件
+        </button>
+        <button class="return-btn" onclick="location.href='/dashboard'">
+          返回仪表盘
+        </button>
+      </div>
     </div>
-
-    <!-- 文件分类管理 -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- 原始数据 -->
-        <div class="bg-white rounded-lg shadow-md">
-            <div class="p-4 border-b border-gray-200">
-                <h3 class="text-xl font-semibold">
-                    <i class="fas fa-database text-blue-500 mr-2"></i>
-                    原始数据
-                    <span class="text-sm text-gray-500 ml-2">({{ raw_files|length }} files)</span>
-                </h3>
-            </div>
-            <div class="p-4 file-list" data-category="raw">
-                {% for file in raw_files %}
-                <div class="file-item flex items-center p-2 hover:bg-gray-50">
-                    <input type="checkbox" class="file-checkbox mr-3">
-                    <i class="fas fa-file-csv text-green-500 text-lg mr-2"></i>
-                    <span class="flex-1 truncate">{{ file.name }}</span>
-                    <span class="text-sm text-gray-500">{{ file.size }}</span>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-
-        <!-- 处理数据 -->
-        <div class="bg-white rounded-lg shadow-md">
-            <div class="p-4 border-b border-gray-200">
-                <h3 class="text-xl font-semibold">
-                    <i class="fas fa-cogs text-purple-500 mr-2"></i>
-                    处理数据
-                    <span class="text-sm text-gray-500 ml-2">({{ processed_files|length }} files)</span>
-                </h3>
-            </div>
-            <div class="p-4 file-list" data-category="processed">
-                {% for file in processed_files %}
-                <div class="file-item flex items-center p-2 hover:bg-gray-50">
-                    <input type="checkbox" class="file-checkbox mr-3">
-                    <i class="fas fa-file-excel text-blue-500 text-lg mr-2"></i>
-                    <span class="flex-1 truncate">{{ file.name }}</span>
-                    <span class="text-sm text-gray-500">{{ file.size }}</span>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-
-        <!-- 预测结果 -->
-        <div class="bg-white rounded-lg shadow-md">
-            <div class="p-4 border-b border-gray-200">
-                <h3 class="text-xl font-semibold">
-                    <i class="fas fa-chart-line text-red-500 mr-2"></i>
-                    预测结果
-                    <span class="text-sm text-gray-500 ml-2">({{ prediction_files|length }} files)</span>
-                </h3>
-            </div>
-            <div class="p-4 file-list" data-category="predictions">
-                {% for file in prediction_files %}
-                <div class="file-item flex items-center p-2 hover:bg-gray-50">
-                    <input type="checkbox" class="file-checkbox mr-3">
-                    <i class="fas fa-file-pdf text-red-500 text-lg mr-2"></i>
-                    <span class="flex-1 truncate">{{ file.name }}</span>
-                    <span class="text-sm text-gray-500">{{ file.size }}</span>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-
-    <!-- 底部操作栏 -->
-    <div class="mt-6 flex justify-between items-center bg-gray-50 p-4 rounded-lg">
-        <div class="flex items-center space-x-4">
-            <button onclick="toggleSelectAll()" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg">
-                <i class="fas fa-check-square mr-2"></i>全选/取消
-            </button>
-            <button onclick="deleteSelected()" class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg">
-                <i class="fas fa-trash-alt mr-2"></i>删除选中
-            </button>
-        </div>
-        <div class="text-sm text-gray-500">
-            总存储空间：{{ total_usage }} / 10GB
-            <div class="w-48 h-2 bg-gray-200 rounded-full mt-1">
-                <div class="h-full bg-blue-500 rounded-full" style="width: {{ usage_percentage }}%"></div>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 
-<!-- 交互脚本 -->
-<script>
-// 文件搜索功能
-document.getElementById('searchInput').addEventListener('input', function(e) {
-    const searchTerm = e.target.value.toLowerCase();
-    document.querySelectorAll('.file-item').forEach(item => {
-        const fileName = item.querySelector('span').textContent.toLowerCase();
-        item.style.display = fileName.includes(searchTerm) ? 'flex' : 'none';
-    });
-});
-
-// 全选切换
-function toggleSelectAll() {
-    const checkboxes = document.querySelectorAll('.file-checkbox');
-    const allChecked = [...checkboxes].every(c => c.checked);
-    checkboxes.forEach(c => c.checked = !allChecked);
-}
-
-// 删除选中文件
-async function deleteSelected() {
-    const selectedFiles = [];
-    document.querySelectorAll('.file-checkbox:checked').forEach(checkbox => {
-        const fileName = checkbox.parentNode.querySelector('span').textContent.trim();
-        const category = checkbox.closest('.file-list').dataset.category;
-        selectedFiles.push({name: fileName, category: category});
-    });
-
-    if (selectedFiles.length === 0) return;
-
-    if (confirm(`确定要删除选中的 ${selectedFiles.length} 个文件吗？`)) {
-        try {
-            const response = await fetch('/delete-files', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({files: selectedFiles})
-            });
-            
-            if (response.ok) {
-                location.reload(); // 刷新页面更新列表
-            }
-        } catch (error) {
-            console.error('删除失败:', error);
-        }
-    }
-}
-</script>
-
 <style>
-.file-item {
-    transition: background-color 0.2s;
-    border-bottom: 1px solid #f3f4f6;
-}
-.file-item:last-child {
-    border-bottom: none;
-}
-.file-checkbox:checked + i {
-    color: #3b82f6 !important;
-}
+  /* 样式部分 */
+  .upload-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .file-input {
+    display: none;
+  }
+
+  .upload-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #2196f3;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow: auto;
+  }
+
+  .file-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .file-item {
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-align: center;
+  }
 </style>
+
+<script>
+  // 文件管理逻辑
+  function showFileManager() {
+    fetch("/file-stats")
+      .then((response) => response.json())
+      .then((data) => {
+        renderFiles(data);
+        document.getElementById("fileModal").style.display = "flex";
+      });
+  }
+
+  function renderFiles(data) {
+    const container = document.getElementById("fileGrid");
+    container.innerHTML = "";
+
+    ["raw", "processed", "predictions"].forEach((category) => {
+      data[category].files.forEach((file) => {
+        const fileItem = document.createElement("div");
+        fileItem.className = "file-item";
+        fileItem.innerHTML = `
+                <input type="checkbox" class="file-checkbox" 
+                    data-category="${category}" data-name="${file.name}">
+                <i class="fas fa-file-csv"></i>
+                <div class="file-name">${file.name}</div>
+                <small>${file.size}</small>
+            `;
+        container.appendChild(fileItem);
+      });
+    });
+  }
+
+  function deleteSelected() {
+    const selected = Array.from(
+      document.querySelectorAll(".file-checkbox:checked")
+    ).map((checkbox) => ({
+      category: checkbox.dataset.category,
+      name: checkbox.dataset.name,
+    }));
+
+    fetch("/delete-files", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ files: selected }),
+    }).then(() => showFileManager());
+  }
+
+  function closeModal() {
+    document.getElementById("fileModal").style.display = "none";
+  }
+</script>
 {% endblock %}

@@ -1,64 +1,67 @@
 {% extends "base.html" %}
-{% block title %}预测分析{% endblock %}
+
 {% block content %}
-<h1 class="text-3xl font-bold mb-6">🔮 预测结果可视化</h1>
-
-<div class="bg-white p-6 rounded-lg shadow-md mb-4">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div>
-            <label class="block text-sm font-medium text-gray-700">
-                预测类型
-                <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
-                    <option value="single">单步预测（未来1小时）</option>
-                    <option value="multi">多步预测（未来24小时）</option>
-                </select>
-            </label>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5>预测参数设置</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">选择预测模型</label>
+                    <select class="form-select">
+                        <option>LSTM模型</option>
+                        <option>随机森林模型</option>
+                        <option>组合预测模型</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">预测类型</label>
+                    <select class="form-select">
+                        <option>单步预测</option>
+                        <option>多步预测</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">预测步长</label>
+                    <input type="number" class="form-control" value="24" min="1" max="72">
+                </div>
+                <button class="btn btn-success w-100">
+                    <i class="bi bi-lightning-charge"></i>
+                    执行预测
+                </button>
+            </div>
         </div>
-        <div>
-            <label class="block text-sm font-medium text-gray-700">
-                预测时间
-                <input type="datetime-local" 
-                       class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
-            </label>
-        </div>
-        <div class="flex items-end">
-            <button class="px-4 py-2 bg-primary text-white rounded-lg">
-                开始预测 <i class="fas fa-play ml-2"></i>
-            </button>
+    </div>
+    
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header">
+                <h5>Prediction Results</h5>
+            </div>
+            <div class="card-body">
+                <div id="predictionChart" style="height:400px"></div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div class="bg-white p-6 rounded-lg shadow-md h-full">
-        <h3 class="text-lg font-medium mb-4">预测结果对比</h3>
-        <div class="h-64" id="prediction-chart"></div>
-        <div class="mt-4 flex justify-between text-sm text-gray-500">
-            <span>实际值：#00B4D8</span>
-            <span>预测值：#FF7B54</span>
-            <span>置信区间：#48CAE4</span>
-        </div>
-    </div>
-
-    <div class="bg-white p-6 rounded-lg shadow-md h-full">
-        <h3 class="text-lg font-medium mb-4">误差分析</h3>
-        <div class="grid grid-cols-3 gap-4">
-            <div>
-                <p class="text-xl font-bold">MAE</p>
-                <p class="text-3xl font-bold">12.7</p>
-            </div>
-            <div>
-                <p class="text-xl font-medium">RMSE</p>
-                <p class="text-3xl font-bold">18.5</p>
-            </div>
-            <div>
-                <p class="text-xl font-medium">R²</p>
-                <p class="text-3xl font-bold">0.92</p>
-            </div>
-        </div>
-        <div class="mt-4 text-sm text-gray-600">
-            （基于2023-01至2024-12历史数据验证）
-        </div>
-    </div>
-</div>
+{% block extra_js %}
+<script>
+    // 示例ECharts预测图表
+    var chart = echarts.init(document.getElementById('predictionChart'));
+    chart.setOption({
+        title: { text: 'Power Forecast' },
+        tooltip: { trigger: 'axis' },
+        xAxis: { data: ['1h', '2h', '3h', '4h', '5h'] },
+        yAxis: {},
+        series: [{
+            name: 'Prediction',
+            type: 'line',
+            data: [120, 132, 101, 134, 90]
+        }]
+    });
+</script>
+{% endblock %}
 {% endblock %}

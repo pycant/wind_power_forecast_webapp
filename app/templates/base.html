@@ -1,65 +1,414 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>风电功率预测系统 - {% block title %}{% endblock %}</title>
+    <title>风电功率预测平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <style>
-        /* 全局样式 */
-        :root {
-            --primary: #00B4D8;
-            --secondary: #48CAE4;
-            --dark: #030712;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #F9FAFB;
-            color: var(--dark);
-        }
-        .sidebar {
-            background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .content {
-            min-height: calc(100vh - 64px);
-        }
+        .sidebar-hover:hover { @apply bg-indigo-50 shadow-md rounded-md transition-all duration-300; }
+        .chart-card { @apply bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition-shadow; }
     </style>
 </head>
-<body>
-    <nav class="bg-white shadow-md">
+<body class="min-h-screen bg-gray-100 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
         <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <a href="/" class="text-2xl font-bold text-primary">🌪️ 风电预测</a>
-                <div class="hidden md:block">
-                    <a href="/upload" class="mx-4 text-gray-600 hover:text-primary">数据导入</a>
-                    <a href="/preprocessing" class="mx-4 text-gray-600 hover:text-primary">预处理</a>
-                    <a href="/model" class="mx-4 text-gray-600 hover:text-primary">模型选择</a>
-                    <a href="/predict" class="mx-4 text-gray-600 hover:text-primary">预测分析</a>
+            <div class="flex justify-between items-center py-3">
+                <a href="/" class="text-2xl font-bold text-indigo-600">🌪️ 风电智测</a>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#upload" class="nav-link" onclick="return false;">数据导入</a>
+                    <a href="#preprocess" class="nav-link">预处理</a>
+                    <a href="#model" class="nav-link">模型选择</a>
+                    <a href="#predict" class="nav-link">预测分析</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class="container mx-auto grid md:grid-cols-12 gap-4 mt-4">
-        <aside class="md:col-span-3 sidebar hidden md:block">
-            {% block sidebar %}{% endblock %}
-        </aside>
-        <main class="md:col-span-9 content p-4">
-            {% block content %}{% endblock %}
-        </main>
-    </div>
+    <!-- 数据导入模块 -->
+    <section id="upload" class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-6 border-b-2 border-indigo-600 pb-2">📤 数据上传</h2>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+                <div class="dropzone border-dashed border-2 border-gray-300 rounded-lg p-8 cursor-pointer hover:bg-gray-100" 
+                    onclick="document.querySelector('input[type=file]').click()">
+                    <i class="fas fa-cloud-upload-alt text-4xl text-indigo-600 mb-4"></i>
+                    <p class="text-gray-600">拖拽CSV文件至此，或点击选择，文件不要超过100MB，不要重名</p>
+                    <input type="file" class="hidden" accept=".csv" name="file" required id="csvFile">
+                </div>
+                
+                <!-- 添加验证提示区域 -->
+                <div id="validationMessage" class="text-red-500 text-sm mt-2 px-4"></div>
+                
+                <div id="uploadStatus" class="hidden mt-4 p-4 rounded-lg">
+                    <div class="success-status flex items-center space-x-2 text-green-600">
+                        <i class="fas fa-check-circle text-xl"></i>
+                        <span>文件上传成功！</span>
+                    </div>
+                    <div class="failed-status flex items-center space-x-2 text-red-600">
+                        <i class="fas fa-times-circle text-xl"></i>
+                        <span>上传失败，请重试</span>
+                    </div>
+                </div>
+                
+                <script>
+                    // 修改表单提交事件处理
+                    document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+                        e.preventDefault();
+                        const form = e.target;
+                        const fileInput = document.getElementById('csvFile');
+                        const validationDiv = document.getElementById('validationMessage');
+                        const statusDiv = document.getElementById('uploadStatus');
+                        
+                        if (!fileInput.files.length) return;
+                
+                        // 清除旧状态
+                        statusDiv.classList.add('hidden');
+                        statusDiv.querySelectorAll('div').forEach(el => el.classList.add('hidden'));
+                        
+                        try {
+                            // 前端验证
+                            const errors = await validateCSV(fileInput.files[0]);
+                            if (errors.length > 0) {
+                                validationDiv.innerHTML = errors.join('<br>');
+                                fileInput.value = '';
+                                return;
+                            }
+                
+                            // 创建异步上传
+                            const formData = new FormData(form);
+                            const response = await fetch(form.action, {
+                                method: 'POST',
+                                body: formData,
+                                headers: { 'Accept': 'application/json' }
+                            });
+                
+                            // 处理响应
+                            if (response.ok) {
+                                const result = await response.json();
+                                showUploadStatus(true, result.filename);
+                            } else {
+                                const error = await response.json();
+                                showUploadStatus(false, error.message);
+                            }
+                        } catch (err) {
+                            console.error('Error during file upload:', err);
+                            showUploadStatus(false, '网络连接异常');
+                        }
+                    });
+                
+                    // 状态显示函数
+                    function showUploadStatus(isSuccess, message = '') {
+                        const statusDiv = document.getElementById('uploadStatus');
+                        const successEl = statusDiv.querySelector('.success-status');
+                        const errorEl = statusDiv.querySelector('.failed-status');
+                        
+                        statusDiv.classList.remove('hidden');
+                        successEl.classList.toggle('hidden', !isSuccess);
+                        errorEl.classList.toggle('hidden', isSuccess);
+                        
+                        if (isSuccess) {
+                            successEl.querySelector('span').textContent = `已成功上传: ${message}`;
+                            // 添加文件图标
+                            successEl.insertAdjacentHTML('beforeend', `
+                                <div class="file-icon ml-4">
+                                    <i class="fas fa-file-csv text-2xl text-indigo-500"></i>
+                                    <span class="text-sm">${message}</span>
+                                </div>
+                            `);
+                        } else {
+                            errorEl.querySelector('span').textContent = message;
+                        }
+                        
+                        // 5秒后自动隐藏
+                        setTimeout(() => statusDiv.classList.add('hidden'), 5000);
+                    }
+                </script>
+                
+                <style>
+                    /* 添加动画效果 */
+                    #uploadStatus {
+                        transition: opacity 0.3s, transform 0.3s;
+                    }
+                    #uploadStatus.hidden {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+                    .file-icon {
+                        animation: bounceIn 0.5s;
+                    }
+                    
+                    @keyframes bounceIn {
+                        0% { transform: scale(0.5); opacity: 0; }
+                        60% { transform: scale(1.1); }
+                        100% { transform: scale(1); opacity: 1; }
+                    }
+                </style>
 
-    <footer class="bg-white shadow-md mt-4 p-4 text-center text-gray-500">
-        <p>© 2025 风电预测团队 | 技术支持：CEEMDAN-LSTM-RF组合模型</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <div class="flex space-x-2">
+                        <span class="text-sm text-gray-500">已支持格式：CSV（时间戳,风速,功率）</span>
+                    </div>
+                    <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+                        下一步：数据预览 <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            
+                <script>
+                    // 文件验证配置
+                    const VALIDATION_CONFIG = {
+                        maxSize: 100 * 1024 * 1024, // 100MB
+                        //requiredColumns: ['时间戳', '风速', '功率'],
+                        allowedTypes: ['text/csv', 'application/vnd.ms-excel']
+                    };
+            
+                    // 文件验证函数
+                    async function validateCSV(file) {
+                        const errors = [];
+                        
+                        // 文件类型验证
+                        if (!VALIDATION_CONFIG.allowedTypes.includes(file.type)) {
+                            errors.push('仅支持CSV格式文件');
+                        }
+            
+                        // 文件大小验证
+                        if (file.size > VALIDATION_CONFIG.maxSize) {
+                            errors.push(`文件大小超过限制（最大${VALIDATION_CONFIG.maxSize/1024/1024}MB）`);
+                        }
+            
+                        /*// 表头验证
+                        const header = await new Promise(resolve => {
+                            const reader = new FileReader();
+                            reader.onload = e => resolve(e.target.result.split('\n')[0]);
+                            reader.readAsText(file.slice(0, 1024)); // 仅读取前1KB
+                        });
+                        
+                        const columns = header.trim().split(',').map(c => c.replace(/"/g, ''));
+                        const missingColumns = VALIDATION_CONFIG.requiredColumns.filter(c => !columns.includes(c));
+                        
+                        if (missingColumns.length > 0) {
+                            errors.push(`缺少必要列：${missingColumns.join(', ')}`);
+                        }
+                        */
+                        return errors;
+                    }
+            
+                    // 表单提交事件
+                    document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+                        e.preventDefault();
+                        const fileInput = document.getElementById('csvFile');
+                        const validationDiv = document.getElementById('validationMessage');
+                        
+                        if (!fileInput.files.length) return;
+            
+                        const errors = await validateCSV(fileInput.files[0]);
+                        
+                        if (errors.length > 0) {
+                            validationDiv.innerHTML = errors.join('<br>');
+                            fileInput.value = ''; // 清空错误文件
+                        } else {
+                            validationDiv.innerHTML = '';
+                            e.target.submit(); // 通过验证后提交
+                        }
+                    });
+            
+                    // 实时显示文件名
+                    document.getElementById('csvFile').addEventListener('change', function() {
+                        if (this.files.length) {
+                            document.querySelector('.dropzone p').textContent = this.files[0].name;
+                        }
+                    });
+                </script>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- 预处理模块 -->
+    <section id="preprocess" class="container mx-auto px-4 py-8 bg-gray-50">
+        <h2 class="text-3xl font-bold mb-6 border-b-2 border-indigo-600 pb-2">🔄 数据预处理</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- 异常值检测 -->
+            <div class="chart-card">
+                <div class="p-4">
+                    <h3 class="text-lg font-medium text-indigo-600 mb-3">📊 异常值检测</h3>
+                    <p class="text-gray-600 mb-4">基于DPGMM算法的时序异常检测</p>
+                    <div class="h-40 bg-gray-100 rounded-lg">
+                        <!-- 模拟箱线图 -->
+                        <div class="relative h-full">
+                            <div class="absolute inset-x-1/4 bottom-1/4 w-1/2 h-1/2 bg-white rounded-lg shadow-md"></div>
+                            <div class="absolute inset-x-1/3 bottom-1/3 w-1/3 h-2 bg-indigo-600 rounded-lg"></div>
+                            <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-red-500 rounded-full shadow-lg"></div>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-end">
+                        <button class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full">
+                            检测到3处异常 <i class="fas fa-exclamation-triangle ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 特征工程 -->
+            <div class="chart-card">
+                <div class="p-4">
+                    <h3 class="text-lg font-medium text-indigo-600 mb-3">⚙️ 特征构建</h3>
+                    <form action="/data_preprocessing_submit" method="post">
+                        <div class="grid grid-cols-2 gap-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="form-checkbox mr-2" name="features" value="滑动窗口特征（3h）">
+                                滑动窗口特征（3h）
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="form-checkbox mr-2" name="features" value="CEEMDAN分解IMF（5层）">
+                                CEEMDAN分解IMF（5层）
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="form-checkbox mr-2" name="features" value="气象因子融合">
+                                气象因子融合
+                            </label>
+                        </div>
+                        <div type="submit" class="mt-4 flex justify-end">
+
+                            <button class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+                                应用预处理 <i class="fas fa-sync-alt ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 模型选择模块 -->
+    <section id="model" class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-6 border-b-2 border-indigo-600 pb-2">🤖 模型选择</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- 模型卡片 -->
+            <div class="chart-card">
+                <div class="p-4">
+                    <h3 class="text-lg font-medium text-indigo-600 mb-3">
+                        <i class="fas fa-layer-group mr-2"></i> CEEMDAN-LSTM
+                    </h3>
+                    <p class="text-gray-600 mb-4">分解-重构式时序预测模型</p>
+                    <div class="mb-4">
+                        <span class="bg-indigo-100 text-indigo-600 px-2 py-1 rounded-full mr-2">
+                            贝叶斯优化
+                        </span>
+                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full">
+                            残差修正
+                        </span>
+                    </div>
+                    <div class="mt-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-sm text-gray-500">历史MAE：</p>
+                                <h4 class="text-xl font-bold text-indigo-600">{{mae}}MW</h4>
+                            </div>
+                            <form action="/model_selection_submit" method="post">
+                                <button class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+                                    选择模型 <i class="fas fa-check ml-2"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 预测模块 -->
+    <section id="predict" class="container mx-auto px-4 py-8 bg-gray-50">
+        <h2 class="text-3xl font-bold mb-6 border-b-2 border-indigo-600 pb-2">🔮 预测分析</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- 预测类型 -->
+            <form action="/predict_submit" method="post">
+                <div class="chart-card p-6">
+                    <h3 class="text-lg font-medium text-indigo-600 mb-4">预测模式选择</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <label class="relative block p-4 bg-white rounded-lg shadow-md hover:shadow-lg cursor-pointer">
+                            <input type="radio" name="predict-type" class="hidden" value="single">
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-2xl text-indigo-600 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium">单步预测</h4>
+                                    <p class="text-gray-500">未来1小时功率预测</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 rounded-lg border-2 border-transparent focus:border-indigo-600"></div>
+                        </label>
+                        <label class="relative block p-4 bg-white rounded-lg shadow-md hover:shadow-lg cursor-pointer">
+                            <input type="radio" name="predict-type" class="hidden" value="multi">
+                            <div class="flex items-center">
+                                <i class="fas fa-chart-line text-2xl text-indigo-600 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium">多步预测</h4>
+                                    <p class="text-gray-500">未来24小时功率曲线</p>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 rounded-lg border-2 border-transparent focus:border-indigo-600"></div>
+                        </label>
+                    </div>
+                    <div class="mt-6">
+                        <button class="w-full px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
+                            开始预测 <i class="fas fa-rocket ml-2 animate-bounce"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <!-- 预测结果 -->
+            <div class="chart-card">
+                <div class="p-4 h-full">
+                    <h3 class="text-lg font-medium text-indigo-600 mb-4">📈 预测曲线</h3>
+                    <div class="h-64 bg-gray-100 rounded-lg relative">
+                        <!-- 模拟时序曲线 -->
+                        <div class="absolute inset-0">
+                            <svg viewBox="0 0 400 200" class="w-full h-full">
+                                <path d="M0 150 Q50 180 100 120 T200 160 Q250 200 300 140 T400 180" 
+                                      fill="none" stroke="indigo-600" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="200" cy="160" r="3" fill="indigo-600"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <p class="text-sm text-gray-500">预测时间：2025-04-21 14:00</p>
+                        <span class="text-lg font-bold text-indigo-600">1850kW</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-white shadow-md mt-8 py-4">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            <p class="text-sm">© 2025 风电预测平台 | 技术支持：CEEMDAN-LSTM混合模型</p>
+        </div>
     </footer>
 
+    <!-- 交互逻辑 -->
     <script>
-        // 模拟加载动画
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                document.querySelectorAll('.skeleton').forEach(el => el.remove());
-            }, 1500);
+        // 导航平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 拖拽上传
+        const dropzone = document.querySelector('.dropzone');
+        dropzone.addEventListener('dragover', e => {
+            e.preventDefault();
+            dropzone.classList.add('bg-indigo-100');
+        });
+        dropzone.addEventListener('dragleave', () => {
+            dropzone.classList.remove('bg-indigo-100');
         });
     </script>
 </body>
