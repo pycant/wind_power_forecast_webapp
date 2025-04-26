@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}预测分析{% endblock %}
+{% block content %}
+<h1 class="text-3xl font-bold mb-6">🔮 预测结果可视化</h1>
+
+<div class="bg-white p-6 rounded-lg shadow-md mb-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+            <label class="block text-sm font-medium text-gray-700">
+                预测类型
+                <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                    <option value="single">单步预测（未来1小时）</option>
+                    <option value="multi">多步预测（未来24小时）</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-gray-700">
+                预测时间
+                <input type="datetime-local" 
+                       class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+            </label>
+        </div>
+        <div class="flex items-end">
+            <button class="px-4 py-2 bg-primary text-white rounded-lg">
+                开始预测 <i class="fas fa-play ml-2"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="bg-white p-6 rounded-lg shadow-md h-full">
+        <h3 class="text-lg font-medium mb-4">预测结果对比</h3>
+        <div class="h-64" id="prediction-chart"></div>
+        <div class="mt-4 flex justify-between text-sm text-gray-500">
+            <span>实际值：#00B4D8</span>
+            <span>预测值：#FF7B54</span>
+            <span>置信区间：#48CAE4</span>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-md h-full">
+        <h3 class="text-lg font-medium mb-4">误差分析</h3>
+        <div class="grid grid-cols-3 gap-4">
+            <div>
+                <p class="text-xl font-bold">MAE</p>
+                <p class="text-3xl font-bold">12.7</p>
+            </div>
+            <div>
+                <p class="text-xl font-medium">RMSE</p>
+                <p class="text-3xl font-bold">18.5</p>
+            </div>
+            <div>
+                <p class="text-xl font-medium">R²</p>
+                <p class="text-3xl font-bold">0.92</p>
+            </div>
+        </div>
+        <div class="mt-4 text-sm text-gray-600">
+            （基于2023-01至2024-12历史数据验证）
+        </div>
+    </div>
+</div>
+{% endblock %}

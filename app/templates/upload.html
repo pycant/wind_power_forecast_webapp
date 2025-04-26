@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <!-- 头部操作栏 -->
+    <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-bold">📁 数据管理中心</h1>
+        <div class="flex space-x-4">
+            <input type="text" id="searchInput" placeholder="搜索文件..." class="px-4 py-2 border rounded-lg">
+            <a href="{{ url_for('dashboard') }}" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg">
+                ← 返回主界面
+            </a>
+        </div>
+    </div>
+
+    <!-- 文件分类管理 -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 原始数据 -->
+        <div class="bg-white rounded-lg shadow-md">
+            <div class="p-4 border-b border-gray-200">
+                <h3 class="text-xl font-semibold">
+                    <i class="fas fa-database text-blue-500 mr-2"></i>
+                    原始数据
+                    <span class="text-sm text-gray-500 ml-2">({{ raw_files|length }} files)</span>
+                </h3>
+            </div>
+            <div class="p-4 file-list" data-category="raw">
+                {% for file in raw_files %}
+                <div class="file-item flex items-center p-2 hover:bg-gray-50">
+                    <input type="checkbox" class="file-checkbox mr-3">
+                    <i class="fas fa-file-csv text-green-500 text-lg mr-2"></i>
+                    <span class="flex-1 truncate">{{ file.name }}</span>
+                    <span class="text-sm text-gray-500">{{ file.size }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- 处理数据 -->
+        <div class="bg-white rounded-lg shadow-md">
+            <div class="p-4 border-b border-gray-200">
+                <h3 class="text-xl font-semibold">
+                    <i class="fas fa-cogs text-purple-500 mr-2"></i>
+                    处理数据
+                    <span class="text-sm text-gray-500 ml-2">({{ processed_files|length }} files)</span>
+                </h3>
+            </div>
+            <div class="p-4 file-list" data-category="processed">
+                {% for file in processed_files %}
+                <div class="file-item flex items-center p-2 hover:bg-gray-50">
+                    <input type="checkbox" class="file-checkbox mr-3">
+                    <i class="fas fa-file-excel text-blue-500 text-lg mr-2"></i>
+                    <span class="flex-1 truncate">{{ file.name }}</span>
+                    <span class="text-sm text-gray-500">{{ file.size }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- 预测结果 -->
+        <div class="bg-white rounded-lg shadow-md">
+            <div class="p-4 border-b border-gray-200">
+                <h3 class="text-xl font-semibold">
+                    <i class="fas fa-chart-line text-red-500 mr-2"></i>
+                    预测结果
+                    <span class="text-sm text-gray-500 ml-2">({{ prediction_files|length }} files)</span>
+                </h3>
+            </div>
+            <div class="p-4 file-list" data-category="predictions">
+                {% for file in prediction_files %}
+                <div class="file-item flex items-center p-2 hover:bg-gray-50">
+                    <input type="checkbox" class="file-checkbox mr-3">
+                    <i class="fas fa-file-pdf text-red-500 text-lg mr-2"></i>
+                    <span class="flex-1 truncate">{{ file.name }}</span>
+                    <span class="text-sm text-gray-500">{{ file.size }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部操作栏 -->
+    <div class="mt-6 flex justify-between items-center bg-gray-50 p-4 rounded-lg">
+        <div class="flex items-center space-x-4">
+            <button onclick="toggleSelectAll()" class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg">
+                <i class="fas fa-check-square mr-2"></i>全选/取消
+            </button>
+            <button onclick="deleteSelected()" class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg">
+                <i class="fas fa-trash-alt mr-2"></i>删除选中
+            </button>
+        </div>
+        <div class="text-sm text-gray-500">
+            总存储空间：{{ total_usage }} / 10GB
+            <div class="w-48 h-2 bg-gray-200 rounded-full mt-1">
+                <div class="h-full bg-blue-500 rounded-full" style="width: {{ usage_percentage }}%"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 交互脚本 -->
+<script>
+// 文件搜索功能
+document.getElementById('searchInput').addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    document.querySelectorAll('.file-item').forEach(item => {
+        const fileName = item.querySelector('span').textContent.toLowerCase();
+        item.style.display = fileName.includes(searchTerm) ? 'flex' : 'none';
+    });
+});
+
+// 全选切换
+function toggleSelectAll() {
+    const checkboxes = document.querySelectorAll('.file-checkbox');
+    const allChecked = [...checkboxes].every(c => c.checked);
+    checkboxes.forEach(c => c.checked = !allChecked);
+}
+
+// 删除选中文件
+async function deleteSelected() {
+    const selectedFiles = [];
+    document.querySelectorAll('.file-checkbox:checked').forEach(checkbox => {
+        const fileName = checkbox.parentNode.querySelector('span').textContent.trim();
+        const category = checkbox.closest('.file-list').dataset.category;
+        selectedFiles.push({name: fileName, category: category});
+    });
+
+    if (selectedFiles.length === 0) return;
+
+    if (confirm(`确定要删除选中的 ${selectedFiles.length} 个文件吗？`)) {
+        try {
+            const response = await fetch('/delete-files', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({files: selectedFiles})
+            });
+            
+            if (response.ok) {
+                location.reload(); // 刷新页面更新列表
+            }
+        } catch (error) {
+            console.error('删除失败:', error);
+        }
+    }
+}
+</script>
+
+<style>
+.file-item {
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #f3f4f6;
+}
+.file-item:last-child {
+    border-bottom: none;
+}
+.file-checkbox:checked + i {
+    color: #3b82f6 !important;
+}
+</style>
+{% endblock %}

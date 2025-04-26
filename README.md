@@ -27,6 +27,8 @@ wind_power_forecast_webapp/
 │   │   ├── upload.html               # 数据上传界面
 │   │   ├── training.html             # 模型训练监控界面
 │   │   ├── results.html              # 多维结果展示界面
+│   │   ├── predict.html              # 预测结果展示界面
+│   │   ├── preprocessing.html        # 数据预处理界面
 │   │   └── report.html               # 综合效益评估报告
 │   │
 │   ├── static/                       # 静态资源
@@ -66,6 +68,7 @@ wind_power_forecast_webapp/
 ├── requirements.txt                  # Python依赖库
 ├── Dockerfile                        # 容器化部署配置
 ├── docker-compose.yml                # 服务编排文件
+├── run.py                            # 启动脚本
 └── README.md                         # 项目说明文档
 ```
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风电功率预测系统 - {% block title %}{% endblock %}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 全局样式 */
+        :root {
+            --primary: #00B4D8;
+            --secondary: #48CAE4;
+            --dark: #030712;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F9FAFB;
+            color: var(--dark);
+        }
+        .sidebar {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .content {
+            min-height: calc(100vh - 64px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-2xl font-bold text-primary">🌪️ 风电预测</a>
+                <div class="hidden md:block">
+                    <a href="/upload" class="mx-4 text-gray-600 hover:text-primary">数据导入</a>
+                    <a href="/preprocessing" class="mx-4 text-gray-600 hover:text-primary">预处理</a>
+                    <a href="/model" class="mx-4 text-gray-600 hover:text-primary">模型选择</a>
+                    <a href="/predict" class="mx-4 text-gray-600 hover:text-primary">预测分析</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto grid md:grid-cols-12 gap-4 mt-4">
+        <aside class="md:col-span-3 sidebar hidden md:block">
+            {% block sidebar %}{% endblock %}
+        </aside>
+        <main class="md:col-span-9 content p-4">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <footer class="bg-white shadow-md mt-4 p-4 text-center text-gray-500">
+        <p>© 2025 风电预测团队 | 技术支持：CEEMDAN-LSTM-RF组合模型</p>
+    </footer>
+
+    <script>
+        // 模拟加载动画
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.querySelectorAll('.skeleton').forEach(el => el.remove());
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
