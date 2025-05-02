@@ -10,13 +10,16 @@ wind_power_forecast_webapp/
 │   ├── routes.py                     # 所有路由配置
 │   ├── forms.py                      # 表单类定义（上传/参数配置）
 │   ├── models/                       # 机器学习模型模块
+│   │   ├── m_configure.json          # 模型配置参数
 │   │   ├── ceemdan_decomposer.py     # CEEMDAN信号分解实现
 │   │   ├── bayesian_lstm.py          # 贝叶斯优化LSTM模型
 │   │   ├── residual_rf.py            # 随机森林残差修正模块
 │   │   └── model_utils.py            # 模型加载/保存工具
 │   │
 │   ├── utils/                        # 数据处理工具
+│   │   ├── p_configure.json          # 数据预处理配置参数
 │   │   ├── data_cleaner.py           # DPGMM异常检测与数据清洗
+│   │   ├── DPGMM.py                  # DPGMM核心算法
 │   │   ├── feature_engineer.py       # 特征工程与IMF选择
 │   │   ├── scaler_manager.py         # 归一化处理器管理
 │   │   └── shap_analyzer.py          # SHAP解释性分析模块
@@ -47,6 +50,7 @@ wind_power_forecast_webapp/
 │   │
 │   ├── data/                         # 数据管理
 │   │   ├── raw/                      # 原始数据存储
+│   │   ├── cleaned/                  # 清洗后数据存储
 │   │   ├── processed/                # 处理后数据存储
 │   │   └── predictions/              # 预测结果存储
 │   │

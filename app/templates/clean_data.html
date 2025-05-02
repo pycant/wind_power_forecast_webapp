@@ -1,0 +1,465 @@
+<!-- templates/clean_data.html -->
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件管理中心 - 风电预测平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        .chart-card { @apply bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition-shadow; }
+        .modal-enter { animation: modalFadeIn 0.3s ease-out; }
+        .hidden {
+            display: none !important;
+        }
+
+        @keyframes modalFadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-gray-100 font-sans">
+    <!-- 导航栏（与base.html完全一致） -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-3">
+                <a href="/" class="text-2xl font-bold text-indigo-600">🌪️ 风电智测</a>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#upload" class="nav-link">数据导入</a>
+                    <a href="#preprocess" class="nav-link">预处理</a>
+                    <a href="#model" class="nav-link">模型选择</a>
+                    <a href="#predict" class="nav-link">预测分析</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+<section class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold mb-6 border-b-2 border-indigo-600 pb-2">⚙️ 数据清洗配置</h2>
+    
+    <!-- 配置表单 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- 左栏：参数配置 -->
+        <div class="chart-card p-6">
+            <h3 class="text-lg font-medium text-indigo-600 mb-4">参数设置</h3>
+            <form id="configForm" class="space-y-4">
+                <!-- 文件选择 -->
+                <div class="form-group">
+                    <label class="block text-sm font-medium text-gray-700">选择数据文件</label>
+                    <select id="fileSelect" name="current_file" 
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500">
+                        <!-- 动态加载文件选项 -->
+                    </select>
+                </div>
+
+                <!-- 异常值处理部分 -->
+                <div class="form-group">
+                    <label class="block text-sm font-medium text-gray-700">异常值处理方式</label>
+                    <div class="mt-2 space-y-2">
+                        <label class="inline-flex items-center">
+                            <input 
+                                type="radio" 
+                                name="method" 
+                                value="delete" 
+                                class="form-radio"
+                                id="deleteRadio"
+                            >
+                            <span class="ml-2">直接删除</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input 
+                                type="radio" 
+                                name="method" 
+                                value="interpolate" 
+                                class="form-radio"
+                                id="interpolateRadio"
+                            >
+                            <span class="ml-2">插值填补</span>
+                        </label>
+                    </div>
+                    <div id="interpolateOptions" class="hidden mt-2">
+                        <select name="interpolate_method" class="block w-full rounded-md border-gray-300">
+                            <option value="linear">线性插值</option>
+                            <option value="nearest">最近邻插值</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="block text-sm font-medium text-gray-700">空值处理策略</label>
+                    <select name="missing_value_strategy" class="mt-1 block w-full rounded-md border-gray-300">
+                        <option value="drop">删除空值</option>
+                        <option value="interpolate">插值填补</option>
+                        <option value="knn">KNN填补</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="block text-sm font-medium text-gray-700">
+                        最大空值比例（当前: <span id="maxMissingValue">30</span>%）
+                    </label>
+                    <input type="range" name="max_missing_ratio" min="0" max="1" step="0.05" 
+                           class="w-full mt-2 range-slider" 
+                           oninput="document.getElementById('maxMissingValue').textContent = Math.round(this.value*100)">
+                </div>
+                <!-- 提交按钮 -->
+                <div class="mt-6 flex justify-between">
+                    <button type="button" onclick="saveConfig()" 
+                            class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+                        保存配置
+                    </button>
+                    <button type="button" onclick="applyProcessing()" 
+                            class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+                        应用处理
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- 右栏：参数展示 -->
+        <div class="chart-card p-6">
+            <h3 class="text-lg font-medium text-indigo-600 mb-4">当前配置</h3>
+            <div id="configDisplay" class="space-y-2 text-sm">
+                <!-- 配置信息动态加载 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 处理结果展示 -->
+    <div id="resultSection" class="hidden mt-8">
+        <div class="chart-card p-6">
+            <h3 class="text-lg font-medium text-indigo-600 mb-4">处理结果</h3>
+            
+            <!-- 数据预览区域 -->
+            <div class="mb-4">
+            <h4 class="text-sm font-semibold text-gray-600 mb-2">数据预览</h4>
+            <div id="dataPreview" class="bg-gray-50 rounded-lg p-2 border border-gray-200 overflow-x-auto"></div>
+            
+        </div>
+        
+
+        <!-- 在结果区域添加消息展示 -->
+        <div id="loadingIndicator" class="hidden p-3 bg-blue-100 rounded-lg">
+            <i class="fas fa-spinner fa-spin mr-2 text-blue-500"></i>
+            正在处理中...
+        </div>
+        <div id="messageSection" class="hidden mt-6 space-y-3">
+            <div v-for="msg in messages" class="p-3 rounded-lg" 
+                 :class="{'bg-blue-100': msg.type === 'status', 
+                         'bg-yellow-100': msg.type === 'warning',
+                         'bg-red-100': msg.type === 'error'}">
+                <i class="fas mr-2" 
+                   :class="{'fa-info-circle': msg.type === 'status',
+                           'fa-exclamation-triangle': msg.type === 'warning',
+                           'fa-times-circle': msg.type === 'error'}"></i>
+                {{ msg.content }}
+            </div>
+        </div>
+    </div>
+    <form id="resultForm" method="post" action="/back_to_home">
+    <div class="flex justify-center">
+        <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+            保存并回到主页 <i class="fas fa-arrow-right ml-2"></i>
+        </button>
+    </div>
+</section>
+<style>
+    /* 数据预览容器 */
+    #dataPreview {
+        @apply overflow-auto max-h-96; /* 最大高度+滚动条 */
+        scrollbar-width: thin; /* 纤细滚动条 */
+        scrollbar-color: #c7d2fe #f0f4ff; /* 滚动条颜色 */
+    }
+    
+    /* 表格整体样式 */
+    #dataPreview table {
+        @apply w-full text-[11px]; /* 缩小字体 */
+        border-collapse: separate;
+        border-spacing: 0;
+        min-width: 800px; /* 最小宽度保证表头完整 */
+    }
+    
+    /* 表头样式 */
+    #dataPreview thead th {
+        @apply bg-indigo-50; /* 调浅背景色 */
+        @apply text-indigo-600; /* 调整文字颜色 */
+        @apply px-2 py-1.5; /* 缩小内边距 */
+        @apply uppercase; /* 英文表头转大写 */
+        @apply tracking-wider; /* 增加字母间距 */
+        @apply bg-indigo-100 text-indigo-700 px-3 py-2 sticky top-0;
+        border-bottom: 2px solid #818cf8; /* 底部边框 */
+        box-shadow: 0 2px 2px -1px rgba(129,140,248,0.1); /* 悬浮阴影 */
+    }
+    
+    /* 新增5: 列宽优化 */
+    #dataPreview td:first-child {
+        min-width: 160px; /* 时间列最小宽度 */
+    }
+    #dataPreview td:nth-child(n+2):not(:last-child) {
+        min-width: 80px; /* 中间列最小宽度 */
+    }
+    #dataPreview td:last-child {
+        min-width: 100px; /* 功率列最小宽度 */
+    }
+
+
+    /* 表格单元格 */
+    #dataPreview td {
+        @apply px-2 py-1; /* 缩小单元格内边距 */
+        @apply whitespace-nowrap; /* 禁止文字换行 */
+    }
+    
+    /* 斑马纹效果 */
+    #dataPreview tbody tr:nth-child(even) {
+        @apply bg-gray-50; /* 偶数行背景 */
+    }
+    
+    /* 悬停效果 */
+    #dataPreview tbody tr:hover {
+        @apply bg-blue-50; /* 悬停背景 */
+        transform: scale(1.002); /* 微放大效果 */
+        box-shadow: 0 1px 3px rgba(99,102,241,0.1); /* 悬浮阴影 */
+    }
+    
+    /* 特殊列高亮 */
+    #dataPreview td:first-child {
+        @apply font-medium text-indigo-600; /* 时间列特殊样式 */
+    }
+    
+    #dataPreview td:last-child {
+        @apply font-semibold text-green-700; /* 功率列特殊样式 */
+    }
+    
+    /* 自定义滚动条 */
+    #dataPreview::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    #dataPreview::-webkit-scrollbar-track {
+        @apply bg-indigo-50 rounded;
+    }
+    
+    #dataPreview::-webkit-scrollbar-thumb {
+        @apply bg-indigo-300 rounded hover:bg-indigo-400;
+        @apply bg-indigo-200; /* 调浅滚动条颜色 */
+        border-radius: 8px;
+    }
+    </style>
+
+<script>
+// 初始化加载配置
+function loadConfig() {
+    fetch('/get_config')
+        .then(res => res.json())
+        .then(config => {
+            // 填充文件选择
+            const fileSelect = document.getElementById('fileSelect')
+            fileSelect.innerHTML = config.file_options.map(f => 
+                `<option ${f === config.current_file ? 'selected' : ''}>${f}</option>`
+            ).join('')
+
+            // 更新单选按钮状态
+            const method = config.anomaly_handling?.method || 'delete'
+            document.querySelector(`[name="method"][value="${method}"]`).checked = true
+            
+            // 更新插值方法选择
+            const interpolateMethod = config.anomaly_handling?.interpolate_method || 'linear'
+            document.querySelector(`[name="interpolate_method"]`).value = interpolateMethod
+            
+            // 强制触发change事件更新显示
+            document.querySelector('[name="method"]:checked').dispatchEvent(new Event('change'))
+            
+            // 显示当前配置
+            displayConfig(config)
+        })
+}
+
+// 动态显示插值选项
+document.addEventListener('DOMContentLoaded', () => {
+    // 动态显示插值选项
+    document.querySelectorAll('[name="method"]').forEach(el => {
+        el.addEventListener('change', () => {
+            const interpolateDiv = document.getElementById('interpolateOptions')
+            interpolateDiv.classList.toggle('hidden', el.value !== 'interpolate')
+            
+            // 自动选择默认插值方法
+            if(el.value === 'interpolate' && !document.querySelector('[name="interpolate_method"]').value) {
+                document.querySelector('[name="interpolate_method"]').value = 'linear'
+            }
+        })
+    })
+    
+    // 初始加载配置
+    loadConfig()
+})
+
+// 保存配置
+function saveConfig() {
+    const formData = new FormData(document.getElementById('configForm'))
+    const config = {
+        current_file: formData.get('current_file'),
+        anomaly_handling: {
+            method: formData.get('method'),
+            interpolate_method: formData.get('interpolate_method')
+        }
+    }
+
+    fetch('/update_config', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(config)
+    }).then(() => loadConfig())
+}
+
+// 应用处理
+function applyProcessing() {
+    // 显示加载状态
+    const loading = document.getElementById('loadingIndicator');
+    loading.classList.remove('hidden');
+    
+    // 清空旧消息
+    document.getElementById('messageSection').innerHTML = '';
+    
+    fetch('/process_data', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'}
+    })
+    .then(async response => {
+        const isJson = response.headers.get('content-type')?.includes('application/json');
+        const data = isJson ? await response.json() : null;
+        
+        if (!response.ok) {
+            const error = (data && data.message) || response.statusText;
+            throw new Error(error);
+        }
+        return data;
+    })
+    .then(data => {
+        // 统一消息结构处理
+        const messages = {
+            status: data.message?.status || [],
+            warnings: data.message?.warnings || [],
+            errors: data.message?.errors || []
+        };
+        
+        if (data.status === 'success') {
+            // 更新数据预览
+            document.getElementById('dataPreview').innerHTML = data.preview;
+            // 渲染图表
+            renderChart(data.chart_data); 
+        }
+        
+        showProcessingMessages(messages);
+    })
+    .catch(error => {
+        showProcessingMessages({
+            errors: [error.message || '请求失败，请检查网络连接']
+        });
+    })
+    .finally(() => {
+        loading.classList.add('hidden');
+        document.getElementById('resultSection').classList.remove('hidden');
+    });
+}
+
+
+function renderChart(chartData) {
+    try {
+        // 清除旧图表
+        if(window.myChart instanceof Chart){
+            window.myChart.destroy();
+        }
+        
+        const ctx = document.getElementById('anomalyChart').getContext('2d');
+        window.myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: chartData.labels,
+                datasets: [{
+                    label: '原始数据',
+                    data: chartData.raw,
+                    borderColor: '#ff6384',
+                    fill: false
+                },{
+                    label: '清洗后数据',
+                    data: chartData.clean,
+                    borderColor: '#4bc0c0',
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'top' },
+                    title: { display: true, text: '数据清洗效果对比' }
+                }
+            }
+        });
+    } catch (e) {
+        console.error('图表渲染失败:', e);
+        showProcessingMessages({
+            errors: ['数据可视化失败：'+e.message]
+        });
+    }
+}
+
+
+// 在<script>中添加配置显示逻辑
+function displayConfig(config) {
+    const displayDiv = document.getElementById('configDisplay');
+    const items = [
+        ['当前文件', config.current_file],
+        ['异常处理方式', config.anomaly_handling.method],
+        ['插值方法', config.anomaly_handling.interpolate_method || 'N/A'],
+        ['空值策略', config.data_format.missing_value_strategy],
+        ['最大空值率', `${config.data_format.max_missing_ratio*100}%`]
+    ];
+    // 更新表单元素
+    document.querySelector('[name="missing_value_strategy"]').value = 
+        config.data_format.missing_value_strategy;
+    document.querySelector('[name="max_missing_ratio"]').value = 
+        config.data_format.max_missing_ratio;
+
+    displayDiv.innerHTML = items.map(([label, value]) => `
+        <div class="flex justify-between py-2 border-b">
+            <span class="text-gray-600">${label}</span>
+            <span class="text-indigo-600">${value}</span>
+        </div>
+    `).join('');
+    }
+
+// 增强消息展示功能
+function showProcessingMessages(messages) {
+    const container = document.getElementById('messageSection');
+    container.classList.remove('hidden');
+    
+    // 清空旧消息
+    container.innerHTML = '';
+    
+    // 分类渲染消息
+    const messageTypes = {
+        'status': {icon: 'fa-info-circle', color: 'text-blue-500'},
+        'warnings': {icon: 'fa-exclamation-triangle', color: 'text-yellow-500'},
+        'errors': {icon: 'fa-times-circle', color: 'text-red-500'}
+    };
+    
+    Object.entries(messageTypes).forEach(([type, style]) => {
+        if(messages[type]) {
+            messages[type].forEach(msg => {
+                const div = document.createElement('div');
+                div.className = `p-3 rounded-lg mb-2 ${style.color.replace('text','bg')}`;
+                div.innerHTML = `
+                    <i class="fas ${style.icon} mr-2 ${style.color}"></i>
+                    <span class="text-sm">${msg}</span>
+                `;
+                container.appendChild(div);
+            });
+        }
+    });
+}
+// 初始化
+window.addEventListener('DOMContentLoaded', loadConfig)
+</script>

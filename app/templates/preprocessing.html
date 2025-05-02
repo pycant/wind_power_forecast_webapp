@@ -1,39 +1,19 @@
-{% extends "base.html" %}
-
-{% block content %}
-<div class="row">
-    <div class="col-md-4">
-        <div class="card shadow">
-            <div class="card-header bg-warning">
-                <h5>Processing Steps</h5>
-            </div>
-            <div class="card-body">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active">
-                        Missing Value Handling
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        Outlier Detection (DPGMM)
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        Feature Engineering
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-md-8">
-        <div class="card shadow">
-            <div class="card-header bg-success text-white">
-                <h5>Data Visualization</h5>
-            </div>
-            <div class="card-body">
-                <div id="outlierChart" style="height: 400px;">
-                    <!-- 这里可以放置Plotly图表 -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{% endblock %}
+{
+  "current_file": "wind_data_2024.csv",
+  "file_options": ["file1.csv", "file2.csv"],
+  "anomaly_handling": {
+    "method": "delete",
+    "interpolate_method": "linear",
+    "max_anomaly_duration": 3,
+    "threshold": 2.5
+  },
+  "feature_settings": {
+    "window_size": 3,
+    "ceemdan_levels": 5,
+    "enable_meteorology": true
+  },
+  "system": {
+    "last_modified": "2024-03-20 14:30:00",
+    "version": "1.2.0"
+  }
+}

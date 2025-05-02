@@ -152,8 +152,12 @@
                         <span class="text-sm text-gray-500">已支持格式：CSV（时间戳,风速,功率）</span>
                     </div>
                     <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
-                        下一步：数据预览 <i class="fas fa-arrow-right ml-2"></i>
+                        下一步：上传选择数据 <i class="fas fa-arrow-right ml-2"></i>
                     </button>
+                    <button id="open-manager" type="button" class="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700">
+                        打开文件管理 <i class="fas fa-folder-open ml-2"></i>
+                    </button>
+
                 </div>
             
                 <script>
@@ -220,6 +224,16 @@
                             document.querySelector('.dropzone p').textContent = this.files[0].name;
                         }
                     });
+                    
+                    document.getElementById('open-manager').addEventListener('click', async () => {
+                        try {
+                            // 改为GET请求并跳转页面
+                            window.location.href = '/file_manager';
+                        } catch (err) {
+                            console.error('打开文件管理失败:', err);
+                            alert('无法打开文件管理器');
+                        }
+                    });
                 </script>
 
             </form>
@@ -256,7 +270,7 @@
                 <div class="p-4">
                     <h3 class="text-lg font-medium text-indigo-600 mb-3">⚙️ 特征构建</h3>
                     <form action="/data_preprocessing_submit" method="post">
-                        <div class="grid grid-cols-2 gap-2">
+                        <div class="hidden grid grid-cols-2 gap-2">
                             <label class="flex items-center">
                                 <input type="checkbox" class="form-checkbox mr-2" name="features" value="滑动窗口特征（3h）">
                                 滑动窗口特征（3h）

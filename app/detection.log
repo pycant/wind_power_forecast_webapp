@@ -1,0 +1,1402 @@
+2025-05-01 23:24:52,303 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-01 23:24:52,303 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-01 23:24:52,307 - INFO -  * Restarting with stat
+2025-05-01 23:24:54,034 - WARNING -  * Debugger is active!
+2025-05-01 23:24:54,041 - INFO -  * Debugger PIN: 886-850-343
+2025-05-01 23:25:03,823 - INFO - 127.0.0.1 - - [01/May/2025 23:25:03] "[33mPOST /data_preprocessing_submit HTTP/1.1[0m" 404 -
+2025-05-01 23:25:07,685 - INFO - 127.0.0.1 - - [01/May/2025 23:25:07] "[33mPOST /data_preprocessing_submit HTTP/1.1[0m" 404 -
+2025-05-01 23:25:12,498 - INFO - 127.0.0.1 - - [01/May/2025 23:25:12] "[33mPOST /data_preprocessing_submit HTTP/1.1[0m" 404 -
+2025-05-01 23:25:18,131 - INFO - 127.0.0.1 - - [01/May/2025 23:25:18] "[33mPOST /data_preprocessing_submit HTTP/1.1[0m" 404 -
+2025-05-01 23:25:21,425 - INFO - 127.0.0.1 - - [01/May/2025 23:25:21] "GET / HTTP/1.1" 200 -
+2025-05-01 23:25:23,006 - INFO - 127.0.0.1 - - [01/May/2025 23:25:23] "[33mPOST /data_preprocessing_submit HTTP/1.1[0m" 404 -
+2025-05-01 23:25:35,643 - INFO - 127.0.0.1 - - [01/May/2025 23:25:35] "[33mGET /data_preprocessing HTTP/1.1[0m" 404 -
+2025-05-01 23:31:05,778 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-01 23:31:05,778 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-01 23:31:05,781 - INFO -  * Restarting with stat
+2025-05-01 23:31:07,611 - WARNING -  * Debugger is active!
+2025-05-01 23:31:07,613 - INFO -  * Debugger PIN: 886-850-343
+2025-05-01 23:31:08,084 - INFO - 127.0.0.1 - - [01/May/2025 23:31:08] "[33mPOST /data_preprocessing_submit HTTP/1.1[0m" 404 -
+2025-05-01 23:31:13,673 - INFO - 127.0.0.1 - - [01/May/2025 23:31:13] "GET / HTTP/1.1" 200 -
+2025-05-01 23:31:15,031 - INFO - 127.0.0.1 - - [01/May/2025 23:31:15] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:31:18,922 - INFO - 127.0.0.1 - - [01/May/2025 23:31:18] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:32:13,443 - INFO - 127.0.0.1 - - [01/May/2025 23:32:13] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:32:14,421 - INFO - 127.0.0.1 - - [01/May/2025 23:32:14] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:32:21,070 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-01 23:32:21,070 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-01 23:32:21,074 - INFO -  * Restarting with stat
+2025-05-01 23:32:22,884 - WARNING -  * Debugger is active!
+2025-05-01 23:32:22,887 - INFO -  * Debugger PIN: 886-850-343
+2025-05-01 23:32:24,809 - INFO - 127.0.0.1 - - [01/May/2025 23:32:24] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:32:27,804 - INFO - 127.0.0.1 - - [01/May/2025 23:32:27] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:32:30,729 - INFO - 127.0.0.1 - - [01/May/2025 23:32:30] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:32:34,688 - INFO - 127.0.0.1 - - [01/May/2025 23:32:34] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:32:43,513 - INFO - 127.0.0.1 - - [01/May/2025 23:32:43] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:33:33,531 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-01 23:33:33,815 - INFO -  * Restarting with stat
+2025-05-01 23:33:35,630 - WARNING -  * Debugger is active!
+2025-05-01 23:33:35,633 - INFO -  * Debugger PIN: 886-850-343
+2025-05-01 23:33:37,665 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-01 23:33:37,952 - INFO -  * Restarting with stat
+2025-05-01 23:33:46,674 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-01 23:33:46,674 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-01 23:33:46,677 - INFO -  * Restarting with stat
+2025-05-01 23:33:48,413 - WARNING -  * Debugger is active!
+2025-05-01 23:33:48,416 - INFO -  * Debugger PIN: 886-850-343
+2025-05-01 23:33:49,651 - INFO - 127.0.0.1 - - [01/May/2025 23:33:49] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:34:13,606 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-01 23:34:13,883 - INFO -  * Restarting with stat
+2025-05-01 23:34:25,920 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-01 23:34:25,920 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-01 23:34:25,923 - INFO -  * Restarting with stat
+2025-05-01 23:34:27,740 - WARNING -  * Debugger is active!
+2025-05-01 23:34:27,742 - INFO -  * Debugger PIN: 886-850-343
+2025-05-01 23:34:28,693 - INFO - 127.0.0.1 - - [01/May/2025 23:34:28] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:34:33,473 - INFO - 127.0.0.1 - - [01/May/2025 23:34:33] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:35:53,403 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-01 23:35:53,678 - INFO -  * Restarting with stat
+2025-05-01 23:37:05,384 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-01 23:37:05,385 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-01 23:37:05,388 - INFO -  * Restarting with stat
+2025-05-01 23:37:07,159 - WARNING -  * Debugger is active!
+2025-05-01 23:37:07,162 - INFO -  * Debugger PIN: 886-850-343
+2025-05-01 23:37:13,605 - INFO - 127.0.0.1 - - [01/May/2025 23:37:13] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:37:44,487 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-01 23:37:44,800 - INFO -  * Restarting with stat
+2025-05-01 23:37:46,099 - WARNING -  * Debugger is active!
+2025-05-01 23:37:46,102 - INFO -  * Debugger PIN: 886-850-343
+2025-05-01 23:38:00,934 - INFO - 127.0.0.1 - - [01/May/2025 23:38:00] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:39:03,247 - INFO - 127.0.0.1 - - [01/May/2025 23:39:03] "[31m[1mPOST /clean_data HTTP/1.1[0m" 405 -
+2025-05-01 23:40:44,679 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-01 23:40:44,969 - INFO -  * Restarting with stat
+2025-05-01 23:41:08,491 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-01 23:41:08,492 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-01 23:41:08,493 - INFO -  * Restarting with stat
+2025-05-01 23:41:09,827 - WARNING -  * Debugger is active!
+2025-05-01 23:41:09,830 - INFO -  * Debugger PIN: 886-850-343
+2025-05-01 23:41:12,104 - INFO - 127.0.0.1 - - [01/May/2025 23:41:12] "[33mPOST /clean_data HTTP/1.1[0m" 404 -
+2025-05-01 23:41:15,567 - INFO - 127.0.0.1 - - [01/May/2025 23:41:15] "[33mPOST /clean_data HTTP/1.1[0m" 404 -
+2025-05-01 23:41:22,964 - INFO - 127.0.0.1 - - [01/May/2025 23:41:22] "[33mPOST /clean_data HTTP/1.1[0m" 404 -
+2025-05-01 23:41:26,377 - INFO - 127.0.0.1 - - [01/May/2025 23:41:26] "[33mPOST /clean_data HTTP/1.1[0m" 404 -
+2025-05-01 23:41:51,795 - INFO - 127.0.0.1 - - [01/May/2025 23:41:51] "[33mPOST /clean_data HTTP/1.1[0m" 404 -
+2025-05-01 23:41:54,781 - INFO - 127.0.0.1 - - [01/May/2025 23:41:54] "GET / HTTP/1.1" 200 -
+2025-05-01 23:41:56,270 - INFO - 127.0.0.1 - - [01/May/2025 23:41:56] "[35m[1mPOST /data_preprocessing_submit HTTP/1.1[0m" 500 -
+2025-05-01 23:41:56,463 - INFO - 127.0.0.1 - - [01/May/2025 23:41:56] "GET /data_preprocessing_submit?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-01 23:41:56,463 - INFO - 127.0.0.1 - - [01/May/2025 23:41:56] "GET /data_preprocessing_submit?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-01 23:41:56,500 - INFO - 127.0.0.1 - - [01/May/2025 23:41:56] "GET /data_preprocessing_submit?__debugger__=yes&cmd=resource&f=console.png&s=4YNIY57qgMk942COt101 HTTP/1.1" 200 -
+2025-05-01 23:41:56,575 - INFO - 127.0.0.1 - - [01/May/2025 23:41:56] "GET /data_preprocessing_submit?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-01 23:42:54,749 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-01 23:42:55,033 - INFO -  * Restarting with stat
+2025-05-01 23:49:03,864 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-01 23:49:03,865 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-01 23:49:03,866 - INFO -  * Restarting with stat
+2025-05-01 23:49:05,180 - WARNING -  * Debugger is active!
+2025-05-01 23:49:05,184 - INFO -  * Debugger PIN: 886-850-343
+2025-05-01 23:49:09,303 - INFO - 127.0.0.1 - - [01/May/2025 23:49:09] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-01 23:49:09,543 - INFO - 127.0.0.1 - - [01/May/2025 23:49:09] "GET /get_config HTTP/1.1" 200 -
+2025-05-01 23:49:09,549 - INFO - 127.0.0.1 - - [01/May/2025 23:49:09] "GET /get_config HTTP/1.1" 200 -
+2025-05-01 23:49:28,660 - INFO - 127.0.0.1 - - [01/May/2025 23:49:28] "POST /process_data HTTP/1.1" 200 -
+2025-05-01 23:50:11,031 - INFO - 127.0.0.1 - - [01/May/2025 23:50:11] "POST /update_config HTTP/1.1" 200 -
+2025-05-01 23:50:11,036 - INFO - 127.0.0.1 - - [01/May/2025 23:50:11] "GET /get_config HTTP/1.1" 200 -
+2025-05-01 23:51:26,603 - INFO - 127.0.0.1 - - [01/May/2025 23:51:26] "POST /process_data HTTP/1.1" 200 -
+2025-05-01 23:51:31,583 - INFO - 127.0.0.1 - - [01/May/2025 23:51:31] "POST /update_config HTTP/1.1" 200 -
+2025-05-01 23:51:31,587 - INFO - 127.0.0.1 - - [01/May/2025 23:51:31] "GET /get_config HTTP/1.1" 200 -
+2025-05-01 23:51:34,362 - INFO - 127.0.0.1 - - [01/May/2025 23:51:34] "POST /process_data HTTP/1.1" 200 -
+2025-05-01 23:51:35,179 - INFO - 127.0.0.1 - - [01/May/2025 23:51:35] "POST /process_data HTTP/1.1" 200 -
+2025-05-01 23:51:38,024 - INFO - 127.0.0.1 - - [01/May/2025 23:51:38] "POST /process_data HTTP/1.1" 200 -
+2025-05-01 23:51:38,628 - INFO - 127.0.0.1 - - [01/May/2025 23:51:38] "POST /process_data HTTP/1.1" 200 -
+2025-05-01 23:51:38,770 - INFO - 127.0.0.1 - - [01/May/2025 23:51:38] "POST /process_data HTTP/1.1" 200 -
+2025-05-01 23:51:54,973 - INFO - 127.0.0.1 - - [01/May/2025 23:51:54] "POST /process_data HTTP/1.1" 200 -
+2025-05-01 23:51:55,778 - INFO - 127.0.0.1 - - [01/May/2025 23:51:55] "POST /process_data HTTP/1.1" 200 -
+2025-05-01 23:56:04,535 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-01 23:56:04,895 - INFO -  * Restarting with stat
+2025-05-01 23:56:18,331 - INFO -  * Restarting with stat
+2025-05-02 00:01:00,575 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 00:01:00,575 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 00:01:00,576 - INFO -  * Restarting with stat
+2025-05-02 00:01:01,919 - WARNING -  * Debugger is active!
+2025-05-02 00:01:01,921 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:01:03,858 - INFO - 127.0.0.1 - - [02/May/2025 00:01:03] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:01:05,179 - INFO - 127.0.0.1 - - [02/May/2025 00:01:05] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:01:05,807 - INFO - 127.0.0.1 - - [02/May/2025 00:01:05] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:01:05,941 - INFO - 127.0.0.1 - - [02/May/2025 00:01:05] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:02:50,195 - INFO - 127.0.0.1 - - [02/May/2025 00:02:50] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:02:51,526 - INFO - 127.0.0.1 - - [02/May/2025 00:02:51] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:02:52,590 - INFO - 127.0.0.1 - - [02/May/2025 00:02:52] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:02:52,755 - INFO - 127.0.0.1 - - [02/May/2025 00:02:52] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:02:52,775 - INFO - 127.0.0.1 - - [02/May/2025 00:02:52] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:03:06,275 - INFO - 127.0.0.1 - - [02/May/2025 00:03:06] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 00:03:06,541 - INFO - 127.0.0.1 - - [02/May/2025 00:03:06] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:03:06,544 - INFO - 127.0.0.1 - - [02/May/2025 00:03:06] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:03:42,385 - INFO - 127.0.0.1 - - [02/May/2025 00:03:42] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:03:44,165 - INFO - 127.0.0.1 - - [02/May/2025 00:03:44] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:03:44,426 - INFO - 127.0.0.1 - - [02/May/2025 00:03:44] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:03:44,496 - INFO - 127.0.0.1 - - [02/May/2025 00:03:44] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:03:44,567 - INFO - 127.0.0.1 - - [02/May/2025 00:03:44] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:03:48,096 - INFO - 127.0.0.1 - - [02/May/2025 00:03:48] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 00:03:48,102 - INFO - 127.0.0.1 - - [02/May/2025 00:03:48] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:04:23,383 - INFO - 127.0.0.1 - - [02/May/2025 00:04:23] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:04:24,982 - INFO - 127.0.0.1 - - [02/May/2025 00:04:24] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:04:25,483 - INFO - 127.0.0.1 - - [02/May/2025 00:04:25] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:04:25,591 - INFO - 127.0.0.1 - - [02/May/2025 00:04:25] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:04:25,672 - INFO - 127.0.0.1 - - [02/May/2025 00:04:25] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:42:13,321 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 00:42:13,322 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 00:42:13,323 - INFO -  * Restarting with stat
+2025-05-02 00:42:14,665 - WARNING -  * Debugger is active!
+2025-05-02 00:42:14,669 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:42:22,653 - INFO - 127.0.0.1 - - [02/May/2025 00:42:22] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 00:42:31,840 - INFO - 127.0.0.1 - - [02/May/2025 00:42:31] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 00:43:22,827 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 00:43:22,827 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 00:43:22,828 - INFO -  * Restarting with stat
+2025-05-02 00:43:24,215 - WARNING -  * Debugger is active!
+2025-05-02 00:43:24,218 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:43:24,584 - INFO - 127.0.0.1 - - [02/May/2025 00:43:24] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 00:43:40,271 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 00:43:40,272 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 00:43:40,273 - INFO -  * Restarting with stat
+2025-05-02 00:43:41,594 - WARNING -  * Debugger is active!
+2025-05-02 00:43:41,596 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:43:41,618 - INFO - 127.0.0.1 - - [02/May/2025 00:43:41] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 00:44:00,067 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 00:44:00,068 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 00:44:00,069 - INFO -  * Restarting with stat
+2025-05-02 00:44:01,370 - WARNING -  * Debugger is active!
+2025-05-02 00:44:01,373 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:44:24,560 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 00:44:24,560 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 00:44:24,561 - INFO -  * Restarting with stat
+2025-05-02 00:44:25,898 - WARNING -  * Debugger is active!
+2025-05-02 00:44:25,901 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:44:27,773 - INFO - 127.0.0.1 - - [02/May/2025 00:44:27] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 00:44:28,062 - INFO - 127.0.0.1 - - [02/May/2025 00:44:28] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:44:28,067 - INFO - 127.0.0.1 - - [02/May/2025 00:44:28] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:44:42,834 - INFO - 127.0.0.1 - - [02/May/2025 00:44:42] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 00:44:42,840 - INFO - 127.0.0.1 - - [02/May/2025 00:44:42] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:44:44,018 - INFO - 127.0.0.1 - - [02/May/2025 00:44:44] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 00:44:44,024 - INFO - 127.0.0.1 - - [02/May/2025 00:44:44] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:44:44,314 - INFO - 127.0.0.1 - - [02/May/2025 00:44:44] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 00:44:44,320 - INFO - 127.0.0.1 - - [02/May/2025 00:44:44] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:44:51,693 - INFO - 127.0.0.1 - - [02/May/2025 00:44:51] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 00:44:51,698 - INFO - 127.0.0.1 - - [02/May/2025 00:44:51] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:44:53,950 - INFO - 127.0.0.1 - - [02/May/2025 00:44:53] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 00:44:53,956 - INFO - 127.0.0.1 - - [02/May/2025 00:44:53] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:44:55,995 - INFO - 127.0.0.1 - - [02/May/2025 00:44:55] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 00:44:56,000 - INFO - 127.0.0.1 - - [02/May/2025 00:44:55] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:44:56,385 - INFO - 127.0.0.1 - - [02/May/2025 00:44:56] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 00:44:56,394 - INFO - 127.0.0.1 - - [02/May/2025 00:44:56] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:44:58,134 - INFO - 127.0.0.1 - - [02/May/2025 00:44:58] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:44:59,273 - INFO - 127.0.0.1 - - [02/May/2025 00:44:59] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:44:59,481 - INFO - 127.0.0.1 - - [02/May/2025 00:44:59] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:45:05,003 - INFO - 127.0.0.1 - - [02/May/2025 00:45:05] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:45:11,263 - INFO - 127.0.0.1 - - [02/May/2025 00:45:11] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:45:13,190 - INFO - 127.0.0.1 - - [02/May/2025 00:45:13] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:46:06,519 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:46:06,824 - INFO -  * Restarting with stat
+2025-05-02 00:46:08,185 - WARNING -  * Debugger is active!
+2025-05-02 00:46:08,188 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:46:09,221 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:46:09,483 - INFO -  * Restarting with stat
+2025-05-02 00:46:10,708 - WARNING -  * Debugger is active!
+2025-05-02 00:46:10,710 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:46:11,737 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:46:12,010 - INFO -  * Restarting with stat
+2025-05-02 00:46:13,380 - WARNING -  * Debugger is active!
+2025-05-02 00:46:13,382 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:46:14,431 - INFO - 127.0.0.1 - - [02/May/2025 00:46:14] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:46:24,485 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:46:24,773 - INFO -  * Restarting with stat
+2025-05-02 00:46:26,066 - WARNING -  * Debugger is active!
+2025-05-02 00:46:26,068 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:46:31,122 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:46:31,398 - INFO -  * Restarting with stat
+2025-05-02 00:46:32,733 - WARNING -  * Debugger is active!
+2025-05-02 00:46:32,735 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:46:37,794 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:46:38,073 - INFO -  * Restarting with stat
+2025-05-02 00:46:39,419 - WARNING -  * Debugger is active!
+2025-05-02 00:46:39,422 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:46:40,452 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:46:40,785 - INFO -  * Restarting with stat
+2025-05-02 00:46:42,034 - WARNING -  * Debugger is active!
+2025-05-02 00:46:42,036 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:52:47,409 - INFO - 127.0.0.1 - - [02/May/2025 00:52:47] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:53:06,187 - INFO - 127.0.0.1 - - [02/May/2025 00:53:06] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:53:12,729 - INFO - 127.0.0.1 - - [02/May/2025 00:53:12] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:53:14,138 - INFO - 127.0.0.1 - - [02/May/2025 00:53:14] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:53:15,293 - INFO - 127.0.0.1 - - [02/May/2025 00:53:15] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:53:16,253 - INFO - 127.0.0.1 - - [02/May/2025 00:53:16] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:53:16,635 - INFO - 127.0.0.1 - - [02/May/2025 00:53:16] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:53:16,741 - INFO - 127.0.0.1 - - [02/May/2025 00:53:16] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:53:38,246 - INFO - 127.0.0.1 - - [02/May/2025 00:53:38] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 00:53:38,544 - INFO - 127.0.0.1 - - [02/May/2025 00:53:38] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:53:38,553 - INFO - 127.0.0.1 - - [02/May/2025 00:53:38] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 00:53:43,102 - INFO - 127.0.0.1 - - [02/May/2025 00:53:43] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:53:49,795 - INFO - 127.0.0.1 - - [02/May/2025 00:53:49] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:53:59,223 - INFO - 127.0.0.1 - - [02/May/2025 00:53:59] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 00:55:55,159 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:55:55,485 - INFO -  * Restarting with stat
+2025-05-02 00:55:57,012 - WARNING -  * Debugger is active!
+2025-05-02 00:55:57,015 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:55:59,051 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:55:59,323 - INFO -  * Restarting with stat
+2025-05-02 00:56:00,570 - WARNING -  * Debugger is active!
+2025-05-02 00:56:00,573 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:56:08,658 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:56:08,925 - INFO -  * Restarting with stat
+2025-05-02 00:56:10,176 - WARNING -  * Debugger is active!
+2025-05-02 00:56:10,178 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:57:43,849 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:57:44,146 - INFO -  * Restarting with stat
+2025-05-02 00:57:45,474 - WARNING -  * Debugger is active!
+2025-05-02 00:57:45,478 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:57:48,527 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:57:48,835 - INFO -  * Restarting with stat
+2025-05-02 00:57:50,184 - WARNING -  * Debugger is active!
+2025-05-02 00:57:50,187 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:57:51,214 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:57:51,509 - INFO -  * Restarting with stat
+2025-05-02 00:57:52,781 - WARNING -  * Debugger is active!
+2025-05-02 00:57:52,783 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:57:53,813 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:57:54,095 - INFO -  * Restarting with stat
+2025-05-02 00:57:55,380 - WARNING -  * Debugger is active!
+2025-05-02 00:57:55,383 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:57:56,421 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:57:56,706 - INFO -  * Restarting with stat
+2025-05-02 00:57:58,091 - WARNING -  * Debugger is active!
+2025-05-02 00:57:58,093 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 00:58:02,144 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 00:58:02,450 - INFO -  * Restarting with stat
+2025-05-02 01:03:47,465 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 01:03:47,465 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 01:03:47,466 - INFO -  * Restarting with stat
+2025-05-02 01:03:48,779 - WARNING -  * Debugger is active!
+2025-05-02 01:03:48,781 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 01:03:56,135 - INFO - 127.0.0.1 - - [02/May/2025 01:03:56] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 01:03:56,408 - INFO - 127.0.0.1 - - [02/May/2025 01:03:56] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 01:03:56,412 - INFO - 127.0.0.1 - - [02/May/2025 01:03:56] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 01:03:59,107 - INFO - 127.0.0.1 - - [02/May/2025 01:03:59] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 01:04:01,239 - INFO - 127.0.0.1 - - [02/May/2025 01:04:01] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 01:04:28,244 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 01:04:28,549 - INFO -  * Restarting with stat
+2025-05-02 01:04:29,864 - WARNING -  * Debugger is active!
+2025-05-02 01:04:29,867 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 01:04:32,911 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 01:04:33,226 - INFO -  * Restarting with stat
+2025-05-02 01:04:34,599 - WARNING -  * Debugger is active!
+2025-05-02 01:04:34,602 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 01:04:35,630 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 01:04:35,918 - INFO -  * Restarting with stat
+2025-05-02 01:04:37,249 - WARNING -  * Debugger is active!
+2025-05-02 01:04:37,251 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 01:06:07,719 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 01:06:07,719 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 01:06:07,720 - INFO -  * Restarting with stat
+2025-05-02 01:06:09,108 - WARNING -  * Debugger is active!
+2025-05-02 01:06:09,110 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 01:06:10,020 - INFO - 127.0.0.1 - - [02/May/2025 01:06:10] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 01:06:10,292 - INFO - 127.0.0.1 - - [02/May/2025 01:06:10] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 01:06:10,309 - INFO - 127.0.0.1 - - [02/May/2025 01:06:10] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 01:06:11,844 - INFO - 127.0.0.1 - - [02/May/2025 01:06:11] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 12:26:05,441 - INFO - 127.0.0.1 - - [02/May/2025 12:26:05] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 12:26:06,068 - INFO - 127.0.0.1 - - [02/May/2025 12:26:06] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:26:06,073 - INFO - 127.0.0.1 - - [02/May/2025 12:26:06] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:26:08,950 - INFO - 127.0.0.1 - - [02/May/2025 12:26:08] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 12:26:09,630 - INFO - 127.0.0.1 - - [02/May/2025 12:26:09] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 12:32:51,568 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 12:32:51,569 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 12:32:51,570 - INFO -  * Restarting with stat
+2025-05-02 12:32:52,879 - WARNING -  * Debugger is active!
+2025-05-02 12:32:52,891 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:32:56,937 - INFO - 127.0.0.1 - - [02/May/2025 12:32:56] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 12:32:57,218 - INFO - 127.0.0.1 - - [02/May/2025 12:32:57] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:32:57,221 - INFO - 127.0.0.1 - - [02/May/2025 12:32:57] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:32:59,670 - INFO - 127.0.0.1 - - [02/May/2025 12:32:59] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 12:36:51,030 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:36:51,346 - INFO -  * Restarting with stat
+2025-05-02 12:36:52,861 - WARNING -  * Debugger is active!
+2025-05-02 12:36:52,863 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:36:59,980 - INFO - 127.0.0.1 - - [02/May/2025 12:36:59] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 12:37:22,227 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 12:37:22,228 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 12:37:22,229 - INFO -  * Restarting with stat
+2025-05-02 12:37:23,560 - WARNING -  * Debugger is active!
+2025-05-02 12:37:23,563 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:37:25,547 - INFO - 127.0.0.1 - - [02/May/2025 12:37:25] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 12:37:25,814 - INFO - 127.0.0.1 - - [02/May/2025 12:37:25] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:37:25,818 - INFO - 127.0.0.1 - - [02/May/2025 12:37:25] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:37:27,912 - INFO - 127.0.0.1 - - [02/May/2025 12:37:27] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 12:37:48,673 - INFO - 127.0.0.1 - - [02/May/2025 12:37:48] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 12:38:48,104 - INFO - 127.0.0.1 - - [02/May/2025 12:38:48] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 12:39:11,568 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:39:11,853 - INFO -  * Restarting with stat
+2025-05-02 12:39:13,326 - WARNING -  * Debugger is active!
+2025-05-02 12:39:13,328 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:39:14,360 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:39:14,625 - INFO -  * Restarting with stat
+2025-05-02 12:39:15,897 - WARNING -  * Debugger is active!
+2025-05-02 12:39:15,900 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:39:16,928 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:39:17,205 - INFO -  * Restarting with stat
+2025-05-02 12:39:18,476 - WARNING -  * Debugger is active!
+2025-05-02 12:39:18,479 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:39:21,920 - INFO - 127.0.0.1 - - [02/May/2025 12:39:21] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 12:40:02,018 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:40:02,355 - INFO -  * Restarting with stat
+2025-05-02 12:40:03,688 - WARNING -  * Debugger is active!
+2025-05-02 12:40:03,691 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:40:08,750 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:40:09,018 - INFO -  * Restarting with stat
+2025-05-02 12:40:10,258 - WARNING -  * Debugger is active!
+2025-05-02 12:40:10,261 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:40:15,324 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:40:15,630 - INFO -  * Restarting with stat
+2025-05-02 12:40:17,005 - WARNING -  * Debugger is active!
+2025-05-02 12:40:17,008 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:40:18,042 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:40:18,361 - INFO -  * Restarting with stat
+2025-05-02 12:40:19,659 - WARNING -  * Debugger is active!
+2025-05-02 12:40:19,662 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:40:23,717 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:40:23,985 - INFO -  * Restarting with stat
+2025-05-02 12:40:25,211 - WARNING -  * Debugger is active!
+2025-05-02 12:40:25,213 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:40:27,252 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:40:27,536 - INFO -  * Restarting with stat
+2025-05-02 12:40:28,798 - WARNING -  * Debugger is active!
+2025-05-02 12:40:28,800 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:40:29,829 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:40:30,110 - INFO -  * Restarting with stat
+2025-05-02 12:40:31,389 - WARNING -  * Debugger is active!
+2025-05-02 12:40:31,392 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:40:33,428 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:40:33,705 - INFO -  * Restarting with stat
+2025-05-02 12:40:34,998 - WARNING -  * Debugger is active!
+2025-05-02 12:40:35,000 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:40:39,204 - INFO - 127.0.0.1 - - [02/May/2025 12:40:39] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 12:40:44,618 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 12:40:44,618 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 12:40:44,619 - INFO -  * Restarting with stat
+2025-05-02 12:40:45,951 - WARNING -  * Debugger is active!
+2025-05-02 12:40:45,953 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:40:46,846 - INFO - 127.0.0.1 - - [02/May/2025 12:40:46] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 12:40:46,851 - INFO - 127.0.0.1 - - [02/May/2025 12:40:46] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:40:48,233 - INFO - 127.0.0.1 - - [02/May/2025 12:40:48] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 12:40:48,488 - INFO - 127.0.0.1 - - [02/May/2025 12:40:48] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:40:48,493 - INFO - 127.0.0.1 - - [02/May/2025 12:40:48] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:40:49,335 - INFO - 127.0.0.1 - - [02/May/2025 12:40:49] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 12:40:49,344 - INFO - 127.0.0.1 - - [02/May/2025 12:40:49] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:40:51,048 - INFO - 127.0.0.1 - - [02/May/2025 12:40:51] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 12:40:51,055 - INFO - 127.0.0.1 - - [02/May/2025 12:40:51] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:40:53,010 - INFO - 127.0.0.1 - - [02/May/2025 12:40:53] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 12:41:07,202 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:41:07,500 - INFO -  * Restarting with stat
+2025-05-02 12:45:42,185 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 12:45:42,185 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 12:45:42,186 - INFO -  * Restarting with stat
+2025-05-02 12:45:43,431 - WARNING -  * Debugger is active!
+2025-05-02 12:45:43,434 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:45:45,197 - INFO - 127.0.0.1 - - [02/May/2025 12:45:45] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 12:45:45,448 - INFO - 127.0.0.1 - - [02/May/2025 12:45:45] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:45:45,451 - INFO - 127.0.0.1 - - [02/May/2025 12:45:45] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:45:47,103 - INFO - 127.0.0.1 - - [02/May/2025 12:45:47] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 12:46:12,706 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:46:12,986 - INFO -  * Restarting with stat
+2025-05-02 12:46:14,290 - WARNING -  * Debugger is active!
+2025-05-02 12:46:14,293 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:46:16,331 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 12:46:16,629 - INFO -  * Restarting with stat
+2025-05-02 12:46:17,883 - WARNING -  * Debugger is active!
+2025-05-02 12:46:17,885 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:46:26,533 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 12:46:26,533 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 12:46:26,534 - INFO -  * Restarting with stat
+2025-05-02 12:46:27,859 - WARNING -  * Debugger is active!
+2025-05-02 12:46:27,862 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:46:30,170 - INFO - 127.0.0.1 - - [02/May/2025 12:46:30] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 12:46:30,176 - INFO - 127.0.0.1 - - [02/May/2025 12:46:30] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:46:31,799 - INFO - 127.0.0.1 - - [02/May/2025 12:46:31] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 12:49:59,405 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\test2.py', reloading
+2025-05-02 12:49:59,723 - INFO -  * Restarting with stat
+2025-05-02 12:50:01,065 - WARNING -  * Debugger is active!
+2025-05-02 12:50:01,068 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:50:08,152 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\test2.py', reloading
+2025-05-02 12:50:08,434 - INFO -  * Restarting with stat
+2025-05-02 12:50:09,687 - WARNING -  * Debugger is active!
+2025-05-02 12:50:09,689 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:50:41,973 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 12:50:42,270 - INFO -  * Restarting with stat
+2025-05-02 12:50:43,614 - WARNING -  * Debugger is active!
+2025-05-02 12:50:43,617 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:50:47,672 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 12:50:47,938 - INFO -  * Restarting with stat
+2025-05-02 12:58:38,167 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 12:58:38,167 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 12:58:38,168 - INFO -  * Restarting with stat
+2025-05-02 12:58:39,506 - WARNING -  * Debugger is active!
+2025-05-02 12:58:39,510 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 12:58:42,665 - INFO - 127.0.0.1 - - [02/May/2025 12:58:42] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 12:58:42,928 - INFO - 127.0.0.1 - - [02/May/2025 12:58:42] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:58:42,932 - INFO - 127.0.0.1 - - [02/May/2025 12:58:42] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:58:46,859 - INFO - 127.0.0.1 - - [02/May/2025 12:58:46] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 12:58:46,864 - INFO - 127.0.0.1 - - [02/May/2025 12:58:46] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 12:58:48,443 - ERROR - ¥¶¿Ì ß∞‹: 'errors'
+Traceback (most recent call last):
+  File "D:\app\python\Lib\site-packages\pandas\core\indexes\range.py", line 413, in get_loc
+    return self._range.index(new_key)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^
+ValueError: 0 is not in range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\12919\Desktop\project\app\utils\data_cleaner.py", line 57, in _validate_data
+    self._ensure_time_continuity()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\12919\Desktop\project\app\utils\data_cleaner.py", line 117, in _ensure_time_continuity
+    freq = self._detect_time_freq()
+  File "c:\Users\12919\Desktop\project\app\utils\data_cleaner.py", line 134, in _detect_time_freq
+    diff = self.raw_data[self.time_col].diff().mode()[0]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "D:\app\python\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ~~~~~~~~~~~~~~~^^^^^
+  File "D:\app\python\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+  File "D:\app\python\Lib\site-packages\pandas\core\indexes\range.py", line 415, in get_loc
+    raise KeyError(key) from err
+KeyError: 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\12919\Desktop\project\app\routes2.py", line 225, in process_data
+    cleaned_data = cleaner.format_data()  # »∑±£∑µªÿ¥¶¿Ì∫Ûµƒ ˝æ›
+  File "c:\Users\12919\Desktop\project\app\utils\data_cleaner.py", line 141, in format_data
+    self._validate_data()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\12919\Desktop\project\app\utils\data_cleaner.py", line 60, in _validate_data
+    self.message['errors'].append(f" ±º‰¡–—È÷§ ß∞‹£∫{str(e)}")
+    ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'errors'
+2025-05-02 12:58:48,452 - INFO - 127.0.0.1 - - [02/May/2025 12:58:48] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:01:24,963 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:01:25,293 - INFO -  * Restarting with stat
+2025-05-02 13:05:02,196 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 13:05:02,196 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 13:05:02,197 - INFO -  * Restarting with stat
+2025-05-02 13:05:03,553 - WARNING -  * Debugger is active!
+2025-05-02 13:05:03,556 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:05:12,402 - INFO - 127.0.0.1 - - [02/May/2025 13:05:12] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 13:05:12,409 - INFO - 127.0.0.1 - - [02/May/2025 13:05:12] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:05:13,377 - ERROR - ¥¶¿Ì ß∞‹: 'errors'
+Traceback (most recent call last):
+  File "c:\Users\12919\Desktop\project\app\utils\data_cleaner.py", line 57, in _validate_data
+    self._ensure_time_continuity()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\12919\Desktop\project\app\utils\data_cleaner.py", line 118, in _ensure_time_continuity
+    full_range = pd.date_range(
+        start=self.raw_data[self.time_col].min(),
+        end=self.raw_data[self.time_col].max(),
+        freq=freq
+    )
+  File "D:\app\python\Lib\site-packages\pandas\core\indexes\datetimes.py", line 1008, in date_range
+    dtarr = DatetimeArray._generate_range(
+        start=start,
+    ...<7 lines>...
+        **kwargs,
+    )
+  File "D:\app\python\Lib\site-packages\pandas\core\arrays\datetimes.py", line 421, in _generate_range
+    freq = to_offset(freq)
+  File "offsets.pyx", line 4791, in pandas._libs.tslibs.offsets.to_offset
+  File "offsets.pyx", line 4961, in pandas._libs.tslibs.offsets.to_offset
+ValueError: Invalid frequency: NaT
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\12919\Desktop\project\app\routes2.py", line 225, in process_data
+    cleaned_data = cleaner.format_data()  # »∑±£∑µªÿ¥¶¿Ì∫Ûµƒ ˝æ›
+  File "c:\Users\12919\Desktop\project\app\utils\data_cleaner.py", line 144, in format_data
+    self._validate_data()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "c:\Users\12919\Desktop\project\app\utils\data_cleaner.py", line 60, in _validate_data
+    self.message['errors'].append(f" ±º‰¡–—È÷§ ß∞‹£∫{str(e)}")
+    ~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'errors'
+2025-05-02 13:05:13,383 - INFO - 127.0.0.1 - - [02/May/2025 13:05:13] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:08:11,811 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:08:12,205 - INFO -  * Restarting with stat
+2025-05-02 13:08:14,122 - WARNING -  * Debugger is active!
+2025-05-02 13:08:14,126 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:08:15,157 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:08:15,429 - INFO -  * Restarting with stat
+2025-05-02 13:16:13,406 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 13:16:13,407 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 13:16:13,407 - INFO -  * Restarting with stat
+2025-05-02 13:16:14,826 - WARNING -  * Debugger is active!
+2025-05-02 13:16:14,829 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:16:17,096 - INFO - 127.0.0.1 - - [02/May/2025 13:16:17] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:16:17,816 - INFO - 127.0.0.1 - - [02/May/2025 13:16:17] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:16:18,956 - INFO - 127.0.0.1 - - [02/May/2025 13:16:18] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 13:16:18,961 - INFO - 127.0.0.1 - - [02/May/2025 13:16:18] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:16:19,398 - INFO - 127.0.0.1 - - [02/May/2025 13:16:19] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 13:16:19,404 - INFO - 127.0.0.1 - - [02/May/2025 13:16:19] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:16:20,468 - INFO - 127.0.0.1 - - [02/May/2025 13:16:20] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:16:21,668 - INFO - 127.0.0.1 - - [02/May/2025 13:16:21] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:16:23,488 - INFO - 127.0.0.1 - - [02/May/2025 13:16:23] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:16:51,503 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 13:16:51,503 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 13:16:51,504 - INFO -  * Restarting with stat
+2025-05-02 13:16:52,886 - WARNING -  * Debugger is active!
+2025-05-02 13:16:52,889 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:16:55,248 - INFO - 127.0.0.1 - - [02/May/2025 13:16:55] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 13:16:55,528 - INFO - 127.0.0.1 - - [02/May/2025 13:16:55] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:16:55,541 - INFO - 127.0.0.1 - - [02/May/2025 13:16:55] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:16:56,519 - INFO - 127.0.0.1 - - [02/May/2025 13:16:56] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:16:58,840 - INFO - 127.0.0.1 - - [02/May/2025 13:16:58] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:16:59,434 - INFO - 127.0.0.1 - - [02/May/2025 13:16:59] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:16:59,717 - INFO - 127.0.0.1 - - [02/May/2025 13:16:59] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:16:59,958 - INFO - 127.0.0.1 - - [02/May/2025 13:16:59] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:17:00,180 - INFO - 127.0.0.1 - - [02/May/2025 13:17:00] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:17:00,402 - INFO - 127.0.0.1 - - [02/May/2025 13:17:00] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:17:00,627 - INFO - 127.0.0.1 - - [02/May/2025 13:17:00] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:17:00,885 - INFO - 127.0.0.1 - - [02/May/2025 13:17:00] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:18:14,665 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 13:18:14,972 - INFO -  * Restarting with stat
+2025-05-02 13:18:16,414 - WARNING -  * Debugger is active!
+2025-05-02 13:18:16,416 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:19:57,538 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 13:19:57,539 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 13:19:57,540 - INFO -  * Restarting with stat
+2025-05-02 13:19:58,805 - WARNING -  * Debugger is active!
+2025-05-02 13:19:58,809 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:19:58,953 - INFO - 127.0.0.1 - - [02/May/2025 13:19:58] "[35m[1mPOST /process_data HTTP/1.1[0m" 500 -
+2025-05-02 13:19:59,140 - INFO - 127.0.0.1 - - [02/May/2025 13:19:59] "[35m[1mPOST /process_data HTTP/1.1[0m" 500 -
+2025-05-02 13:20:16,976 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 13:20:17,268 - INFO -  * Restarting with stat
+2025-05-02 13:20:18,597 - WARNING -  * Debugger is active!
+2025-05-02 13:20:18,600 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:20:24,668 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 13:20:24,956 - INFO -  * Restarting with stat
+2025-05-02 13:20:26,229 - WARNING -  * Debugger is active!
+2025-05-02 13:20:26,232 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:20:31,291 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 13:20:31,574 - INFO -  * Restarting with stat
+2025-05-02 13:20:32,823 - WARNING -  * Debugger is active!
+2025-05-02 13:20:32,826 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:20:35,871 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 13:20:36,144 - INFO -  * Restarting with stat
+2025-05-02 13:20:37,377 - WARNING -  * Debugger is active!
+2025-05-02 13:20:37,380 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:20:41,451 - INFO - 127.0.0.1 - - [02/May/2025 13:20:41] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 13:20:41,713 - INFO - 127.0.0.1 - - [02/May/2025 13:20:41] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:20:41,718 - INFO - 127.0.0.1 - - [02/May/2025 13:20:41] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:20:42,703 - INFO - 127.0.0.1 - - [02/May/2025 13:20:42] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:21:10,677 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 13:21:10,972 - INFO -  * Restarting with stat
+2025-05-02 13:21:12,351 - WARNING -  * Debugger is active!
+2025-05-02 13:21:12,353 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:21:13,143 - INFO - 127.0.0.1 - - [02/May/2025 13:21:13] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:21:15,953 - INFO - 127.0.0.1 - - [02/May/2025 13:21:15] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:22:19,424 - INFO - 127.0.0.1 - - [02/May/2025 13:22:19] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 13:22:19,431 - INFO - 127.0.0.1 - - [02/May/2025 13:22:19] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:22:20,250 - INFO - 127.0.0.1 - - [02/May/2025 13:22:20] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 13:22:20,256 - INFO - 127.0.0.1 - - [02/May/2025 13:22:20] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:22:21,285 - INFO - 127.0.0.1 - - [02/May/2025 13:22:21] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:22:29,995 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:22:30,294 - INFO -  * Restarting with stat
+2025-05-02 13:22:31,769 - WARNING -  * Debugger is active!
+2025-05-02 13:22:31,771 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:27:38,039 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:27:38,314 - INFO -  * Restarting with stat
+2025-05-02 13:27:39,831 - WARNING -  * Debugger is active!
+2025-05-02 13:27:39,834 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:27:44,888 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:27:45,200 - INFO -  * Restarting with stat
+2025-05-02 13:29:57,262 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 13:29:57,262 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 13:29:57,263 - INFO -  * Restarting with stat
+2025-05-02 13:29:58,489 - WARNING -  * Debugger is active!
+2025-05-02 13:29:58,491 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:30:07,273 - INFO - 127.0.0.1 - - [02/May/2025 13:30:07] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 13:30:07,532 - INFO - 127.0.0.1 - - [02/May/2025 13:30:07] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:30:07,536 - INFO - 127.0.0.1 - - [02/May/2025 13:30:07] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:30:08,649 - INFO - 127.0.0.1 - - [02/May/2025 13:30:08] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:31:05,088 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:31:05,373 - INFO -  * Restarting with stat
+2025-05-02 13:31:06,689 - WARNING -  * Debugger is active!
+2025-05-02 13:31:06,691 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:31:11,692 - INFO - 127.0.0.1 - - [02/May/2025 13:31:11] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:31:22,107 - INFO - 127.0.0.1 - - [02/May/2025 13:31:22] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 13:31:22,113 - INFO - 127.0.0.1 - - [02/May/2025 13:31:22] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:31:24,789 - INFO - 127.0.0.1 - - [02/May/2025 13:31:24] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:31:32,859 - INFO - 127.0.0.1 - - [02/May/2025 13:31:32] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:31:39,479 - INFO - 127.0.0.1 - - [02/May/2025 13:31:39] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:33:02,134 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 13:33:02,134 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 13:33:02,135 - INFO -  * Restarting with stat
+2025-05-02 13:33:03,554 - WARNING -  * Debugger is active!
+2025-05-02 13:33:03,557 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:33:04,684 - INFO - 127.0.0.1 - - [02/May/2025 13:33:04] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:41:02,121 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:41:02,417 - INFO -  * Restarting with stat
+2025-05-02 13:41:03,872 - WARNING -  * Debugger is active!
+2025-05-02 13:41:03,874 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:42:28,754 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:42:29,047 - INFO -  * Restarting with stat
+2025-05-02 13:42:30,377 - WARNING -  * Debugger is active!
+2025-05-02 13:42:30,379 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:42:36,443 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:42:36,740 - INFO -  * Restarting with stat
+2025-05-02 13:42:38,031 - WARNING -  * Debugger is active!
+2025-05-02 13:42:38,034 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:42:39,063 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:42:39,346 - INFO -  * Restarting with stat
+2025-05-02 13:42:40,603 - WARNING -  * Debugger is active!
+2025-05-02 13:42:40,606 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:42:45,661 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:42:45,929 - INFO -  * Restarting with stat
+2025-05-02 13:42:47,212 - WARNING -  * Debugger is active!
+2025-05-02 13:42:47,215 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:42:49,252 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:42:49,534 - INFO -  * Restarting with stat
+2025-05-02 13:42:50,810 - WARNING -  * Debugger is active!
+2025-05-02 13:42:50,813 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:42:58,888 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:42:59,176 - INFO -  * Restarting with stat
+2025-05-02 13:43:00,443 - WARNING -  * Debugger is active!
+2025-05-02 13:43:00,445 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:43:18,590 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:43:18,855 - INFO -  * Restarting with stat
+2025-05-02 13:43:20,171 - WARNING -  * Debugger is active!
+2025-05-02 13:43:20,174 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:43:21,203 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:43:21,480 - INFO -  * Restarting with stat
+2025-05-02 13:43:22,730 - WARNING -  * Debugger is active!
+2025-05-02 13:43:22,733 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:43:46,490 - INFO - 127.0.0.1 - - [02/May/2025 13:43:46] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:43:51,133 - INFO - 127.0.0.1 - - [02/May/2025 13:43:51] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 13:43:51,409 - INFO - 127.0.0.1 - - [02/May/2025 13:43:51] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:43:51,417 - INFO - 127.0.0.1 - - [02/May/2025 13:43:51] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:43:52,798 - INFO - 127.0.0.1 - - [02/May/2025 13:43:52] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:44:16,150 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:44:16,426 - INFO -  * Restarting with stat
+2025-05-02 13:44:17,708 - WARNING -  * Debugger is active!
+2025-05-02 13:44:17,711 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:44:18,739 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:44:19,012 - INFO -  * Restarting with stat
+2025-05-02 13:44:20,273 - WARNING -  * Debugger is active!
+2025-05-02 13:44:20,275 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:44:30,171 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 13:44:30,171 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 13:44:30,172 - INFO -  * Restarting with stat
+2025-05-02 13:44:31,489 - WARNING -  * Debugger is active!
+2025-05-02 13:44:31,497 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:44:32,799 - INFO - 127.0.0.1 - - [02/May/2025 13:44:32] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:44:34,500 - INFO - 127.0.0.1 - - [02/May/2025 13:44:34] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:44:36,071 - INFO - 127.0.0.1 - - [02/May/2025 13:44:36] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 13:44:36,326 - INFO - 127.0.0.1 - - [02/May/2025 13:44:36] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:44:36,329 - INFO - 127.0.0.1 - - [02/May/2025 13:44:36] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:44:37,597 - INFO - 127.0.0.1 - - [02/May/2025 13:44:37] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:46:09,281 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:46:09,544 - INFO -  * Restarting with stat
+2025-05-02 13:46:10,961 - WARNING -  * Debugger is active!
+2025-05-02 13:46:10,963 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:46:13,000 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:46:13,278 - INFO -  * Restarting with stat
+2025-05-02 13:46:14,578 - WARNING -  * Debugger is active!
+2025-05-02 13:46:14,580 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:46:17,621 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:46:17,909 - INFO -  * Restarting with stat
+2025-05-02 13:46:19,171 - WARNING -  * Debugger is active!
+2025-05-02 13:46:19,173 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:46:20,201 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:46:20,509 - INFO -  * Restarting with stat
+2025-05-02 13:46:30,576 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 13:46:30,577 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 13:46:30,578 - INFO -  * Restarting with stat
+2025-05-02 13:46:31,918 - WARNING -  * Debugger is active!
+2025-05-02 13:46:31,920 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:46:33,752 - INFO - 127.0.0.1 - - [02/May/2025 13:46:33] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 13:46:33,989 - INFO - 127.0.0.1 - - [02/May/2025 13:46:33] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:46:33,993 - INFO - 127.0.0.1 - - [02/May/2025 13:46:33] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:46:35,567 - INFO - 127.0.0.1 - - [02/May/2025 13:46:35] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:47:21,322 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:47:21,597 - INFO -  * Restarting with stat
+2025-05-02 13:47:22,915 - WARNING -  * Debugger is active!
+2025-05-02 13:47:22,918 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:47:24,953 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:47:25,223 - INFO -  * Restarting with stat
+2025-05-02 13:47:26,538 - WARNING -  * Debugger is active!
+2025-05-02 13:47:26,541 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:47:30,598 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:47:30,862 - INFO -  * Restarting with stat
+2025-05-02 13:47:32,164 - WARNING -  * Debugger is active!
+2025-05-02 13:47:32,168 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:47:33,198 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:47:33,477 - INFO -  * Restarting with stat
+2025-05-02 13:47:34,754 - WARNING -  * Debugger is active!
+2025-05-02 13:47:34,756 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:47:40,819 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:47:41,084 - INFO -  * Restarting with stat
+2025-05-02 13:47:42,355 - WARNING -  * Debugger is active!
+2025-05-02 13:47:42,357 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:47:44,395 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:47:44,676 - INFO -  * Restarting with stat
+2025-05-02 13:47:45,921 - WARNING -  * Debugger is active!
+2025-05-02 13:47:45,924 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:47:49,258 - INFO - 127.0.0.1 - - [02/May/2025 13:47:49] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:47:50,577 - INFO - 127.0.0.1 - - [02/May/2025 13:47:50] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:47:51,399 - INFO - 127.0.0.1 - - [02/May/2025 13:47:51] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 13:47:51,669 - INFO - 127.0.0.1 - - [02/May/2025 13:47:51] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:47:51,675 - INFO - 127.0.0.1 - - [02/May/2025 13:47:51] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:47:52,545 - INFO - 127.0.0.1 - - [02/May/2025 13:47:52] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:48:27,279 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:48:27,580 - INFO -  * Restarting with stat
+2025-05-02 13:48:58,581 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 13:48:58,582 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 13:48:58,583 - INFO -  * Restarting with stat
+2025-05-02 13:48:59,966 - WARNING -  * Debugger is active!
+2025-05-02 13:48:59,968 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:49:01,377 - INFO - 127.0.0.1 - - [02/May/2025 13:49:01] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:49:27,181 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:49:27,452 - INFO -  * Restarting with stat
+2025-05-02 13:49:28,752 - WARNING -  * Debugger is active!
+2025-05-02 13:49:28,754 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:49:29,786 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:49:30,070 - INFO -  * Restarting with stat
+2025-05-02 13:49:31,362 - WARNING -  * Debugger is active!
+2025-05-02 13:49:31,364 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:49:34,412 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:49:34,693 - INFO -  * Restarting with stat
+2025-05-02 13:49:35,969 - WARNING -  * Debugger is active!
+2025-05-02 13:49:35,972 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:49:37,002 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:49:37,301 - INFO -  * Restarting with stat
+2025-05-02 13:49:38,577 - WARNING -  * Debugger is active!
+2025-05-02 13:49:38,579 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:49:56,725 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:49:56,996 - INFO -  * Restarting with stat
+2025-05-02 13:49:58,297 - WARNING -  * Debugger is active!
+2025-05-02 13:49:58,299 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:50:00,337 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:50:00,636 - INFO -  * Restarting with stat
+2025-05-02 13:50:01,908 - WARNING -  * Debugger is active!
+2025-05-02 13:50:01,910 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:50:02,939 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:50:03,217 - INFO -  * Restarting with stat
+2025-05-02 13:50:04,548 - WARNING -  * Debugger is active!
+2025-05-02 13:50:04,551 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:50:05,584 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:50:05,878 - INFO -  * Restarting with stat
+2025-05-02 13:50:07,188 - WARNING -  * Debugger is active!
+2025-05-02 13:50:07,190 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:50:16,229 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 13:50:16,230 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 13:50:16,231 - INFO -  * Restarting with stat
+2025-05-02 13:50:17,545 - WARNING -  * Debugger is active!
+2025-05-02 13:50:17,547 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:50:18,413 - INFO - 127.0.0.1 - - [02/May/2025 13:50:18] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 13:50:18,650 - INFO - 127.0.0.1 - - [02/May/2025 13:50:18] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:50:18,653 - INFO - 127.0.0.1 - - [02/May/2025 13:50:18] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:50:20,371 - INFO - 127.0.0.1 - - [02/May/2025 13:50:20] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:51:21,040 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:51:21,327 - INFO -  * Restarting with stat
+2025-05-02 13:53:56,676 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 13:53:56,677 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 13:53:56,678 - INFO -  * Restarting with stat
+2025-05-02 13:53:57,987 - WARNING -  * Debugger is active!
+2025-05-02 13:53:57,991 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:53:58,014 - INFO - 127.0.0.1 - - [02/May/2025 13:53:58] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 13:53:58,264 - INFO - 127.0.0.1 - - [02/May/2025 13:53:58] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:53:58,275 - INFO - 127.0.0.1 - - [02/May/2025 13:53:58] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 13:53:59,246 - INFO - 127.0.0.1 - - [02/May/2025 13:53:59] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 13:58:24,917 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 13:58:25,194 - INFO -  * Restarting with stat
+2025-05-02 13:59:11,344 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 13:59:11,345 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 13:59:11,345 - INFO -  * Restarting with stat
+2025-05-02 13:59:12,599 - WARNING -  * Debugger is active!
+2025-05-02 13:59:12,602 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 13:59:14,522 - INFO - 127.0.0.1 - - [02/May/2025 13:59:14] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 14:01:51,735 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 14:01:52,015 - INFO -  * Restarting with stat
+2025-05-02 14:01:53,343 - WARNING -  * Debugger is active!
+2025-05-02 14:01:53,346 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 14:01:57,396 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 14:01:57,691 - INFO -  * Restarting with stat
+2025-05-02 14:01:58,982 - WARNING -  * Debugger is active!
+2025-05-02 14:01:58,984 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 14:02:01,018 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 14:02:01,283 - INFO -  * Restarting with stat
+2025-05-02 14:02:02,496 - WARNING -  * Debugger is active!
+2025-05-02 14:02:02,499 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 14:02:10,577 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 14:02:10,866 - INFO -  * Restarting with stat
+2025-05-02 14:09:04,851 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 14:09:04,851 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 14:09:04,852 - INFO -  * Restarting with stat
+2025-05-02 14:09:06,056 - WARNING -  * Debugger is active!
+2025-05-02 14:09:06,059 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 14:09:10,845 - INFO - 127.0.0.1 - - [02/May/2025 14:09:10] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 14:09:11,082 - INFO - 127.0.0.1 - - [02/May/2025 14:09:11] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 14:09:11,086 - INFO - 127.0.0.1 - - [02/May/2025 14:09:11] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 14:09:12,294 - INFO - 127.0.0.1 - - [02/May/2025 14:09:12] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 14:12:04,495 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 14:12:04,820 - INFO -  * Restarting with stat
+2025-05-02 14:12:06,293 - WARNING -  * Debugger is active!
+2025-05-02 14:12:06,295 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 14:15:15,659 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 14:15:15,934 - INFO -  * Restarting with stat
+2025-05-02 14:15:17,362 - WARNING -  * Debugger is active!
+2025-05-02 14:15:17,366 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 14:15:19,405 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 14:15:19,674 - INFO -  * Restarting with stat
+2025-05-02 14:15:21,010 - WARNING -  * Debugger is active!
+2025-05-02 14:15:21,012 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 14:15:23,046 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 14:15:23,339 - INFO -  * Restarting with stat
+2025-05-02 14:15:24,639 - WARNING -  * Debugger is active!
+2025-05-02 14:15:24,642 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 14:15:25,671 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 14:15:25,952 - INFO -  * Restarting with stat
+2025-05-02 14:15:27,311 - WARNING -  * Debugger is active!
+2025-05-02 14:15:27,313 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 14:15:29,355 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 14:15:29,642 - INFO -  * Restarting with stat
+2025-05-02 14:15:31,002 - WARNING -  * Debugger is active!
+2025-05-02 14:15:31,005 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 14:15:41,344 - INFO - 127.0.0.1 - - [02/May/2025 14:15:41] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 14:15:41,721 - INFO - 127.0.0.1 - - [02/May/2025 14:15:41] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 14:15:41,725 - INFO - 127.0.0.1 - - [02/May/2025 14:15:41] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 14:15:42,651 - INFO - 127.0.0.1 - - [02/May/2025 14:15:42] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 14:17:23,861 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 14:17:24,268 - INFO -  * Restarting with stat
+2025-05-02 14:17:26,091 - WARNING -  * Debugger is active!
+2025-05-02 14:17:26,094 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 14:17:33,172 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 14:17:33,461 - INFO -  * Restarting with stat
+2025-05-02 14:18:14,564 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 14:18:14,565 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 14:18:14,566 - INFO -  * Restarting with stat
+2025-05-02 14:18:15,829 - WARNING -  * Debugger is active!
+2025-05-02 14:18:15,832 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 14:18:18,680 - INFO - 127.0.0.1 - - [02/May/2025 14:18:18] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:09:05,668 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:09:05,995 - INFO -  * Restarting with stat
+2025-05-02 15:10:52,666 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 15:10:52,666 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:10:52,668 - INFO -  * Restarting with stat
+2025-05-02 15:10:54,025 - WARNING -  * Debugger is active!
+2025-05-02 15:10:54,032 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:10:58,194 - INFO - 127.0.0.1 - - [02/May/2025 15:10:58] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 15:10:58,542 - INFO - 127.0.0.1 - - [02/May/2025 15:10:58] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 15:10:58,546 - INFO - 127.0.0.1 - - [02/May/2025 15:10:58] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 15:11:00,387 - INFO - 127.0.0.1 - - [02/May/2025 15:11:00] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:11:24,312 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:11:24,651 - INFO -  * Restarting with stat
+2025-05-02 15:11:26,515 - WARNING -  * Debugger is active!
+2025-05-02 15:11:26,518 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:11:44,669 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:11:44,942 - INFO -  * Restarting with stat
+2025-05-02 15:11:46,265 - WARNING -  * Debugger is active!
+2025-05-02 15:11:46,268 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:11:48,308 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:11:48,606 - INFO -  * Restarting with stat
+2025-05-02 15:11:49,954 - WARNING -  * Debugger is active!
+2025-05-02 15:11:49,956 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:11:59,206 - INFO - 127.0.0.1 - - [02/May/2025 15:11:59] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:14:27,217 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:14:27,523 - INFO -  * Restarting with stat
+2025-05-02 15:14:29,603 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 15:14:29,603 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:14:29,604 - INFO -  * Restarting with stat
+2025-05-02 15:14:30,871 - WARNING -  * Debugger is active!
+2025-05-02 15:14:30,874 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:16:06,546 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:16:06,834 - INFO -  * Restarting with stat
+2025-05-02 15:16:08,270 - WARNING -  * Debugger is active!
+2025-05-02 15:16:08,273 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:16:12,326 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:16:12,627 - INFO -  * Restarting with stat
+2025-05-02 15:16:25,210 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 15:16:25,210 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:16:25,212 - INFO -  * Restarting with stat
+2025-05-02 15:16:26,568 - WARNING -  * Debugger is active!
+2025-05-02 15:16:26,570 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:16:29,037 - INFO - 127.0.0.1 - - [02/May/2025 15:16:29] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:16:44,735 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:16:45,021 - INFO -  * Restarting with stat
+2025-05-02 15:16:46,287 - WARNING -  * Debugger is active!
+2025-05-02 15:16:46,290 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:16:50,349 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:16:50,651 - INFO -  * Restarting with stat
+2025-05-02 15:16:51,900 - WARNING -  * Debugger is active!
+2025-05-02 15:16:51,902 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:16:54,943 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:16:55,242 - INFO -  * Restarting with stat
+2025-05-02 15:16:56,500 - WARNING -  * Debugger is active!
+2025-05-02 15:16:56,502 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:17:22,703 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:17:22,969 - INFO -  * Restarting with stat
+2025-05-02 15:17:24,305 - WARNING -  * Debugger is active!
+2025-05-02 15:17:24,308 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:17:25,335 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:17:25,596 - INFO -  * Restarting with stat
+2025-05-02 15:17:26,919 - WARNING -  * Debugger is active!
+2025-05-02 15:17:26,921 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:17:28,955 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:17:29,221 - INFO -  * Restarting with stat
+2025-05-02 15:17:52,625 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 15:17:52,625 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:17:52,626 - INFO -  * Restarting with stat
+2025-05-02 15:17:53,874 - WARNING -  * Debugger is active!
+2025-05-02 15:17:53,877 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:17:56,482 - INFO - 127.0.0.1 - - [02/May/2025 15:17:56] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:18:03,325 - INFO - 127.0.0.1 - - [02/May/2025 15:18:03] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:18:44,241 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:18:44,519 - INFO -  * Restarting with stat
+2025-05-02 15:18:45,746 - WARNING -  * Debugger is active!
+2025-05-02 15:18:45,748 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:18:47,786 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:18:48,054 - INFO -  * Restarting with stat
+2025-05-02 15:18:49,314 - WARNING -  * Debugger is active!
+2025-05-02 15:18:49,316 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:20:59,224 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:20:59,512 - INFO -  * Restarting with stat
+2025-05-02 15:21:00,976 - WARNING -  * Debugger is active!
+2025-05-02 15:21:00,979 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:21:02,008 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:21:02,270 - INFO -  * Restarting with stat
+2025-05-02 15:22:24,277 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 15:22:24,277 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:22:24,278 - INFO -  * Restarting with stat
+2025-05-02 15:22:25,622 - WARNING -  * Debugger is active!
+2025-05-02 15:22:25,625 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:22:38,871 - INFO - 127.0.0.1 - - [02/May/2025 15:22:38] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:24:55,712 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:24:55,989 - INFO -  * Restarting with stat
+2025-05-02 15:24:57,462 - WARNING -  * Debugger is active!
+2025-05-02 15:24:57,465 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:24:59,500 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:24:59,787 - INFO -  * Restarting with stat
+2025-05-02 15:25:01,087 - WARNING -  * Debugger is active!
+2025-05-02 15:25:01,090 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:25:02,121 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:25:02,401 - INFO -  * Restarting with stat
+2025-05-02 15:25:03,778 - WARNING -  * Debugger is active!
+2025-05-02 15:25:03,781 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:25:06,827 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:25:07,094 - INFO -  * Restarting with stat
+2025-05-02 15:25:08,498 - WARNING -  * Debugger is active!
+2025-05-02 15:25:08,501 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:25:14,561 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 15:25:14,562 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:25:14,563 - INFO -  * Restarting with stat
+2025-05-02 15:25:15,913 - WARNING -  * Debugger is active!
+2025-05-02 15:25:15,916 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:25:16,050 - INFO - 127.0.0.1 - - [02/May/2025 15:25:16] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 15:25:16,321 - INFO - 127.0.0.1 - - [02/May/2025 15:25:16] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 15:25:16,327 - INFO - 127.0.0.1 - - [02/May/2025 15:25:16] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 15:25:17,312 - INFO - 127.0.0.1 - - [02/May/2025 15:25:17] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:25:53,204 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:25:53,477 - INFO -  * Restarting with stat
+2025-05-02 15:25:54,747 - WARNING -  * Debugger is active!
+2025-05-02 15:25:54,750 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:26:51,156 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:26:51,445 - INFO -  * Restarting with stat
+2025-05-02 15:26:52,739 - WARNING -  * Debugger is active!
+2025-05-02 15:26:52,741 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:26:55,784 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:26:56,047 - INFO -  * Restarting with stat
+2025-05-02 15:28:56,152 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 15:28:56,152 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:28:56,153 - INFO -  * Restarting with stat
+2025-05-02 15:28:57,459 - WARNING -  * Debugger is active!
+2025-05-02 15:28:57,462 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:28:58,973 - INFO - 127.0.0.1 - - [02/May/2025 15:28:58] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 15:28:59,207 - INFO - 127.0.0.1 - - [02/May/2025 15:28:59] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 15:28:59,211 - INFO - 127.0.0.1 - - [02/May/2025 15:28:59] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 15:29:00,395 - INFO - 127.0.0.1 - - [02/May/2025 15:29:00] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:33:37,451 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:33:37,746 - INFO -  * Restarting with stat
+2025-05-02 15:33:39,150 - WARNING -  * Debugger is active!
+2025-05-02 15:33:39,153 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:33:42,198 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:33:42,470 - INFO -  * Restarting with stat
+2025-05-02 15:33:43,745 - WARNING -  * Debugger is active!
+2025-05-02 15:33:43,748 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:33:49,809 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:33:50,078 - INFO -  * Restarting with stat
+2025-05-02 15:33:51,318 - WARNING -  * Debugger is active!
+2025-05-02 15:33:51,320 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:33:55,368 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:33:55,643 - INFO -  * Restarting with stat
+2025-05-02 15:33:56,972 - WARNING -  * Debugger is active!
+2025-05-02 15:33:56,975 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:33:59,012 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:33:59,296 - INFO -  * Restarting with stat
+2025-05-02 15:34:00,617 - WARNING -  * Debugger is active!
+2025-05-02 15:34:00,619 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:34:01,647 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:34:01,920 - INFO -  * Restarting with stat
+2025-05-02 15:34:03,166 - WARNING -  * Debugger is active!
+2025-05-02 15:34:03,168 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:34:06,208 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:34:06,498 - INFO -  * Restarting with stat
+2025-05-02 15:34:07,811 - WARNING -  * Debugger is active!
+2025-05-02 15:34:07,814 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:34:24,850 - INFO - 127.0.0.1 - - [02/May/2025 15:34:24] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:34:57,179 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:34:57,493 - INFO -  * Restarting with stat
+2025-05-02 15:34:58,883 - WARNING -  * Debugger is active!
+2025-05-02 15:34:58,885 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:34:59,914 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:35:00,203 - INFO -  * Restarting with stat
+2025-05-02 15:35:01,552 - WARNING -  * Debugger is active!
+2025-05-02 15:35:01,555 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:35:03,591 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:35:03,878 - INFO -  * Restarting with stat
+2025-05-02 15:35:20,876 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 15:35:20,877 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:35:20,878 - INFO -  * Restarting with stat
+2025-05-02 15:35:22,156 - WARNING -  * Debugger is active!
+2025-05-02 15:35:22,159 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:35:22,451 - INFO - 127.0.0.1 - - [02/May/2025 15:35:22] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:35:36,504 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 15:35:36,504 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:35:36,506 - INFO -  * Restarting with stat
+2025-05-02 15:35:37,730 - WARNING -  * Debugger is active!
+2025-05-02 15:35:37,733 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:35:43,477 - INFO - 127.0.0.1 - - [02/May/2025 15:35:43] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:39:38,487 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:39:38,773 - INFO -  * Restarting with stat
+2025-05-02 15:39:40,235 - WARNING -  * Debugger is active!
+2025-05-02 15:39:40,237 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:39:46,924 - INFO - 127.0.0.1 - - [02/May/2025 15:39:46] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:40:31,616 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:40:31,877 - INFO -  * Restarting with stat
+2025-05-02 15:40:33,276 - WARNING -  * Debugger is active!
+2025-05-02 15:40:33,281 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:40:51,434 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:40:51,744 - INFO -  * Restarting with stat
+2025-05-02 15:40:53,020 - WARNING -  * Debugger is active!
+2025-05-02 15:40:53,024 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:40:57,245 - INFO - 127.0.0.1 - - [02/May/2025 15:40:57] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:40:57,917 - INFO - 127.0.0.1 - - [02/May/2025 15:40:57] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:42:13,665 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:42:13,947 - INFO -  * Restarting with stat
+2025-05-02 15:46:02,118 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 15:46:02,118 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:46:02,119 - INFO -  * Restarting with stat
+2025-05-02 15:46:03,387 - WARNING -  * Debugger is active!
+2025-05-02 15:46:03,392 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:46:05,197 - INFO - 127.0.0.1 - - [02/May/2025 15:46:05] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:52:40,251 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:52:40,550 - INFO -  * Restarting with stat
+2025-05-02 15:53:00,016 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 15:53:00,016 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:53:00,017 - INFO -  * Restarting with stat
+2025-05-02 15:53:01,331 - WARNING -  * Debugger is active!
+2025-05-02 15:53:01,333 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:53:02,095 - INFO - 127.0.0.1 - - [02/May/2025 15:53:02] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:53:26,532 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:53:26,804 - INFO -  * Restarting with stat
+2025-05-02 15:53:28,064 - WARNING -  * Debugger is active!
+2025-05-02 15:53:28,067 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:53:30,102 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:53:30,390 - INFO -  * Restarting with stat
+2025-05-02 15:53:31,634 - WARNING -  * Debugger is active!
+2025-05-02 15:53:31,636 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:53:32,666 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:53:32,939 - INFO -  * Restarting with stat
+2025-05-02 15:53:34,223 - WARNING -  * Debugger is active!
+2025-05-02 15:53:34,225 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:53:37,265 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:53:37,548 - INFO -  * Restarting with stat
+2025-05-02 15:53:38,831 - WARNING -  * Debugger is active!
+2025-05-02 15:53:38,833 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:53:40,868 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 15:53:41,166 - INFO -  * Restarting with stat
+2025-05-02 15:53:42,420 - WARNING -  * Debugger is active!
+2025-05-02 15:53:42,424 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:53:47,453 - INFO - 127.0.0.1 - - [02/May/2025 15:53:47] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:56:39,025 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 15:56:39,027 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:56:39,028 - INFO -  * Restarting with stat
+2025-05-02 15:56:40,329 - WARNING -  * Debugger is active!
+2025-05-02 15:56:40,332 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:56:40,782 - INFO - 127.0.0.1 - - [02/May/2025 15:56:40] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:57:45,817 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 15:57:46,114 - INFO -  * Restarting with stat
+2025-05-02 15:57:47,463 - WARNING -  * Debugger is active!
+2025-05-02 15:57:47,467 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:57:50,509 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 15:57:50,831 - INFO -  * Restarting with stat
+2025-05-02 15:58:16,500 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 15:58:16,501 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:58:16,502 - INFO -  * Restarting with stat
+2025-05-02 15:58:17,754 - WARNING -  * Debugger is active!
+2025-05-02 15:58:17,757 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:58:18,201 - INFO - 127.0.0.1 - - [02/May/2025 15:58:18] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 15:59:08,137 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 15:59:08,419 - INFO -  * Restarting with stat
+2025-05-02 15:59:09,816 - WARNING -  * Debugger is active!
+2025-05-02 15:59:09,818 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 15:59:11,213 - INFO - 127.0.0.1 - - [02/May/2025 15:59:11] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 16:03:21,541 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 16:03:21,542 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:03:21,543 - INFO -  * Restarting with stat
+2025-05-02 16:03:22,834 - WARNING -  * Debugger is active!
+2025-05-02 16:03:22,837 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 16:03:26,929 - INFO - 127.0.0.1 - - [02/May/2025 16:03:26] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 16:03:26,935 - INFO - 127.0.0.1 - - [02/May/2025 16:03:26] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 16:03:28,189 - INFO - 127.0.0.1 - - [02/May/2025 16:03:28] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 16:03:29,570 - INFO - 127.0.0.1 - - [02/May/2025 16:03:29] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 16:03:29,846 - INFO - 127.0.0.1 - - [02/May/2025 16:03:29] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 16:03:29,849 - INFO - 127.0.0.1 - - [02/May/2025 16:03:29] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 16:03:31,452 - INFO - 127.0.0.1 - - [02/May/2025 16:03:31] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 16:07:25,911 - INFO - 127.0.0.1 - - [02/May/2025 16:07:25] "GET / HTTP/1.1" 200 -
+2025-05-02 17:38:38,867 - INFO - 127.0.0.1 - - [02/May/2025 17:38:38] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 17:38:39,709 - INFO - 127.0.0.1 - - [02/May/2025 17:38:39] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 17:38:39,716 - INFO - 127.0.0.1 - - [02/May/2025 17:38:39] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 17:38:42,899 - INFO - 127.0.0.1 - - [02/May/2025 17:38:42] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:45:36,992 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 17:45:37,358 - INFO -  * Restarting with stat
+2025-05-02 17:45:39,188 - WARNING -  * Debugger is active!
+2025-05-02 17:45:39,191 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 17:45:43,242 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 17:45:43,522 - INFO -  * Restarting with stat
+2025-05-02 17:45:44,802 - WARNING -  * Debugger is active!
+2025-05-02 17:45:44,806 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 17:45:59,987 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 17:46:00,280 - INFO -  * Restarting with stat
+2025-05-02 17:46:28,722 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 17:46:28,723 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 17:46:28,723 - INFO -  * Restarting with stat
+2025-05-02 17:46:29,936 - WARNING -  * Debugger is active!
+2025-05-02 17:46:29,938 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 17:46:33,470 - INFO - 127.0.0.1 - - [02/May/2025 17:46:33] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 17:46:33,724 - INFO - 127.0.0.1 - - [02/May/2025 17:46:33] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 17:46:33,729 - INFO - 127.0.0.1 - - [02/May/2025 17:46:33] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 17:46:42,947 - INFO - 127.0.0.1 - - [02/May/2025 17:46:42] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:45,509 - INFO - 127.0.0.1 - - [02/May/2025 17:46:45] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:47,177 - INFO - 127.0.0.1 - - [02/May/2025 17:46:47] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:47,948 - INFO - 127.0.0.1 - - [02/May/2025 17:46:47] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:48,217 - INFO - 127.0.0.1 - - [02/May/2025 17:46:48] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:48,231 - INFO - 127.0.0.1 - - [02/May/2025 17:46:48] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:48,546 - INFO - 127.0.0.1 - - [02/May/2025 17:46:48] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:49,269 - INFO - 127.0.0.1 - - [02/May/2025 17:46:49] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:50,635 - INFO - 127.0.0.1 - - [02/May/2025 17:46:50] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:51,388 - INFO - 127.0.0.1 - - [02/May/2025 17:46:51] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:52,010 - INFO - 127.0.0.1 - - [02/May/2025 17:46:52] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:52,114 - INFO - 127.0.0.1 - - [02/May/2025 17:46:52] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:52,295 - INFO - 127.0.0.1 - - [02/May/2025 17:46:52] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:52,755 - INFO - 127.0.0.1 - - [02/May/2025 17:46:52] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:53,214 - INFO - 127.0.0.1 - - [02/May/2025 17:46:53] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:46:53,281 - INFO - 127.0.0.1 - - [02/May/2025 17:46:53] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:47:02,124 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 17:47:02,124 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 17:47:02,125 - INFO -  * Restarting with stat
+2025-05-02 17:47:03,471 - WARNING -  * Debugger is active!
+2025-05-02 17:47:03,473 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 17:47:05,956 - INFO - 127.0.0.1 - - [02/May/2025 17:47:05] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 17:47:06,190 - INFO - 127.0.0.1 - - [02/May/2025 17:47:06] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 17:47:06,194 - INFO - 127.0.0.1 - - [02/May/2025 17:47:06] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 17:47:09,133 - INFO - 127.0.0.1 - - [02/May/2025 17:47:09] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:47:13,296 - INFO - 127.0.0.1 - - [02/May/2025 17:47:13] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:47:37,734 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 17:47:38,016 - INFO -  * Restarting with stat
+2025-05-02 17:47:39,420 - WARNING -  * Debugger is active!
+2025-05-02 17:47:39,422 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 17:47:45,938 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 17:47:45,939 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 17:47:45,940 - INFO -  * Restarting with stat
+2025-05-02 17:47:47,241 - WARNING -  * Debugger is active!
+2025-05-02 17:47:47,244 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 17:47:47,264 - INFO - 127.0.0.1 - - [02/May/2025 17:47:47] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 17:47:47,464 - INFO - 127.0.0.1 - - [02/May/2025 17:47:47] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 17:47:47,468 - INFO - 127.0.0.1 - - [02/May/2025 17:47:47] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 17:47:50,028 - INFO - 127.0.0.1 - - [02/May/2025 17:47:50] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 17:57:07,349 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 17:57:07,349 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 17:57:07,350 - INFO -  * Restarting with stat
+2025-05-02 17:57:08,616 - WARNING -  * Debugger is active!
+2025-05-02 17:57:08,619 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 17:57:11,295 - INFO - 127.0.0.1 - - [02/May/2025 17:57:11] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 17:57:11,549 - INFO - 127.0.0.1 - - [02/May/2025 17:57:11] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 17:57:11,554 - INFO - 127.0.0.1 - - [02/May/2025 17:57:11] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 17:57:13,684 - INFO - 127.0.0.1 - - [02/May/2025 17:57:13] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 18:02:45,775 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 18:02:45,776 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 18:02:45,777 - INFO -  * Restarting with stat
+2025-05-02 18:02:47,073 - WARNING -  * Debugger is active!
+2025-05-02 18:02:47,076 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 18:02:50,339 - INFO - 127.0.0.1 - - [02/May/2025 18:02:50] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 18:02:50,591 - INFO - 127.0.0.1 - - [02/May/2025 18:02:50] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 18:02:50,594 - INFO - 127.0.0.1 - - [02/May/2025 18:02:50] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 18:02:52,508 - INFO - 127.0.0.1 - - [02/May/2025 18:02:52] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 18:05:39,417 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 18:05:39,418 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 18:05:39,419 - INFO -  * Restarting with stat
+2025-05-02 18:05:40,714 - WARNING -  * Debugger is active!
+2025-05-02 18:05:40,718 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 18:05:44,678 - INFO - 127.0.0.1 - - [02/May/2025 18:05:44] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 18:05:44,934 - INFO - 127.0.0.1 - - [02/May/2025 18:05:44] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 18:05:44,938 - INFO - 127.0.0.1 - - [02/May/2025 18:05:44] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 18:05:46,596 - INFO - 127.0.0.1 - - [02/May/2025 18:05:46] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 18:09:53,220 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 18:09:53,220 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 18:09:53,221 - INFO -  * Restarting with stat
+2025-05-02 18:09:54,545 - WARNING -  * Debugger is active!
+2025-05-02 18:09:54,549 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 18:10:01,500 - INFO - 127.0.0.1 - - [02/May/2025 18:10:01] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 18:10:01,730 - INFO - 127.0.0.1 - - [02/May/2025 18:10:01] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 18:10:01,733 - INFO - 127.0.0.1 - - [02/May/2025 18:10:01] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 18:10:03,636 - INFO - 127.0.0.1 - - [02/May/2025 18:10:03] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 18:10:27,719 - INFO - 127.0.0.1 - - [02/May/2025 18:10:27] "GET / HTTP/1.1" 200 -
+2025-05-02 18:10:35,124 - INFO - 127.0.0.1 - - [02/May/2025 18:10:35] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 18:12:33,249 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 18:12:33,250 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 18:12:33,251 - INFO -  * Restarting with stat
+2025-05-02 18:12:34,598 - WARNING -  * Debugger is active!
+2025-05-02 18:12:34,601 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 18:12:44,180 - INFO - 127.0.0.1 - - [02/May/2025 18:12:44] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 18:12:44,370 - INFO - 127.0.0.1 - - [02/May/2025 18:12:44] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 18:12:44,374 - INFO - 127.0.0.1 - - [02/May/2025 18:12:44] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 18:12:46,081 - INFO - 127.0.0.1 - - [02/May/2025 18:12:46] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 20:32:21,278 - INFO - 127.0.0.1 - - [02/May/2025 20:32:21] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 20:32:21,555 - INFO - 127.0.0.1 - - [02/May/2025 20:32:21] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 20:32:21,560 - INFO - 127.0.0.1 - - [02/May/2025 20:32:21] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 20:32:40,758 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 20:32:40,758 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 20:32:40,759 - INFO -  * Restarting with stat
+2025-05-02 20:32:41,997 - WARNING -  * Debugger is active!
+2025-05-02 20:32:42,000 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 20:32:47,014 - INFO - 127.0.0.1 - - [02/May/2025 20:32:47] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 20:32:47,236 - INFO - 127.0.0.1 - - [02/May/2025 20:32:47] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 20:32:47,241 - INFO - 127.0.0.1 - - [02/May/2025 20:32:47] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 20:32:50,703 - INFO - 127.0.0.1 - - [02/May/2025 20:32:50] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 20:33:31,426 - INFO - 127.0.0.1 - - [02/May/2025 20:33:31] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 20:33:31,642 - INFO - 127.0.0.1 - - [02/May/2025 20:33:31] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 20:33:31,650 - INFO - 127.0.0.1 - - [02/May/2025 20:33:31] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 20:33:33,228 - INFO - 127.0.0.1 - - [02/May/2025 20:33:33] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 21:00:23,414 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 21:00:23,833 - INFO -  * Restarting with stat
+2025-05-02 21:00:25,642 - WARNING -  * Debugger is active!
+2025-05-02 21:00:25,645 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 21:00:31,510 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 21:00:31,511 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 21:00:31,511 - INFO -  * Restarting with stat
+2025-05-02 21:00:32,881 - WARNING -  * Debugger is active!
+2025-05-02 21:00:32,884 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 21:00:39,420 - INFO - 127.0.0.1 - - [02/May/2025 21:00:39] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 21:00:39,672 - INFO - 127.0.0.1 - - [02/May/2025 21:00:39] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 21:00:39,676 - INFO - 127.0.0.1 - - [02/May/2025 21:00:39] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 21:00:42,010 - INFO - 127.0.0.1 - - [02/May/2025 21:00:42] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 21:02:56,310 - INFO - 127.0.0.1 - - [02/May/2025 21:02:56] "GET / HTTP/1.1" 200 -
+2025-05-02 21:06:41,917 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\routes2.py', reloading
+2025-05-02 21:06:42,203 - INFO -  * Restarting with stat
+2025-05-02 21:18:00,553 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 21:18:00,554 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 21:18:00,555 - INFO -  * Restarting with stat
+2025-05-02 21:18:01,917 - WARNING -  * Debugger is active!
+2025-05-02 21:18:01,920 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 21:18:01,940 - INFO - 127.0.0.1 - - [02/May/2025 21:18:01] "GET / HTTP/1.1" 200 -
+2025-05-02 21:18:22,060 - INFO - 127.0.0.1 - - [02/May/2025 21:18:22] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 21:18:22,221 - INFO - 127.0.0.1 - - [02/May/2025 21:18:22] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 21:18:22,224 - INFO - 127.0.0.1 - - [02/May/2025 21:18:22] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 21:18:29,426 - INFO - 127.0.0.1 - - [02/May/2025 21:18:29] "GET /file_manager HTTP/1.1" 200 -
+2025-05-02 21:18:38,996 - INFO - 127.0.0.1 - - [02/May/2025 21:18:38] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 21:18:39,075 - INFO - 127.0.0.1 - - [02/May/2025 21:18:39] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 21:18:39,079 - INFO - 127.0.0.1 - - [02/May/2025 21:18:39] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 21:18:49,358 - INFO - 127.0.0.1 - - [02/May/2025 21:18:49] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 21:19:07,877 - INFO - 127.0.0.1 - - [02/May/2025 21:19:07] "POST /update_config HTTP/1.1" 200 -
+2025-05-02 21:19:07,885 - INFO - 127.0.0.1 - - [02/May/2025 21:19:07] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 21:19:39,029 - INFO - 127.0.0.1 - - [02/May/2025 21:19:39] "GET /file_manager HTTP/1.1" 200 -
+2025-05-02 21:19:49,419 - INFO - 127.0.0.1 - - [02/May/2025 21:19:49] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 21:19:49,493 - INFO - 127.0.0.1 - - [02/May/2025 21:19:49] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 21:19:49,497 - INFO - 127.0.0.1 - - [02/May/2025 21:19:49] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 21:19:53,158 - INFO - 127.0.0.1 - - [02/May/2025 21:19:53] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 21:19:53,229 - INFO - 127.0.0.1 - - [02/May/2025 21:19:53] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 21:19:53,234 - INFO - 127.0.0.1 - - [02/May/2025 21:19:53] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 21:20:06,974 - INFO - 127.0.0.1 - - [02/May/2025 21:20:06] "GET /file_manager HTTP/1.1" 200 -
+2025-05-02 21:20:19,744 - INFO - 127.0.0.1 - - [02/May/2025 21:20:19] "GET /file_manager HTTP/1.1" 200 -
+2025-05-02 21:21:38,729 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 21:21:39,032 - INFO -  * Restarting with stat
+2025-05-02 21:21:40,601 - WARNING -  * Debugger is active!
+2025-05-02 21:21:40,604 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 21:21:41,639 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\app\\utils\\data_cleaner.py', reloading
+2025-05-02 21:21:41,904 - INFO -  * Restarting with stat
+2025-05-02 21:21:43,167 - WARNING -  * Debugger is active!
+2025-05-02 21:21:43,169 - INFO -  * Debugger PIN: 886-850-343
+2025-05-02 21:21:46,818 - INFO - 127.0.0.1 - - [02/May/2025 21:21:46] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-02 21:21:46,942 - INFO - 127.0.0.1 - - [02/May/2025 21:21:46] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 21:21:46,953 - INFO - 127.0.0.1 - - [02/May/2025 21:21:46] "GET /get_config HTTP/1.1" 200 -
+2025-05-02 21:21:49,680 - INFO - 127.0.0.1 - - [02/May/2025 21:21:49] "POST /process_data HTTP/1.1" 200 -
+2025-05-02 21:21:52,209 - INFO - 127.0.0.1 - - [02/May/2025 21:21:52] "POST /back_to_home HTTP/1.1" 200 -
+2025-05-02 21:21:53,255 - INFO - 127.0.0.1 - - [02/May/2025 21:21:53] "GET /file_manager HTTP/1.1" 200 -
+2025-05-02 21:23:10,158 - INFO - 127.0.0.1 - - [02/May/2025 21:23:10] "[33mPOST /model_selection_submit HTTP/1.1[0m" 404 -

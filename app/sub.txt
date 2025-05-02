@@ -1,0 +1,16 @@
+├── routes.py                     # 所有路由配置
+├── forms.py                      # 表单类定义（上传/参数配置）
+├── models/                       # 机器学习模型模块
+├── templates/                    # 前端模板
+│   ├── base.html                 # 基础模板
+│   ├── index.html                # 仪表盘主页
+│   ├── upload.html               # 数据上传界面
+│   ├── data_file_manger.html              
+│   ├── training.html             # 模型训练监控界面
+│   ├── results.html              # 多维结果展示界面
+│   ├── predict.html              # 预测结果展示界面
+│   └── report.html               # 综合效益评估报告
+├── data/                         # 数据管理
+│   ├── raw/                      # 原始数据存储
+│   ├── processed/                # 处理后数据存储
+│   └── predictions/              # 预测结果存储
