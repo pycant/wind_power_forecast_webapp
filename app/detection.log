@@ -1400,3 +1400,126 @@ KeyError: 'errors'
 2025-05-02 21:21:52,209 - INFO - 127.0.0.1 - - [02/May/2025 21:21:52] "POST /back_to_home HTTP/1.1" 200 -
 2025-05-02 21:21:53,255 - INFO - 127.0.0.1 - - [02/May/2025 21:21:53] "GET /file_manager HTTP/1.1" 200 -
 2025-05-02 21:23:10,158 - INFO - 127.0.0.1 - - [02/May/2025 21:23:10] "[33mPOST /model_selection_submit HTTP/1.1[0m" 404 -
+2025-05-03 09:46:44,033 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 09:46:44,043 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 09:46:44,044 - INFO -  * Restarting with stat
+2025-05-03 09:46:45,514 - WARNING -  * Debugger is active!
+2025-05-03 09:46:45,517 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 09:46:48,881 - INFO - 127.0.0.1 - - [03/May/2025 09:46:48] "GET / HTTP/1.1" 200 -
+2025-05-03 09:47:14,763 - INFO - 127.0.0.1 - - [03/May/2025 09:47:14] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-03 09:47:15,078 - INFO - 127.0.0.1 - - [03/May/2025 09:47:15] "GET /get_config HTTP/1.1" 200 -
+2025-05-03 09:47:15,081 - INFO - 127.0.0.1 - - [03/May/2025 09:47:15] "GET /get_config HTTP/1.1" 200 -
+2025-05-03 09:47:27,534 - INFO - 127.0.0.1 - - [03/May/2025 09:47:27] "POST /update_config HTTP/1.1" 200 -
+2025-05-03 09:47:27,540 - INFO - 127.0.0.1 - - [03/May/2025 09:47:27] "GET /get_config HTTP/1.1" 200 -
+2025-05-03 09:47:31,149 - INFO - 127.0.0.1 - - [03/May/2025 09:47:31] "POST /process_data HTTP/1.1" 200 -
+2025-05-03 09:47:34,041 - ERROR - Õº±Ì…˙≥… ß∞‹: New date column already in dict Time(year-month-day h:m:s)
+2025-05-03 09:47:34,044 - INFO - 127.0.0.1 - - [03/May/2025 09:47:34] "POST /back_to_home HTTP/1.1" 200 -
+2025-05-03 09:50:38,630 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-03 09:50:39,053 - INFO -  * Restarting with stat
+2025-05-03 09:55:41,920 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 09:55:41,920 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 09:55:41,921 - INFO -  * Restarting with stat
+2025-05-03 09:55:43,368 - WARNING -  * Debugger is active!
+2025-05-03 09:55:43,371 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 09:55:50,567 - INFO - 127.0.0.1 - - [03/May/2025 09:55:50] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-03 09:55:50,788 - INFO - 127.0.0.1 - - [03/May/2025 09:55:50] "GET /get_config HTTP/1.1" 200 -
+2025-05-03 09:55:50,792 - INFO - 127.0.0.1 - - [03/May/2025 09:55:50] "GET /get_config HTTP/1.1" 200 -
+2025-05-03 09:55:56,247 - INFO - 127.0.0.1 - - [03/May/2025 09:55:56] "POST /process_data HTTP/1.1" 200 -
+2025-05-03 09:56:19,572 - INFO - 127.0.0.1 - - [03/May/2025 09:56:19] "POST /back_to_home HTTP/1.1" 200 -
+2025-05-03 09:56:34,357 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-03 09:56:34,763 - INFO -  * Restarting with stat
+2025-05-03 09:56:36,286 - WARNING -  * Debugger is active!
+2025-05-03 09:56:36,288 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 09:56:38,323 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-03 09:56:38,648 - INFO -  * Restarting with stat
+2025-05-03 09:57:24,502 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 09:57:24,502 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 09:57:24,504 - INFO -  * Restarting with stat
+2025-05-03 09:57:26,042 - WARNING -  * Debugger is active!
+2025-05-03 09:57:26,046 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 09:57:26,766 - ERROR - Õº±Ì…˙≥… ß∞‹: list index out of range
+2025-05-03 09:57:26,771 - INFO - 127.0.0.1 - - [03/May/2025 09:57:26] "POST /back_to_home HTTP/1.1" 200 -
+2025-05-03 09:57:50,914 - INFO - 127.0.0.1 - - [03/May/2025 09:57:50] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-03 09:57:51,149 - INFO - 127.0.0.1 - - [03/May/2025 09:57:51] "GET /get_config HTTP/1.1" 200 -
+2025-05-03 09:57:51,155 - INFO - 127.0.0.1 - - [03/May/2025 09:57:51] "GET /get_config HTTP/1.1" 200 -
+2025-05-03 09:57:53,907 - INFO - 127.0.0.1 - - [03/May/2025 09:57:53] "POST /process_data HTTP/1.1" 200 -
+2025-05-03 09:57:56,614 - INFO - 127.0.0.1 - - [03/May/2025 09:57:56] "POST /back_to_home HTTP/1.1" 200 -
+2025-05-03 10:05:36,393 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-03 10:05:36,794 - INFO -  * Restarting with stat
+2025-05-03 10:05:38,302 - WARNING -  * Debugger is active!
+2025-05-03 10:05:38,305 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:05:41,349 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-03 10:05:41,664 - INFO -  * Restarting with stat
+2025-05-03 10:05:43,180 - WARNING -  * Debugger is active!
+2025-05-03 10:05:43,182 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:05:45,219 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-03 10:05:45,574 - INFO -  * Restarting with stat
+2025-05-03 10:05:47,119 - WARNING -  * Debugger is active!
+2025-05-03 10:05:47,122 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:05:49,158 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-03 10:05:49,472 - INFO -  * Restarting with stat
+2025-05-03 10:05:50,958 - WARNING -  * Debugger is active!
+2025-05-03 10:05:50,961 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:05:51,988 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-03 10:05:52,282 - INFO -  * Restarting with stat
+2025-05-03 10:05:53,813 - WARNING -  * Debugger is active!
+2025-05-03 10:05:53,819 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:06:08,961 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-03 10:06:09,262 - INFO -  * Restarting with stat
+2025-05-03 10:06:10,777 - WARNING -  * Debugger is active!
+2025-05-03 10:06:10,780 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:06:12,821 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-03 10:06:13,134 - INFO -  * Restarting with stat
+2025-05-03 10:06:14,611 - WARNING -  * Debugger is active!
+2025-05-03 10:06:14,613 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:06:15,642 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-03 10:06:15,999 - INFO -  * Restarting with stat
+2025-05-03 10:06:17,481 - WARNING -  * Debugger is active!
+2025-05-03 10:06:17,483 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:06:58,813 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\test.py', reloading
+2025-05-03 10:06:59,129 - INFO -  * Restarting with stat
+2025-05-03 10:07:00,565 - WARNING -  * Debugger is active!
+2025-05-03 10:07:00,567 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:07:06,650 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\test.py', reloading
+2025-05-03 10:07:06,983 - INFO -  * Restarting with stat
+2025-05-03 10:07:08,578 - WARNING -  * Debugger is active!
+2025-05-03 10:07:08,580 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:07:09,612 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\test.py', reloading
+2025-05-03 10:07:09,944 - INFO -  * Restarting with stat
+2025-05-03 10:07:11,367 - WARNING -  * Debugger is active!
+2025-05-03 10:07:11,369 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:07:17,431 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\test.py', reloading
+2025-05-03 10:07:17,737 - INFO -  * Restarting with stat
+2025-05-03 10:07:19,229 - WARNING -  * Debugger is active!
+2025-05-03 10:07:19,232 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:07:25,300 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\test.py', reloading
+2025-05-03 10:07:25,637 - INFO -  * Restarting with stat
+2025-05-03 10:07:27,105 - WARNING -  * Debugger is active!
+2025-05-03 10:07:27,107 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:18:07,727 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 10:18:07,728 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 10:18:07,728 - INFO -  * Restarting with stat
+2025-05-03 10:18:09,191 - WARNING -  * Debugger is active!
+2025-05-03 10:18:09,194 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:18:11,705 - ERROR - Õº±Ì…˙≥… ß∞‹: list index out of range
+2025-05-03 10:18:11,711 - INFO - 127.0.0.1 - - [03/May/2025 10:18:11] "POST /back_to_home HTTP/1.1" 200 -
+2025-05-03 10:18:40,128 - ERROR - Õº±Ì…˙≥… ß∞‹: list index out of range
+2025-05-03 10:18:40,134 - INFO - 127.0.0.1 - - [03/May/2025 10:18:40] "POST /back_to_home HTTP/1.1" 200 -
+2025-05-03 10:18:44,875 - INFO - 127.0.0.1 - - [03/May/2025 10:18:44] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-05-03 10:18:45,118 - INFO - 127.0.0.1 - - [03/May/2025 10:18:45] "GET /get_config HTTP/1.1" 200 -
+2025-05-03 10:18:45,122 - INFO - 127.0.0.1 - - [03/May/2025 10:18:45] "GET /get_config HTTP/1.1" 200 -
+2025-05-03 10:18:46,933 - INFO - 127.0.0.1 - - [03/May/2025 10:18:46] "POST /process_data HTTP/1.1" 200 -
+2025-05-03 10:18:50,233 - INFO - 127.0.0.1 - - [03/May/2025 10:18:50] "POST /back_to_home HTTP/1.1" 200 -
+2025-05-03 10:22:21,360 - INFO - 127.0.0.1 - - [03/May/2025 10:22:21] "[33mPOST /model_selection_submit HTTP/1.1[0m" 404 -
+2025-05-03 10:23:11,161 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-03 10:23:11,642 - INFO -  * Restarting with stat
+2025-05-03 10:23:13,586 - WARNING -  * Debugger is active!
+2025-05-03 10:23:13,589 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 10:23:14,621 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-03 10:23:14,955 - INFO -  * Restarting with stat
+2025-05-03 10:23:16,431 - WARNING -  * Debugger is active!
+2025-05-03 10:23:16,433 - INFO -  * Debugger PIN: 886-850-343

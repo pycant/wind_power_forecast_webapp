@@ -9,10 +9,10 @@ from tensorflow.keras.callbacks import EarlyStopping
 from bayes_opt import BayesianOptimization
 import matplotlib.pyplot as plt
 
-def run_lstm_model():
+def run_lstm_model(imf_path, data_path):
     # 1. 加载数据
-    imfs_file_path = r"C:\Users\chenjin\Downloads\IMFs_decomposed_ceemdan_full.xlsx"
-    data_file_path = r"C:\Users\chenjin\OneDrive\图片\文档\处理后数据.xlsx"
+    imfs_file_path = imf_path
+    data_file_path = data_path
 
     imfs_df = pd.read_excel(imfs_file_path, index_col=0)
     data_df = pd.read_excel(data_file_path)

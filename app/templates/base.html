@@ -10,6 +10,15 @@
         .sidebar-hover:hover { @apply bg-indigo-50 shadow-md rounded-md transition-all duration-300; }
         .chart-card { @apply bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition-shadow; }
     </style>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        /* 优化图表容器响应式 */
+        .plotly-chart {
+            width: 100%;
+            height: 100%;
+            min-height: 380px;
+        }
+    </style>
 </head>
 <body class="min-h-screen bg-gray-100 font-sans">
     <!-- 导航栏 -->
@@ -291,12 +300,32 @@
                             </button>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="show_data" class="container mx-auto px-4 py-8 bg-gray-50">
+        <div class="p-4">
+            <h3 class="text-lg font-medium text-indigo-600 mb-3">📊 异常值检测</h3>
+            <p class="text-gray-600 mb-4">基于DPGMM算法的时序异常检测</p>
+            <div class="h-96 bg-gray-100 rounded-lg">
+                <!-- 替换为Plotly图表容器 -->
+                <div id="processed-chart">
+                    {% if chart_html %}
+                        {{ chart_html|safe }}
+                    {% else %}
+                        <!-- 默认占位内容 -->
+                        <div class="flex items-center justify-center h-full text-gray-400">
+                            <i class="fas fa-chart-line text-4xl mr-2"></i>
+                            <p>等待数据处理后显示图表</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <!-- ...保持原有按钮不变 -->
+        </div>
+    </section>
     <!-- 模型选择模块 -->
     <section id="model" class="container mx-auto px-4 py-8">
         <h2 class="text-3xl font-bold mb-6 border-b-2 border-indigo-600 pb-2">🤖 模型选择</h2>

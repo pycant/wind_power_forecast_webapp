@@ -7,6 +7,8 @@ from data_manager import *
 from utils.data_cleaner import *
 import unicodedata
 import re
+import plotly.graph_objects as go
+import statsmodels.api as sm
 import json
 
 app = Flask(__name__)
@@ -296,7 +298,84 @@ def create_default_config():
 
 @app.route('/back_to_home', methods=['POST'])
 def save_processed_data():
-    return render_template('base.html')
+    def plot_data(path):
+        # 读取数据
+        print("图片绘制中...")
+        df = pd.read_csv(path)  # 先普通读取
+        df=df.iloc[:3000,:]  
+        date_column = df.columns[0]  # 获取第1列名称（位置索引0）
+        # df['Time(year-month-day h:m:s)'] = pd.to_datetime(df[date_column])
+        time = df.iloc[:, 0]
+        power = df.iloc[:, -1]
+        
+        # LOWESS拟合
+        x = np.arange(len(time))
+        lowess = sm.nonparametric.lowess(power, x, frac=0.05)
+        fitted_power = lowess[:, 1]
+
+        # 创建动态折线图
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(
+            x=time,
+            y=power,
+            mode='lines',
+            name='实际功率',
+            line=dict(color='#1f77b4')
+        ))
+        fig.add_trace(go.Scatter(
+            x=time,
+            y=fitted_power,
+            mode='lines',
+            name='LOWESS拟合',
+            line=dict(color='#ff7f0e', dash='dot')
+        ))
+
+        # 增强图表交互功能
+        fig.update_layout(
+            title='风电场发电功率趋势分析',
+            xaxis_title='时间',
+            yaxis_title='功率 (MW)',
+            hovermode='x unified',
+            template='plotly_white',
+            showlegend=True,
+            legend=dict(
+                orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="right",
+                x=1
+            ),
+            margin=dict(l=40, r=20, t=40, b=20)
+        )
+        
+        # 添加异常点标注（示例数据）
+        anomalies = power[(power - fitted_power).abs() > 2*power.std()]
+        fig.add_trace(go.Scatter(
+            x=time[anomalies.index],
+            y=anomalies,
+            mode='markers',
+            name='异常点',
+            marker=dict(color='red', size=6)
+        ))
+        
+        return fig.to_html(full_html=False, include_plotlyjs='cdn')
+
+    try:
+        # 生成图表HTML
+        fig_html = plot_data(p_result_path[-1])
+        
+        # 获取文件统计信息
+        file_stats = get_file_stats()
+        
+        return render_template('base.html', 
+                             chart_html=fig_html,
+                             file_stats=file_stats,
+                             processed_file=os.path.basename(p_result_path[-1]))
+        print("图表生成成功")
+    except Exception as e:
+        app.logger.error(f"图表生成失败: {str(e)}")
+        return render_template('base.html', 
+                             error_message="图表生成失败，请检查数据格式")
 
 
 
@@ -328,6 +407,13 @@ def handle_interaction():
         })
     
     return jsonify({'status': 'unknown_action'}), 400
+
+@app.route('model_selection_submit', methods=['POST'])
+def model_selection_submit():
+    # 获取前端交互元素信息
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True, threaded=True)

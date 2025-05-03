@@ -2,13 +2,11 @@ import pandas as pd
 from PyEMD import CEEMDAN, EMD
 import numpy as np
 import matplotlib.pyplot as plt
-
-def run_ceemdan_decomposition():
+    
+def run_ceemdan_decomposition(file_path,output_path):
     # 设置绘图参数
     plt.rcParams.update({'font.size': 10, 'font.family': 'serif'})
 
-    # 读取CSV文件
-    file_path = r"C:\Users\chenjin\Downloads\clustering_results_cleaned.csv"
     try:
         df = pd.read_csv(file_path, encoding='gbk')  # 尝试使用 GBK 编码
     except UnicodeDecodeError:
@@ -47,10 +45,9 @@ def run_ceemdan_decomposition():
     IMF_ceemdan_df['Original Signal'] = s
 
     # 保存CEEMDAN分解结果到新的Excel文件
-    output_file_path = r"C:\Users\chenjin\Downloads\IMFs_decomposed_ceemdan_full.xlsx"
-    IMF_ceemdan_df.to_excel(output_file_path)
+    IMF_ceemdan_df.to_excel(output_path)
 
-    print(f"Decomposed data saved to {output_file_path}")
+    print(f"Decomposed data saved to {output_path}")
 
     # 设置绘图参数
     plt.rcParams.update({'font.size': 10, 'font.family': 'serif'})
