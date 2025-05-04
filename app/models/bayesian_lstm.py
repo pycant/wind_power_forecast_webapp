@@ -158,5 +158,3 @@ def run_lstm_model(imf_path, data_path):
     plt.legend()
     plt.show()
 
-# 调用函数
-run_lstm_model()

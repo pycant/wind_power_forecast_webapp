@@ -32,3 +32,92 @@
 2025-05-03 10:17:54,229 - INFO -  * Restarting with stat
 2025-05-03 10:17:55,733 - WARNING -  * Debugger is active!
 2025-05-03 10:17:55,735 - INFO -  * Debugger PIN: 886-850-343
+2025-05-03 23:14:30,695 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 23:14:30,696 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 23:14:30,697 - INFO -  * Restarting with stat
+2025-05-03 23:14:32,489 - WARNING -  * Debugger is active!
+2025-05-03 23:14:32,492 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 02:01:07,291 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 02:01:07,825 - INFO -  * Restarting with stat
+2025-05-04 02:01:10,506 - WARNING -  * Debugger is active!
+2025-05-04 02:01:10,509 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 02:03:53,324 - ERROR - Õº±Ì…˙≥… ß∞‹: list index out of range
+2025-05-04 02:03:53,331 - INFO - 127.0.0.1 - - [04/May/2025 02:03:53] "POST /back_to_home HTTP/1.1" 200 -
+2025-05-04 02:03:58,375 - ERROR - ‘§≤‚ ß∞‹: name 'ModelConfigLoader' is not defined
+Traceback (most recent call last):
+  File "c:\Users\12919\Desktop\project\º∆À„…Ëº∆\wind_power_forecast_webapp\app\routes2.py", line 450, in predict_submit
+    config = ModelConfigLoader.load_config()
+             ^^^^^^^^^^^^^^^^^
+NameError: name 'ModelConfigLoader' is not defined
+2025-05-04 02:03:58,378 - INFO - 127.0.0.1 - - [04/May/2025 02:03:58] "POST /predict_submit HTTP/1.1" 200 -
+2025-05-04 02:05:13,426 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 02:05:13,958 - INFO -  * Restarting with stat
+2025-05-04 02:05:15,916 - WARNING -  * Debugger is active!
+2025-05-04 02:05:15,919 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 02:05:16,951 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 02:05:17,368 - INFO -  * Restarting with stat
+2025-05-04 02:05:19,038 - WARNING -  * Debugger is active!
+2025-05-04 02:05:19,041 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 02:05:21,082 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 02:05:21,477 - INFO -  * Restarting with stat
+2025-05-04 02:05:23,170 - WARNING -  * Debugger is active!
+2025-05-04 02:05:23,173 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:13:41,816 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 03:13:42,250 - INFO -  * Restarting with stat
+2025-05-04 03:13:44,956 - WARNING -  * Debugger is active!
+2025-05-04 03:13:44,959 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:13:45,993 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 03:13:46,322 - INFO -  * Restarting with stat
+2025-05-04 03:13:47,823 - WARNING -  * Debugger is active!
+2025-05-04 03:13:47,826 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:13:55,916 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 03:13:56,302 - INFO -  * Restarting with stat
+2025-05-04 03:13:57,837 - WARNING -  * Debugger is active!
+2025-05-04 03:13:57,840 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:13:59,881 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 03:14:00,213 - INFO -  * Restarting with stat
+2025-05-04 03:14:01,908 - WARNING -  * Debugger is active!
+2025-05-04 03:14:01,911 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:14:02,944 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 03:14:03,289 - INFO -  * Restarting with stat
+2025-05-04 03:14:04,935 - WARNING -  * Debugger is active!
+2025-05-04 03:14:04,937 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:15:26,570 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 03:15:26,948 - INFO -  * Restarting with stat
+2025-05-04 03:15:28,591 - WARNING -  * Debugger is active!
+2025-05-04 03:15:28,593 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:15:34,659 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 03:15:34,987 - INFO -  * Restarting with stat
+2025-05-04 03:15:36,523 - WARNING -  * Debugger is active!
+2025-05-04 03:15:36,525 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:16:44,071 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\models\\model_utils.py', reloading
+2025-05-04 03:16:44,465 - INFO -  * Restarting with stat
+2025-05-04 03:16:46,173 - WARNING -  * Debugger is active!
+2025-05-04 03:16:46,176 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:16:50,227 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\models\\model_utils.py', reloading
+2025-05-04 03:16:50,631 - INFO -  * Restarting with stat
+2025-05-04 03:16:52,352 - WARNING -  * Debugger is active!
+2025-05-04 03:16:52,355 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:16:53,384 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\models\\model_utils.py', reloading
+2025-05-04 03:16:53,731 - INFO -  * Restarting with stat
+2025-05-04 03:16:55,265 - WARNING -  * Debugger is active!
+2025-05-04 03:16:55,268 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:16:58,309 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\models\\model_utils.py', reloading
+2025-05-04 03:16:58,663 - INFO -  * Restarting with stat
+2025-05-04 03:17:00,212 - WARNING -  * Debugger is active!
+2025-05-04 03:17:00,215 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:18:13,821 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\models\\models.py', reloading
+2025-05-04 03:18:14,188 - INFO -  * Restarting with stat
+2025-05-04 03:18:15,713 - WARNING -  * Debugger is active!
+2025-05-04 03:18:15,715 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:19:45,409 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\models\\model_utils.py', reloading
+2025-05-04 03:19:45,949 - INFO -  * Restarting with stat
+2025-05-04 03:19:48,423 - WARNING -  * Debugger is active!
+2025-05-04 03:19:48,425 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:19:58,531 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 03:19:58,879 - INFO -  * Restarting with stat
+2025-05-04 03:20:00,436 - WARNING -  * Debugger is active!
+2025-05-04 03:20:00,439 - INFO -  * Debugger PIN: 886-850-343
+2025-05-04 03:20:02,478 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 03:20:02,853 - INFO -  * Restarting with stat

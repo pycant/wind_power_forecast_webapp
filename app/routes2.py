@@ -10,6 +10,11 @@ import re
 import plotly.graph_objects as go
 import statsmodels.api as sm
 import json
+from models.model_utils import *
+from flask_cors import CORS 
+from functools import wraps
+# from models.bayesian_lstm import BayesianLSTMPredictor
+# from models.models import * 
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'data/raw'
@@ -34,6 +39,39 @@ def is_file_duplicate(target_file, target_dir=os.path):
             if file == target_filename:
                 return True
     return False
+
+
+def validate_content_type(content_types):
+    """内容类型验证装饰器"""
+    def decorator(f):
+        @wraps(f)
+        def wrapper(*args, **kwargs):
+            if request.method in ['POST', 'PUT', 'PATCH']:
+                if request.content_type not in content_types:
+                    return jsonify({
+                        "status": "error",
+                        "code": "INVALID_CONTENT_TYPE",
+                        "message": f"Unsupported media type: {request.content_type}"
+                    }), 415
+            return f(*args, **kwargs)
+        return wrapper
+    return decorator
+
+def handle_errors(f):
+    """全局错误处理装饰器"""
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        try:
+            return f(*args, **kwargs)
+        except Exception as e:
+            app.logger.error(f"请求处理失败: {str(e)}", exc_info=True)
+            return jsonify({
+                "status": "error",
+                "code": "INTERNAL_ERROR",
+                "message": "服务器内部错误"
+            }), 500
+    return wrapper
+
 
 
 @app.route('/')
@@ -408,11 +446,146 @@ def handle_interaction():
     
     return jsonify({'status': 'unknown_action'}), 400
 
-@app.route('model_selection_submit', methods=['POST'])
+MODEL_CONFIG_PATH = 'models/m_configure.json'
+
+@app.route('/model_selection_submit', methods=['POST'])
+@handle_errors
 def model_selection_submit():
-    # 获取前端交互元素信息
+    # 获取选择的模型ID
+    selected_id = request.form.get('selected_model_id')
+    print(f"接收到模型选择请求，选择ID: {selected_id}")
+    
+    # 建立模型ID与名称的映射关系
+    MODEL_MAPPING = {
+        'select-model-1': '基础LSTM',
+        'select-model-2': 'CEEMDAN-LSTM'
+    }
+    
+    # 验证模型ID有效性
+    if selected_id not in MODEL_MAPPING:
+        return jsonify({
+            "status": "error",
+            "code": "INVALID_MODEL_ID",
+            "message": "无效的模型选择标识"
+        }), 400
+    
+    model_name = MODEL_MAPPING[selected_id]
+    
+    try:
+        # 读取现有配置
+        if os.path.exists(MODEL_CONFIG_PATH):
+            with open(MODEL_CONFIG_PATH, 'r') as f:
+                config = json.load(f)
+        else:
+            config = {
+                "model_name": "Bayesian_LSTM",
+                "predict_length": 24,
+                "predict_type": {
+                    "type": "multi",
+                    "steps": 24,
+                    "confidence": True,
+                    "confidence_level": 95
+                }
+            }
+        
+        # 更新模型名称
+        config['model_name'] = model_name
+        config['last_modified'] = datetime.now().isoformat()
+        print(f"更新模型配置：{config}")
+        # 写入配置文件
+        with open(MODEL_CONFIG_PATH, 'w') as f:
+            json.dump(config, f, indent=4, ensure_ascii=False)
+            
+        print(f"模型配置更新成功，当前模型：{model_name}")
+        
+        return jsonify({
+            "status": "success",
+            "message": f"模型配置已更新为：{model_name}",
+            "model_type": model_name,
+            "config": config
+        })
+        
+    except Exception as e:
+        app.logger.error(f"模型配置更新失败：{str(e)}")
+        return jsonify({
+            "status": "error",
+            "code": "CONFIG_UPDATE_FAILED",
+            "message": f"配置保存失败：{str(e)}"
+        }), 500
+        
+        
 
+@app.route('/predict_submit', methods=['POST'])
+def predict_submit():
+    try:
+        # 从请求获取参数
+        predict_type = request.form.get('predict-type')
+        steps = int(request.form.get('steps', 24))
+        confidence_level = int(request.form.get('confidenceLevel', 95))
+        print(f"接收到预测请求，预测类型: {predict_type}, 步数: {steps}, 置信区间: {confidence_level}")
+        # 验证参数
+        if predict_type not in ('single', 'multi'):
+            raise ValueError("无效预测类型")
+        if not (1 <= steps <= 72):
+            raise ValueError("预测步数应在1-72范围内")
+        if confidence_level not in (90, 95, 99):
+            raise ValueError("不支持的置信区间")
+        print(f"参数验证通过：")
+        # 更新运行时配置
+        with open(MODEL_CONFIG_PATH, 'r+') as f:
+            config = json.load(f)
+            print(f"过去模型配置：{config}")
+            config['predict_type'].update({
+                "type": predict_type,
+                "steps": steps,
+                "confidence": True,
+                "confidence_level": confidence_level
+            })
+            print(f"更新模型配置：{config}")
+            f.seek(0)
+            json.dump(config, f, indent=4)
+            f.truncate()
+        print(f"模型配置更新成功")
+        # 根据配置加载模型
+        model = load_model_by_config(config)
+        
+        # 执行预测
+        prediction_result = model.predict(
+            steps=steps,
+            confidence_level=confidence_level/100
+        )
 
+        return jsonify({
+            'status': 'success',
+            'prediction': prediction_result,
+            'config': config
+        })
+
+    except Exception as e:
+        return jsonify({
+            'status': 'error',
+            'message': str(e)
+        }), 400
+
+def load_model_by_config(config):
+    model_name = config['model_name']
+    if model_name == "Bayesian_LSTM":
+        from models.bayesian_lstm import BayesianLSTMPredictor
+        return BayesianLSTMPredictor(config)
+    elif model_name == "CEEMDAN-LSTM":
+        from models.ceemdan_lstm import CEEMDANLSTMPredictor
+        return CEEMDANLSTMPredictor(config)
+    else:
+        raise ValueError("未知模型类型")
+    
+
+def get_latest_processed_data():
+    """获取最新处理后的数据文件路径"""
+    # 实现逻辑示例：
+    # processed_dir = Path('data/processed')
+    # files = sorted(processed_dir.glob('*.csv'), key=os.path.getmtime)
+    # return str(files[-1]) if files else None
+    return 'data/processed/latest.csv'  # 需要根据实际项目实现
 
 
 if __name__ == '__main__':

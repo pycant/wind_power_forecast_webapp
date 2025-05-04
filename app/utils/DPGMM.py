@@ -123,7 +123,6 @@ class EnhancedWindTurbineAnalyzer:
             # 时间窗口特征
             self.data['Power_1h_std'] = self.data['Power (kW)'].rolling(4, min_periods=1).std()
             self.data['Wind_1h_mean'] = self.data['Wind speed - at the height of wheel hub (m/s)'].rolling(4, min_periods=1).mean()
-            
             # 物理特征
             self.data['Wind_Power_Ratio'] = self.data['Power (kW)'] / (
                 self.data['Wind speed - at the height of wheel hub (m/s)'] + 1e-6)

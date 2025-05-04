@@ -1,0 +1,11 @@
+{
+    "model_name": "CEEMDAN-LSTM",
+    "predict_length": 24,
+    "predict_type": {
+        "type": "single",
+        "steps": 24,
+        "confidence": true,
+        "confidence_level": 95
+    },
+    "last_modified": "2025-05-04T13:10:58.397189"
+}

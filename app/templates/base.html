@@ -18,8 +18,64 @@
             height: 100%;
             min-height: 380px;
         }
+        /* 添加全局提示样式 */
+        .notification-center {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .notification-item {
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            background: #10B981;
+            color: white;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            animation: slide-up 0.3s ease-out;
+        }
+        
+        @keyframes slide-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
+<!-- <style>
+    /* 绿色主题动画 */
+    @keyframes green-pulse {
+        0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+        70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+
+    .model-success-toast {
+        @apply fixed bottom-4 right-4 flex items-center p-4 rounded-lg text-white;
+        background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        animation: green-pulse 2s infinite;
+        min-width: 280px;
+        transition: all 0.3s ease;
+    }
+
+    .model-success-icon {
+        @apply flex-shrink-0 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-3;
+    }
+</style>
+-->
 <body class="min-h-screen bg-gray-100 font-sans">
     <!-- 导航栏 -->
     <nav class="bg-white shadow-md sticky top-0 z-10">
@@ -256,8 +312,8 @@
             <!-- 异常值检测 -->
             <div class="chart-card">
                 <div class="p-4">
-                    <h3 class="text-lg font-medium text-indigo-600 mb-3">📊 异常值检测</h3>
-                    <p class="text-gray-600 mb-4">基于DPGMM算法的时序异常检测</p>
+                    <h3 class="text-lg font-medium text-indigo-600 mb-3">📊 缺失值检测</h3>
+                    <p class="text-gray-600 mb-4">箱线图检测缺失值</p>
                     <div class="h-40 bg-gray-100 rounded-lg">
                         <!-- 模拟箱线图 -->
                         <div class="relative h-full">
@@ -268,7 +324,7 @@
                     </div>
                     <div class="mt-4 flex justify-end">
                         <button class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full">
-                            检测到3处异常 <i class="fas fa-exclamation-triangle ml-1"></i>
+                            检测到missing.num处异常 <i class="fas fa-exclamation-triangle ml-1"></i>
                         </button>
                     </div>
                 </div>
@@ -329,38 +385,249 @@
     <!-- 模型选择模块 -->
     <section id="model" class="container mx-auto px-4 py-8">
         <h2 class="text-3xl font-bold mb-6 border-b-2 border-indigo-600 pb-2">🤖 模型选择</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- 模型卡片 -->
-            <div class="chart-card">
-                <div class="p-4">
-                    <h3 class="text-lg font-medium text-indigo-600 mb-3">
-                        <i class="fas fa-layer-group mr-2"></i> CEEMDAN-LSTM
-                    </h3>
-                    <p class="text-gray-600 mb-4">分解-重构式时序预测模型</p>
-                    <div class="mb-4">
-                        <span class="bg-indigo-100 text-indigo-600 px-2 py-1 rounded-full mr-2">
-                            贝叶斯优化
-                        </span>
-                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded-full">
-                            残差修正
-                        </span>
+        <form action="/model_selection_submit" method="post">
+            <input type="hidden" name="selected_model_id" id="selected_model_id">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="chart-card border-2 border-green-100 hover:border-green-300 transition-colors">
+                    <div class="p-4 bg-gradient-to-b from-green-50 to-white">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-network-wired text-green-600 text-xl mr-2"></i>
+                            <h3 class="text-lg font-medium text-green-600">基础LSTM</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">普通LSTM时序预测模型</p>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full mr-2">时序建模</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">早停机制</span>
+                        </p>
+                        <div class="mb-4">
+                            <div class="h-1 bg-gradient-to-r from-green-400 to-yellow-400 rounded-full"></div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <p class="text-sm text-gray-500">历史MAE：</p>
+                                    <h4 class="text-xl font-bold text-indigo-600">{{mae}}MW</h4>
+                                </div>
+                            <button id="select-model-1" onclick="setModelId('select-model-1')" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+                                选择模型 <i class="fas fa-check ml-2"></i>
+                            </button>
+                        </div>
+                        </div>
                     </div>
-                    <div class="mt-4">
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <p class="text-sm text-gray-500">历史MAE：</p>
-                                <h4 class="text-xl font-bold text-indigo-600">{{mae}}MW</h4>
+                </div>
+                <div class="chart-card border-2 border-blue-100 hover:border-blue-300 transition-colors">
+                    <div class="p-4 bg-gradient-to-b from-blue-50 to-white">
+                        
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-sitemap text-blue-600 text-xl mr-2"></i>
+                            <h3 class="text-lg font-medium text-blue-600">CEEMDAN-LSTM</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">分解-重构式时序预测模型</p>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full mr-2">多尺度分解</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full">贝叶斯优化</span>
+                        </p>
+                        <div class="h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>   
+                            <div class="mt-4">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="text-sm text-gray-500">历史MAE：</p>
+                                        <h4 class="text-xl font-bold text-indigo-600">{{mae}}MW</h4>
+                                    </div>
+                                    <button id="select-model-2" onclick="setModelId('select-model-2')" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+                                        选择模型 <i class="fas fa-check ml-2"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <form action="/model_selection_submit" method="post">
-                                <button class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
-                                    选择模型 <i class="fas fa-check ml-2"></i>
-                                </button>
-                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
+        <script>
+            // 模型选择逻辑
+            let selectedModel = null;
+            document.querySelectorAll('[id^="select-model-"]').forEach(button => {
+                button.addEventListener('click', async function(e) {
+                    e.preventDefault();
+                    
+                    // 设置选中状态
+                    document.getElementById('selected_model_id').value = this.id;
+                    
+                    // 发送表单数据
+                    const formData = new FormData(document.forms[2]); // 获取模型选择表单
+                    
+                    try {
+                        const response = await fetch('/model_selection_submit', {
+                            method: 'POST',
+                            body: formData
+                        });
+                        
+                        const data = await handleApiResponse(response);
+                        
+                        // 更新按钮状态
+                        document.querySelectorAll('.model-card button').forEach(btn => {
+                            btn.classList.remove('bg-indigo-600', 'text-white');
+                            btn.classList.add('bg-gray-100', 'text-gray-600');
+                            btn.innerHTML = '选择模型 <i class="fas fa-check ml-2"></i>';
+                        });
+                        
+                        this.classList.remove('bg-gray-100', 'text-gray-600');
+                        this.classList.add('bg-indigo-600', 'text-white');
+                        this.innerHTML = '已选中 <i class="fas fa-check-double ml-2"></i>';
+                        
+                        // 显示成功提示
+                        showToast(`已选择模型：${data.model_type}`, 'success');
+                        
+                    } catch (error) {
+                        console.error('模型选择失败:', error);
+                    }
+                });
+            });
+
+
+
+            function setModelId(buttonId) {
+                document.getElementById('selected_model_id').value = buttonId;
+             }
+
+            function selectModel(button, modelName) {
+                // 重置所有按钮状态
+                document.querySelectorAll('.model-card button').forEach(btn => {
+                    btn.classList.remove('bg-indigo-600', 'text-white');
+                    btn.classList.add('bg-gray-100', 'text-gray-600');
+                    btn.innerHTML = '选择模型 <i class="fas fa-check ml-2"></i>';
+                });
+            
+                // 设置当前选中状态
+                button.classList.remove('bg-gray-100', 'text-gray-600');
+                button.classList.add('bg-indigo-600', 'text-white');
+                button.innerHTML = '已选中 <i class="fas fa-check-double ml-2"></i>';
+                selectedModel = modelName;
+            
+                // 发送选择到后端
+                saveModelSelection(modelName);
+            }
+            
+            // 统一封装的API请求函数
+            async function apiRequest(url, method, data) {
+                const headers = {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                };
+                
+                try {
+                    const response = await fetch(url, {
+                        method: method.toUpperCase(),
+                        headers: headers,
+                        body: JSON.stringify(data),
+                        credentials: 'same-origin' // 处理Cookie
+                    });
+
+                    // 处理非200响应
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
+                    }
+
+                    return await response.json();
+                } catch (error) {
+                    console.error('API请求失败:', error);
+                    showToast(`操作失败: ${error.message}`, 'error');
+                    throw error; // 允许上层捕获
+                }
+            }
+
+                        // 统一处理API响应
+            function handleApiResponse(response) {
+                if (!response.ok) {
+                    return response.json().then(err => {
+                        showToast(err.message || '操作失败', 'error');
+                        throw err;
+                    });
+                }
+                return response.json().then(data => {
+                    if (data.status === 'success') {
+                        showToast(data.message, 'success');
+                        return data;
+                    } else {
+                        showToast(data.message, 'error');
+                        throw data;
+                    }
+                });
+            }
+    
+            // 统一提示样式
+            function showToast(message, type = 'info') {
+                const colors = {
+                    success: '#10B981',
+                    error: '#EF4444',
+                    info: '#3B82F6'
+                };
+            
+                const container = document.getElementById('notification-container');
+                
+                // 创建通知元素
+                const toast = document.createElement('div');
+                toast.className = 'notification-item';
+                toast.style.backgroundColor = colors[type];
+                
+                toast.innerHTML = `
+                    <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-triangle'} mr-2"></i>
+                    <span>${message}</span>
+                `;
+            
+                // 添加到通知容器顶部
+                container.insertBefore(toast, container.firstChild);
+            
+                // 自动移除
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    setTimeout(() => toast.remove(), 300);
+                }, 3000);
+            }
+    
+            // 改造后的模型选择函数
+            // 模型选择提交
+            async function saveModelSelection(modelName) {
+                try {
+                    const response = await fetch('/model_selection_submit', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({ model_type: modelName })
+                    });
+                    
+                    const data = await handleApiResponse(response);
+                    // 更新前端模型显示
+                    document.querySelectorAll('.model-card').forEach(card => {
+                        card.classList.remove('border-green-300');
+                        if (card.dataset.model === data.model_type) {
+                            card.classList.add('border-green-300');
+                        }
+                    });
+                } catch (error) {
+                    console.error('模型选择失败:', error);
+                }
+            }
+
+            document.getElementById('predictForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const formData = new FormData(e.target);
+                try {
+                    const response = await fetch('/predict_submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const data = await handleApiResponse(response);
+                    // 更新预测结果展示
+                    updatePredictionChart(data.prediction);
+                } catch (error) {
+                    console.error('预测失败:', error);
+                }
+            });
+            </script>
     </section>
 
     <!-- 预测模块 -->
@@ -371,28 +638,51 @@
             <form action="/predict_submit" method="post">
                 <div class="chart-card p-6">
                     <h3 class="text-lg font-medium text-indigo-600 mb-4">预测模式选择</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <label class="relative block p-4 bg-white rounded-lg shadow-md hover:shadow-lg cursor-pointer">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <label class="relative block p-4 bg-white rounded-lg shadow-md hover:shadow-lg cursor-pointer border-2 transition-all" onclick="toggleStepsInput('single')">
                             <input type="radio" name="predict-type" class="hidden" value="single">
                             <div class="flex items-center">
                                 <i class="fas fa-clock text-2xl text-indigo-600 mr-4"></i>
                                 <div>
                                     <h4 class="font-medium">单步预测</h4>
-                                    <p class="text-gray-500">未来1小时功率预测</p>
+                                    <p class="text-gray-500">未来15分钟功率预测</p>
                                 </div>
                             </div>
                             <div class="absolute inset-0 rounded-lg border-2 border-transparent focus:border-indigo-600"></div>
                         </label>
-                        <label class="relative block p-4 bg-white rounded-lg shadow-md hover:shadow-lg cursor-pointer">
-                            <input type="radio" name="predict-type" class="hidden" value="multi">
+                        <label class="relative block p-4 bg-white rounded-lg shadow-md hover:shadow-lg cursor-pointer border-2 transition-all"
+                        onclick="toggleStepsInput('multi')">
+                            <input type="radio" name="predict-type" class="hidden" value="multi">   
+
                             <div class="flex items-center">
                                 <i class="fas fa-chart-line text-2xl text-indigo-600 mr-4"></i>
                                 <div>
                                     <h4 class="font-medium">多步预测</h4>
-                                    <p class="text-gray-500">未来24小时功率曲线</p>
+                                    <p class="text-gray-500">未来选定时间段功率预测</p>
                                 </div>
+
+                            </div>
+                            <div class="mt-2" id="stepsInput" style="display:none;">
+                                <input type="number" id="predictSteps" min="1" max="72" 
+                                       class="border rounded px-2 py-1 w-24 text-sm"
+                                       placeholder="预测步数">
+                                <span class="text-gray-500 text-sm ml-2">小时</span>
                             </div>
                             <div class="absolute inset-0 rounded-lg border-2 border-transparent focus:border-indigo-600"></div>
+                        </label>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <label class="w-20">置信区间:</label>
+                            <select id="confidenceLevel" class="border rounded px-2 py-1 text-sm">
+                                <option value="90">90%</option>
+                                <option value="95">95%</option>
+                                <option value="99">99%</option>
+                            </select>
+                        </div>
+                        <label class="flex items-center">
+                            <input type="checkbox" id="enableUncertainty" class="mr-2">
+                            显示概率预测
                         </label>
                     </div>
                     <div class="mt-6">
@@ -402,6 +692,7 @@
                     </div>
                 </div>
             </form>
+        
             <!-- 预测结果 -->
             <div class="chart-card">
                 <div class="p-4 h-full">
@@ -423,6 +714,56 @@
                 </div>
             </div>
         </div>
+        <script>
+            // 切换步数输入显示
+            function toggleStepsInput(type) {
+                const stepsDiv = document.getElementById('stepsInput');
+                stepsDiv.style.display = type === 'multi' ? 'block' : 'none';
+                document.querySelector('form').addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(e.target);
+                    const response = await fetch('/predict_submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.status === 'success') {
+                        // 更新预测结果可视化
+                        updatePredictionChart(
+                            result.prediction.values, 
+                            result.prediction.confidence_interval
+                        );
+                        
+                        // 显示评估指标
+                        showMetrics(result.prediction.metrics);
+                    } else {
+                        showPredictionError(result.message);
+                    }
+                });
+                
+                function updatePredictionChart(values, ci) {
+                    // 使用Plotly更新图表
+                    const trace = {
+                        x: [...Array(values.length).keys()],
+                        y: values,
+                        mode: 'lines+markers',
+                        name: '预测值'
+                    };
+                    
+                    const ciTrace = {
+                        x: [...trace.x, ...trace.x.reverse()],
+                        y: [...ci.upper, ...ci.lower.reverse()],
+                        fill: 'toself',
+                        name: `${ci.level}% 置信区间`
+                    };
+                    
+                    Plotly.newPlot('prediction-chart', [trace, ciTrace]);
+                }
+            }
+            </script>
     </section>
 
     <!-- 页脚 -->
@@ -453,6 +794,63 @@
         dropzone.addEventListener('dragleave', () => {
             dropzone.classList.remove('bg-indigo-100');
         });
+
     </script>
 </body>
+<!--<template id="successToastTemplate">
+    <div class="model-success-toast">
+        <div class="model-success-icon">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+        </div>
+        <div class="text-left">
+            <p class="font-semibold" data-content="title"></p>
+            <p class="text-sm opacity-90" data-content="message"></p>
+        </div>
+    </div>
+</template>-->
+<div class="notification-center" id="notification-container"></div>
+<script>
+    /*
+    // 增强版Toast函数
+    function showModelSuccessToast(data) {
+        const template = document.getElementById('successToastTemplate');
+        const clone = template.content.cloneNode(true);
+        const toast = clone.querySelector('.model-success-toast');
+        
+        // 填充内容
+        toast.querySelector('[data-content="title"]').textContent = `✅ ${data.model_type} 配置已保存`;
+        toast.querySelector('[data-content="message"]').textContent = data.message;
+
+        // 添加到页面
+        document.body.appendChild(clone);
+        
+        // 自动消失逻辑
+        setTimeout(() => {
+            toast.style.transform = 'translateY(100px)';
+            toast.style.opacity = '0';
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
+
+        // 点击立即关闭
+        toast.addEventListener('click', () => {
+            toast.style.transform = 'translateY(100px)';
+            toast.style.opacity = '0';
+            setTimeout(() => toast.remove(), 300);
+        });
+    }
+    
+    // 监听页面加载事件显示消息
+    window.addEventListener('DOMContentLoaded', () => {
+        {% if model_settings_message %}
+            showModelSuccessToast({
+                status: '{{ model_settings_message.status }}',
+                message: '{{ model_settings_message.message }}',
+                model_type: '{{ model_settings_message.model_type }}'
+            });
+        {% endif %}
+    });
+    */
+</script>
 </html>

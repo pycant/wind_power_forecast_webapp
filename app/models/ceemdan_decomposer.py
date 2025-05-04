@@ -1,16 +1,19 @@
+
+
 import pandas as pd
-from PyEMD import CEEMDAN, EMD
+from pyemd import CEEMDAN, EMD
 import numpy as np
 import matplotlib.pyplot as plt
-    
+
+
 def run_ceemdan_decomposition(file_path,output_path):
     # 设置绘图参数
     plt.rcParams.update({'font.size': 10, 'font.family': 'serif'})
 
     try:
-        df = pd.read_csv(file_path, encoding='gbk')  # 尝试使用 GBK 编码
+        df = pd.read_csv(file_path, encoding='utf-8').head(100)  # 尝试使用 GBK 编码
     except UnicodeDecodeError:
-        df = pd.read_csv(file_path, encoding='latin-1')  # 尝试使用 Latin-1 编码
+        df = pd.read_csv(file_path, encoding='latin-1').head(100) # 尝试使用 Latin-1 编码
 
     # 提取完整数据
     t = df.index  # 时间索引
@@ -45,9 +48,10 @@ def run_ceemdan_decomposition(file_path,output_path):
     IMF_ceemdan_df['Original Signal'] = s
 
     # 保存CEEMDAN分解结果到新的Excel文件
-    IMF_ceemdan_df.to_excel(output_path)
+    output_file_path = output_path
+    IMF_ceemdan_df.to_excel(output_file_path)
 
-    print(f"Decomposed data saved to {output_path}")
+    print(f"Decomposed data saved to {output_file_path}")
 
     # 设置绘图参数
     plt.rcParams.update({'font.size': 10, 'font.family': 'serif'})
@@ -57,23 +61,7 @@ def run_ceemdan_decomposition(file_path,output_path):
     for i, imf in enumerate(IMFs_ceemdan):
         plt.subplot(len(IMFs_ceemdan) + 1, 1, i + 1)
         plt.plot(t, imf, color='blue', linewidth=1.2)
-        plt.title(f'IMF {i+1}', fontsize=10)
-        plt.xticks([])
-        plt.yticks([])
-
-    # 绘制原始信号
-    plt.subplot(len(IMFs_ceemdan) + 1, 1, len(IMFs_ceemdan) + 1)
-    plt.plot(t, s, color='black', linewidth=1.2, label='Original Signal')
-    plt.title('Original Signal (Power (MW))', fontsize=10)
-    plt.xlabel('Time', fontsize=10)
-    plt.ylabel('Power (MW)', fontsize=10)
-    plt.legend(loc='upper right')
-
-    # 调整布局
-    plt.tight_layout(pad=2.0)
-
-    # 显示图表
-    plt.show()
-
-# 调用函数
-run_ceemdan_decomposition()
+  
+  
+print("开始CEEMDAN分解...")
+run_ceemdan_decomposition(r'data\cleaned\Wind farm site 1 (Nominal capacity-99MW)1746191929.0945573.csv',r'output/ceemdan_decomposition.csv')
