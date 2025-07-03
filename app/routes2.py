@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for,re
 import os
 import uuid
 from werkzeug.utils import secure_filename
-import data_manager as dm
-from data_manager import *
+import tools.data_manager as dm
+from tools.data_manager import *
 from utils.data_cleaner import *
 import unicodedata
 import re
@@ -13,6 +13,8 @@ import json
 from models.model_utils import *
 from flask_cors import CORS 
 from functools import wraps
+import time
+
 # from models.bayesian_lstm import BayesianLSTMPredictor
 # from models.models import * 
 
@@ -136,6 +138,7 @@ def upload_file():
         
         # 记录成功日志
         print(f"文件上传成功：{filename}，大小：{os.path.getsize(os.path.join(app.config['UPLOAD_FOLDER'], filename))}字节")
+        # time.sleep(1000)
         
         return render_template('base.html', success_message={
             'status': 'upload_success',
@@ -174,6 +177,27 @@ def file_manager():
         'message': f'未知操作：{button_clicked,request.form}'
     })
                 
+
+
+@app.route('/api/files',methods=['GET','POST'])
+def delete_data_file():
+    """删除文件"""
+    try:
+        # 获取前端交互元素信息
+        relative_path = request.json.get('path')
+        print(f"接收到文件删除请求：{relative_path}")
+        # 调用文件删除函数
+        delete_file(relative_path)
+        # 记录成功日志
+        print(f"文件删除成功：{relative_path}")
+        # 重新加载文件管理页面
+        return jsonify({ 'success':True, 'path': relative_path})
+    except Exception as e:
+        # 错误处理及实时反馈
+        error_message = f"文件删除失败：{str(e)}"
+        print(error_message)
+    
+
 
         
 

@@ -121,3 +121,144 @@ NameError: name 'ModelConfigLoader' is not defined
 2025-05-04 03:20:00,439 - INFO -  * Debugger PIN: 886-850-343
 2025-05-04 03:20:02,478 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
 2025-05-04 03:20:02,853 - INFO -  * Restarting with stat
+2025-06-30 13:58:21,884 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-30 13:58:21,884 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 13:58:21,899 - INFO -  * Restarting with watchdog (windowsapi)
+2025-06-30 13:58:23,628 - WARNING -  * Debugger is active!
+2025-06-30 13:58:23,634 - INFO -  * Debugger PIN: 472-835-270
+2025-06-30 14:00:18,053 - INFO - 127.0.0.1 - - [30/Jun/2025 14:00:18] "GET / HTTP/1.1" 200 -
+2025-06-30 14:00:18,173 - INFO - 127.0.0.1 - - [30/Jun/2025 14:00:18] "GET /static/assets/imgs/Õº∆¨1.png HTTP/1.1" 200 -
+2025-06-30 14:00:24,927 - INFO - 127.0.0.1 - - [30/Jun/2025 14:00:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-30 14:00:29,999 - INFO - 127.0.0.1 - - [30/Jun/2025 14:00:29] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-06-30 14:00:30,088 - INFO - 127.0.0.1 - - [30/Jun/2025 14:00:30] "GET /get_config HTTP/1.1" 200 -
+2025-06-30 14:00:30,092 - INFO - 127.0.0.1 - - [30/Jun/2025 14:00:30] "GET /get_config HTTP/1.1" 200 -
+2025-06-30 14:00:36,946 - INFO - 127.0.0.1 - - [30/Jun/2025 14:00:36] "GET / HTTP/1.1" 200 -
+2025-06-30 14:00:37,005 - INFO - 127.0.0.1 - - [30/Jun/2025 14:00:37] "[36mGET /static/assets/imgs/Õº∆¨1.png HTTP/1.1[0m" 304 -
+2025-06-30 14:00:38,280 - INFO - 127.0.0.1 - - [30/Jun/2025 14:00:38] "GET /file_manager HTTP/1.1" 200 -
+2025-06-30 14:00:44,677 - INFO - 127.0.0.1 - - [30/Jun/2025 14:00:44] "[33mDELETE /api/files HTTP/1.1[0m" 404 -
+2025-06-30 14:00:51,096 - INFO - 127.0.0.1 - - [30/Jun/2025 14:00:51] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-06-30 14:00:51,197 - INFO - 127.0.0.1 - - [30/Jun/2025 14:00:51] "GET /get_config HTTP/1.1" 200 -
+2025-06-30 14:00:51,202 - INFO - 127.0.0.1 - - [30/Jun/2025 14:00:51] "GET /get_config HTTP/1.1" 200 -
+2025-06-30 14:01:01,998 - INFO - 127.0.0.1 - - [30/Jun/2025 14:01:01] "GET / HTTP/1.1" 200 -
+2025-06-30 14:01:02,029 - INFO - 127.0.0.1 - - [30/Jun/2025 14:01:02] "[36mGET /static/assets/imgs/Õº∆¨1.png HTTP/1.1[0m" 304 -
+2025-06-30 14:01:07,094 - ERROR - ƒ£–Õ≈‰÷√∏¸–¬ ß∞‹£∫[Errno 2] No such file or directory: 'models/m_configure.json'
+2025-06-30 14:01:07,095 - INFO - 127.0.0.1 - - [30/Jun/2025 14:01:07] "[35m[1mPOST /model_selection_submit HTTP/1.1[0m" 500 -
+2025-06-30 14:01:08,333 - ERROR - ƒ£–Õ≈‰÷√∏¸–¬ ß∞‹£∫[Errno 2] No such file or directory: 'models/m_configure.json'
+2025-06-30 14:01:08,333 - INFO - 127.0.0.1 - - [30/Jun/2025 14:01:08] "[35m[1mPOST /model_selection_submit HTTP/1.1[0m" 500 -
+2025-06-30 14:01:14,755 - ERROR - ƒ£–Õ≈‰÷√∏¸–¬ ß∞‹£∫[Errno 2] No such file or directory: 'models/m_configure.json'
+2025-06-30 14:01:14,756 - INFO - 127.0.0.1 - - [30/Jun/2025 14:01:14] "[35m[1mPOST /model_selection_submit HTTP/1.1[0m" 500 -
+2025-06-30 14:01:21,206 - INFO - 127.0.0.1 - - [30/Jun/2025 14:01:21] "POST /data_preprocessing_submit HTTP/1.1" 200 -
+2025-06-30 14:01:21,304 - INFO - 127.0.0.1 - - [30/Jun/2025 14:01:21] "GET /get_config HTTP/1.1" 200 -
+2025-06-30 14:01:21,308 - INFO - 127.0.0.1 - - [30/Jun/2025 14:01:21] "GET /get_config HTTP/1.1" 200 -
+2025-06-30 14:01:25,591 - INFO - 127.0.0.1 - - [30/Jun/2025 14:01:25] "[35m[1mPOST /update_config HTTP/1.1[0m" 500 -
+2025-06-30 14:01:25,597 - INFO - 127.0.0.1 - - [30/Jun/2025 14:01:25] "GET /get_config HTTP/1.1" 200 -
+2025-07-02 14:24:05,482 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-02 14:24:05,483 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 14:24:05,496 - INFO -  * Restarting with watchdog (windowsapi)
+2025-07-02 14:24:07,138 - WARNING -  * Debugger is active!
+2025-07-02 14:24:07,152 - INFO -  * Debugger PIN: 472-835-270
+2025-07-02 14:24:15,578 - INFO - 127.0.0.1 - - [02/Jul/2025 14:24:15] "GET / HTTP/1.1" 200 -
+2025-07-02 14:24:15,678 - INFO - 127.0.0.1 - - [02/Jul/2025 14:24:15] "[36mGET /static/assets/imgs/Õº∆¨1.png HTTP/1.1[0m" 304 -
+2025-07-02 14:24:23,399 - INFO - 127.0.0.1 - - [02/Jul/2025 14:24:23] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-07-02 14:24:23,401 - INFO - 127.0.0.1 - - [02/Jul/2025 14:24:23] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-07-02 14:24:23,445 - INFO - 127.0.0.1 - - [02/Jul/2025 14:24:23] "[36mGET /upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-07-02 14:24:23,447 - INFO - 127.0.0.1 - - [02/Jul/2025 14:24:23] "[36mGET /upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-07-02 14:24:23,461 - INFO - 127.0.0.1 - - [02/Jul/2025 14:24:23] "GET /upload?__debugger__=yes&cmd=resource&f=console.png&s=x3h6hvQ2pIARpWEWRjAJ HTTP/1.1" 200 -
+2025-07-02 14:24:54,749 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-07-02 14:24:54,749 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-07-02 14:24:54,750 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-07-02 14:24:55,583 - INFO -  * Restarting with watchdog (windowsapi)
+2025-07-02 14:24:57,397 - WARNING -  * Debugger is active!
+2025-07-02 14:24:57,401 - INFO -  * Debugger PIN: 472-835-270
+2025-07-02 14:25:00,609 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-07-02 14:25:00,610 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-07-02 14:25:01,837 - INFO -  * Restarting with watchdog (windowsapi)
+2025-07-02 14:25:03,498 - WARNING -  * Debugger is active!
+2025-07-02 14:25:03,503 - INFO -  * Debugger PIN: 472-835-270
+2025-07-02 14:25:07,491 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-07-02 14:25:07,492 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-07-02 14:25:07,492 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-07-02 14:25:07,803 - INFO -  * Restarting with watchdog (windowsapi)
+2025-07-02 14:25:09,469 - WARNING -  * Debugger is active!
+2025-07-02 14:25:09,473 - INFO -  * Debugger PIN: 472-835-270
+2025-07-02 14:25:15,611 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-02 14:25:15,612 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 14:25:15,619 - INFO -  * Restarting with watchdog (windowsapi)
+2025-07-02 14:25:17,275 - WARNING -  * Debugger is active!
+2025-07-02 14:25:17,280 - INFO -  * Debugger PIN: 472-835-270
+2025-07-02 14:25:27,300 - INFO - 127.0.0.1 - - [02/Jul/2025 14:25:27] "GET / HTTP/1.1" 200 -
+2025-07-02 14:25:27,391 - INFO - 127.0.0.1 - - [02/Jul/2025 14:25:27] "[36mGET /static/assets/imgs/Õº∆¨1.png HTTP/1.1[0m" 304 -
+2025-07-02 14:25:34,725 - INFO - 127.0.0.1 - - [02/Jul/2025 14:25:34] "POST /upload HTTP/1.1" 200 -
+2025-07-02 14:25:34,750 - INFO - 127.0.0.1 - - [02/Jul/2025 14:25:34] "POST /upload HTTP/1.1" 200 -
+2025-07-02 14:25:34,804 - INFO - 127.0.0.1 - - [02/Jul/2025 14:25:34] "[36mGET /static/assets/imgs/Õº∆¨1.png HTTP/1.1[0m" 304 -
+2025-07-02 14:25:36,971 - INFO - 127.0.0.1 - - [02/Jul/2025 14:25:36] "GET /file_manager HTTP/1.1" 200 -
+2025-07-02 14:25:39,960 - INFO - 127.0.0.1 - - [02/Jul/2025 14:25:39] "GET /file_manager HTTP/1.1" 200 -
+2025-07-02 14:25:49,386 - INFO - 127.0.0.1 - - [02/Jul/2025 14:25:49] "POST /upload HTTP/1.1" 200 -
+2025-07-02 14:25:49,394 - INFO - 127.0.0.1 - - [02/Jul/2025 14:25:49] "POST /upload HTTP/1.1" 200 -
+2025-07-02 14:25:49,421 - INFO - 127.0.0.1 - - [02/Jul/2025 14:25:49] "[36mGET /static/assets/imgs/Õº∆¨1.png HTTP/1.1[0m" 304 -
+2025-07-02 14:25:54,520 - INFO - 127.0.0.1 - - [02/Jul/2025 14:25:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-02 14:26:01,178 - INFO - 127.0.0.1 - - [02/Jul/2025 14:26:01] "POST /upload HTTP/1.1" 200 -
+2025-07-02 14:26:01,178 - INFO - 127.0.0.1 - - [02/Jul/2025 14:26:01] "POST /upload HTTP/1.1" 200 -
+2025-07-02 14:26:01,212 - INFO - 127.0.0.1 - - [02/Jul/2025 14:26:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-02 14:26:01,222 - INFO - 127.0.0.1 - - [02/Jul/2025 14:26:01] "[36mGET /static/assets/imgs/Õº∆¨1.png HTTP/1.1[0m" 304 -
+2025-07-02 14:26:03,868 - INFO - 127.0.0.1 - - [02/Jul/2025 14:26:03] "GET /file_manager HTTP/1.1" 200 -
+2025-07-02 14:26:03,909 - INFO - 127.0.0.1 - - [02/Jul/2025 14:26:03] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-02 14:26:30,861 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\tools\\uploads.py', reloading
+2025-07-02 14:26:30,864 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\tools\\uploads.py', reloading
+2025-07-02 14:26:30,864 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\tools\\uploads.py', reloading
+2025-07-02 14:26:31,801 - INFO -  * Restarting with watchdog (windowsapi)
+2025-07-02 14:26:33,560 - WARNING -  * Debugger is active!
+2025-07-02 14:26:33,566 - INFO -  * Debugger PIN: 472-835-270
+2025-07-02 14:26:44,543 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-07-02 14:26:44,545 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-07-02 14:26:44,545 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-07-02 14:26:44,863 - INFO -  * Restarting with watchdog (windowsapi)
+2025-07-02 14:26:46,617 - WARNING -  * Debugger is active!
+2025-07-02 14:26:46,622 - INFO -  * Debugger PIN: 472-835-270
+2025-07-02 14:27:31,612 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-02 14:27:31,612 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 14:27:31,619 - INFO -  * Restarting with watchdog (windowsapi)
+2025-07-02 14:27:33,307 - WARNING -  * Debugger is active!
+2025-07-02 14:27:33,312 - INFO -  * Debugger PIN: 472-835-270
+2025-07-02 14:27:38,631 - INFO - 127.0.0.1 - - [02/Jul/2025 14:27:38] "GET /file_manager HTTP/1.1" 200 -
+2025-07-02 14:27:38,662 - INFO - 127.0.0.1 - - [02/Jul/2025 14:27:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-02 14:27:43,450 - INFO - 127.0.0.1 - - [02/Jul/2025 14:27:43] "GET / HTTP/1.1" 200 -
+2025-07-02 14:27:43,479 - INFO - 127.0.0.1 - - [02/Jul/2025 14:27:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-02 14:27:43,580 - INFO - 127.0.0.1 - - [02/Jul/2025 14:27:43] "[36mGET /static/assets/imgs/Õº∆¨1.png HTTP/1.1[0m" 304 -
+2025-07-02 14:27:48,750 - INFO - 127.0.0.1 - - [02/Jul/2025 14:27:48] "POST /upload HTTP/1.1" 200 -
+2025-07-02 14:27:48,750 - INFO - 127.0.0.1 - - [02/Jul/2025 14:27:48] "POST /upload HTTP/1.1" 200 -
+2025-07-02 14:27:48,799 - INFO - 127.0.0.1 - - [02/Jul/2025 14:27:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-02 14:27:48,819 - INFO - 127.0.0.1 - - [02/Jul/2025 14:27:48] "[36mGET /static/assets/imgs/Õº∆¨1.png HTTP/1.1[0m" 304 -
+2025-07-02 14:27:59,704 - INFO - 127.0.0.1 - - [02/Jul/2025 14:27:59] "GET /file_manager HTTP/1.1" 200 -
+2025-07-02 14:27:59,734 - INFO - 127.0.0.1 - - [02/Jul/2025 14:27:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-02 14:29:29,120 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-07-02 14:29:29,121 - INFO -  * Detected change in 'd:\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-07-02 14:29:29,985 - INFO -  * Restarting with watchdog (windowsapi)
+2025-07-02 14:29:31,687 - WARNING -  * Debugger is active!
+2025-07-02 14:29:31,692 - INFO -  * Debugger PIN: 472-835-270
+2025-07-02 14:29:36,502 - INFO - 127.0.0.1 - - [02/Jul/2025 14:29:36] "GET /file_manager HTTP/1.1" 200 -
+2025-07-02 14:29:36,528 - INFO - 127.0.0.1 - - [02/Jul/2025 14:29:36] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-02 14:29:37,888 - INFO - 127.0.0.1 - - [02/Jul/2025 14:29:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-02 14:29:42,830 - INFO - 127.0.0.1 - - [02/Jul/2025 14:29:42] "POST /upload HTTP/1.1" 200 -
+2025-07-02 14:29:42,886 - INFO - 127.0.0.1 - - [02/Jul/2025 14:29:42] "POST /upload HTTP/1.1" 200 -
+2025-07-02 14:29:42,935 - INFO - 127.0.0.1 - - [02/Jul/2025 14:29:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-02 14:29:43,137 - INFO - 127.0.0.1 - - [02/Jul/2025 14:29:43] "[36mGET /static/assets/imgs/Õº∆¨1.png HTTP/1.1[0m" 304 -
+2025-07-02 14:29:46,611 - INFO - 127.0.0.1 - - [02/Jul/2025 14:29:46] "GET /file_manager HTTP/1.1" 200 -
+2025-07-02 14:29:46,638 - INFO - 127.0.0.1 - - [02/Jul/2025 14:29:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-02 14:29:56,127 - INFO - 127.0.0.1 - - [02/Jul/2025 14:29:56] "GET / HTTP/1.1" 200 -
+2025-07-02 14:29:56,156 - INFO - 127.0.0.1 - - [02/Jul/2025 14:29:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-02 14:29:56,172 - INFO - 127.0.0.1 - - [02/Jul/2025 14:29:56] "[36mGET /static/assets/imgs/Õº∆¨1.png HTTP/1.1[0m" 304 -
+2025-07-02 14:30:01,263 - INFO - 127.0.0.1 - - [02/Jul/2025 14:30:01] "POST /upload HTTP/1.1" 200 -
+2025-07-02 14:30:01,285 - INFO - 127.0.0.1 - - [02/Jul/2025 14:30:01] "POST /upload HTTP/1.1" 200 -
+2025-07-02 14:30:01,313 - INFO - 127.0.0.1 - - [02/Jul/2025 14:30:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-07-02 14:30:01,327 - INFO - 127.0.0.1 - - [02/Jul/2025 14:30:01] "[36mGET /static/assets/imgs/Õº∆¨1.png HTTP/1.1[0m" 304 -
+2025-07-02 14:31:14,957 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-02 14:31:14,958 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-02 14:31:14,972 - INFO -  * Restarting with watchdog (windowsapi)
+2025-07-02 14:31:17,343 - WARNING -  * Debugger is active!
+2025-07-02 14:31:17,347 - INFO -  * Debugger PIN: 472-835-270

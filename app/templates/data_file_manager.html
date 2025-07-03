@@ -109,7 +109,7 @@
                 </h3>
                 <button onclick="closeUploadPanel()" class="text-gray-500 hover:text-gray-700">
                     <i class="fas fa-times text-xl"></i>
-                </button>
+                </button>  
             </div>
             
             <!-- 上传区域 -->
@@ -141,7 +141,7 @@
     </div>
 
     <script>
-        //文件数据示例 
+
         document.querySelectorAll('.delete-btn').forEach(btn => {
             btn.addEventListener('click', async () => {
                 if (!confirm('确认永久删除该文件？')) return;
@@ -149,11 +149,13 @@
                 const path = btn.dataset.path;
                 try {
                     const response = await fetch('/api/files', {
-                        method: 'DELETE',
+                        method: 'POST',
                         headers: {'Content-Type': 'application/json'},
                         body: JSON.stringify({ path: path })
                     });
+                    console.log(btn.dataset.path);
                     const result = await response.json();
+                    console.log(result);
                     
                     if (result.success) {
                         btn.closest('.file-card').remove();
@@ -164,6 +166,7 @@
                 } catch (error) {
                     showToast(`操作失败: ${error.message}`, 'error');
                 }
+                //window.location.reload(true); // 刷新页面
             });
         });
         
@@ -174,7 +177,7 @@
             const toast = document.createElement('div');
             toast.className = `fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
                 p-4 rounded-lg text-white min-w-[200px] text-center 
-                ${type === 'error' ? 'bg-red-500' : 'bg-indigo-500'} 
+                ${type === 'error' ? 'bg-red-500' : type === 'success'? 'bg-green-500' :'bg-indigo-500'} 
                 animate-fade-in-up z-[9999]`; // 增加z-index
             toast.textContent = message;
             
@@ -275,6 +278,53 @@
                 percent.textContent = `${Math.min(100, Math.floor(progressValue))}%`;
             }, 300);
         }
+/*
+        document.addEventListener('DOMContentLoaded', () => {
+            // 删除按钮事件绑定
+            document.querySelectorAll('.delete-btn').forEach(btn => {
+                btn.addEventListener('click', async (e) => {
+                    // 添加确认对话框
+                    if (!confirm('确定要永久删除该文件吗？')) return
+                    console.log(btn.dataset.path);
+                    const filePath = btn.dataset.path
+                    const csrfToken = document.querySelector('meta[name="csrf-token"]').content
+
+                    try {
+                        const response = await fetch('/delete-file', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRFToken': csrfToken
+                            },
+                            body: JSON.stringify({ file_path: filePath })
+                        })
+
+                        const result = await response.json()
+                        if (response.ok) {
+                            // 删除成功时移除对应卡片
+                            btn.closest('.file-card').remove()
+                            showToast('删除成功', 'success')
+                        } else {
+                            throw new Error(result.error || '删除失败')
+                        }
+                    } catch (error) {
+                        console.error('删除错误:', error)
+                        showToast(error.message, 'error')
+                    }
+                })
+            })
+        })
+
+        // 示例Toast提示函数
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div')
+            toast.className = `toast ${type} fixed bottom-4 right-4 px-4 py-2 rounded-md text-white`
+            toast.textContent = message
+            document.body.appendChild(toast)
+            
+            setTimeout(() => toast.remove(), 3000)
+        }
+            */
     </script>
 </body>
 </html>

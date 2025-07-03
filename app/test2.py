@@ -108,7 +108,7 @@ def download_file(category, filename):
 
 
 from flask import request, render_template
-from data_manager import get_file_stats, delete_file, save_uploaded_file
+from app.tools.data_manager import get_file_stats, delete_file, save_uploaded_file
 
 def configure_routes(app):
     @app.route('/file-manager')

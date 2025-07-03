@@ -38,8 +38,8 @@
         }
     },
     "anomaly_handling": {
-        "method": "interpolate",
-        "interpolate_method": "linear",
+        "method": "delete",
+        "interpolate_method": "nearest",
         "max_anomaly_duration": 3,
         "threshold": 2.5
     },

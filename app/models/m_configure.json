@@ -2,10 +2,10 @@
     "model_name": "CEEMDAN-LSTM",
     "predict_length": 24,
     "predict_type": {
-        "type": "single",
+        "type": "multi",
         "steps": 24,
         "confidence": true,
         "confidence_level": 95
     },
-    "last_modified": "2025-05-04T21:17:43.493034"
+    "last_modified": "2025-06-30T14:02:40.234604"
 }
