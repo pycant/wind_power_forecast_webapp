@@ -2304,3 +2304,49 @@ AttributeError: type object 'ModelConfigLoader' has no attribute 'load_config'
 2025-05-04 13:16:57,989 - INFO -  * Restarting with watchdog (windowsapi)
 2025-05-04 13:16:59,554 - WARNING -  * Debugger is active!
 2025-05-04 13:16:59,557 - INFO -  * Debugger PIN: 134-810-633
+2025-05-04 21:13:47,599 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-04 21:13:47,600 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-04 21:13:47,633 - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-04 21:13:49,330 - WARNING -  * Debugger is active!
+2025-05-04 21:13:49,342 - INFO -  * Debugger PIN: 134-810-633
+2025-05-04 21:17:24,342 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\models\\bayesian_lstm.py', reloading
+2025-05-04 21:17:25,254 - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-04 21:17:27,455 - WARNING -  * Debugger is active!
+2025-05-04 21:17:27,457 - INFO -  * Debugger PIN: 134-810-633
+2025-05-04 21:17:38,485 - INFO - 127.0.0.1 - - [04/May/2025 21:17:38] "[31m[1mPOST /predict_submit HTTP/1.1[0m" 400 -
+2025-05-04 21:17:40,817 - INFO - 127.0.0.1 - - [04/May/2025 21:17:40] "POST /model_selection_submit HTTP/1.1" 200 -
+2025-05-04 21:17:43,494 - INFO - 127.0.0.1 - - [04/May/2025 21:17:43] "POST /model_selection_submit HTTP/1.1" 200 -
+2025-05-04 21:18:46,940 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\routes2.py', reloading
+2025-05-04 21:18:46,965 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\models\\model_utils.py', reloading
+2025-05-04 21:18:46,978 - INFO -  * Detected change in 'c:\\Users\\12919\\Desktop\\project\\º∆À„…Ëº∆\\wind_power_forecast_webapp\\app\\utils\\data_cleaner.py', reloading
+2025-05-04 21:18:48,039 - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-04 21:18:49,623 - WARNING -  * Debugger is active!
+2025-05-04 21:18:49,625 - INFO -  * Debugger PIN: 134-810-633
+2025-05-04 21:22:49,124 - INFO - 127.0.0.1 - - [04/May/2025 21:22:49] "GET / HTTP/1.1" 200 -
+2025-05-04 21:23:06,200 - INFO - 127.0.0.1 - - [04/May/2025 21:23:06] "GET / HTTP/1.1" 200 -
+2025-05-04 21:23:56,277 - INFO -  * Detected change in 'D:\\app\\anaconda\\Lib\\site-packages\\flask\\app.py', reloading
+2025-05-04 21:23:56,278 - INFO -  * Detected change in 'D:\\app\\anaconda\\Lib\\site-packages\\flask\\templating.py', reloading
+2025-05-04 21:23:56,280 - INFO -  * Detected change in 'D:\\app\\anaconda\\Lib\\site-packages\\jinja2\\environment.py', reloading
+2025-05-04 21:23:56,281 - INFO -  * Detected change in 'D:\\app\\anaconda\\Lib\\site-packages\\jinja2\\loaders.py', reloading
+2025-05-04 21:23:56,285 - INFO - 127.0.0.1 - - [04/May/2025 21:23:56] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-04 21:23:56,775 - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-04 21:23:58,540 - WARNING -  * Debugger is active!
+2025-05-04 21:23:58,543 - INFO -  * Debugger PIN: 134-810-633
+2025-05-04 21:23:58,624 - INFO - 127.0.0.1 - - [04/May/2025 21:23:58] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-04 21:23:58,695 - INFO - 127.0.0.1 - - [04/May/2025 21:23:58] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-04 21:24:02,302 - INFO - 127.0.0.1 - - [04/May/2025 21:24:02] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-04 21:24:07,035 - ERROR - Õº±Ì…˙≥… ß∞‹: list index out of range
+2025-05-04 21:24:07,041 - INFO - 127.0.0.1 - - [04/May/2025 21:24:07] "POST /back_to_home HTTP/1.1" 200 -
+2025-05-04 21:24:30,429 - ERROR - Õº±Ì…˙≥… ß∞‹: list index out of range
+2025-05-04 21:24:30,440 - INFO - 127.0.0.1 - - [04/May/2025 21:24:30] "[35m[1mPOST /back_to_home HTTP/1.1[0m" 500 -
+2025-05-04 21:24:30,477 - INFO - 127.0.0.1 - - [04/May/2025 21:24:30] "GET /back_to_home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-04 21:24:30,483 - INFO - 127.0.0.1 - - [04/May/2025 21:24:30] "GET /back_to_home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-04 21:24:30,598 - INFO - 127.0.0.1 - - [04/May/2025 21:24:30] "[36mGET /back_to_home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-04 21:24:30,687 - INFO - 127.0.0.1 - - [04/May/2025 21:24:30] "[36mGET /back_to_home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-04 21:25:04,529 - ERROR - Õº±Ì…˙≥… ß∞‹: list index out of range
+2025-05-04 21:25:04,534 - INFO - 127.0.0.1 - - [04/May/2025 21:25:04] "POST /back_to_home HTTP/1.1" 200 -
+2025-05-04 21:25:04,569 - INFO - 127.0.0.1 - - [04/May/2025 21:25:04] "[33mGET /assets/imgs/Õº∆¨1.png HTTP/1.1[0m" 404 -
+2025-05-04 21:27:11,685 - ERROR - Õº±Ì…˙≥… ß∞‹: list index out of range
+2025-05-04 21:27:11,697 - INFO - 127.0.0.1 - - [04/May/2025 21:27:11] "POST /back_to_home HTTP/1.1" 200 -
+2025-05-04 21:27:11,739 - INFO - 127.0.0.1 - - [04/May/2025 21:27:11] "GET /static/assets/imgs/Õº∆¨1.png HTTP/1.1" 200 -
